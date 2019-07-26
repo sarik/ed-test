@@ -1,5 +1,6 @@
 let main = document.getElementById("main");
 
+var authToken = "abc";
 
 window.onload = async function() {
 	console.log("loaded");
@@ -21,12 +22,18 @@ async function toggleAuth() {
 	const tokenStatus = await getTokenStatus();
 	if (tokenStatus) {
 		await window.localStorage.removeItem("echoAuth");
-		// return null
+		authToken = null
 	} else {
 		await window.localStorage.setItem("echoAuth", "lolka");
-		// return 'some-auth-token'
+		authToken = 'some-auth-token'
 	}
 	location.reload();
+}
+
+
+//This function is called in helper.js -- ideally need to return the authtoken when user is logged in and null when logged out
+function getAuthToken(){
+	return authToken
 }
 
 function loadForm(){

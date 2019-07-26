@@ -33,6 +33,11 @@ export async function loadApp(name, hash, appURL, storeURL, globalEventDistribut
 }
 
 export async function isAuthenticated(){
+    //uncomment to import auth.js using SystemJS. Then use authToken to decide if user is logged in or not
+
+    // const x = await SystemJS.import('/auth.js').then(auth => auth.getAuthToken())
+    // console.log(x)
+    
     const token = await localStorage.getItem('echoAuth');
 
     if(token) {

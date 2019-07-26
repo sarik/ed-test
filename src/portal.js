@@ -2,10 +2,7 @@ import * as singleSpa from 'single-spa';
 import { GlobalEventDistributor } from './globalEventDistributor'
 import { loadApp, isAuthenticated } from './helper'
 
-let authToken;
-
 async function init() {
-    // SystemJS.import('/auth.js').then(auth => auth.toggleAuth().then(res => {authToken=res}))
     const authenticationStatus = await isAuthenticated();
     if(authenticationStatus) {
         const globalEventDistributor = new GlobalEventDistributor();
