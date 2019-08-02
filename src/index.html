@@ -4,8 +4,11 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<title></title>
-	</head>
-	<body>
+
+		<link
+			rel="stylesheet"
+			href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
+		/>
 
 		<script src="./system.js"></script>
 
@@ -13,11 +16,86 @@
 		<script src="./main.js"></script>
 
 		<!-- Static navbar -->
-		<link rel="stylesheet" href="./style.css">
+		<link rel="stylesheet" href="./style.css" />
 
-		<div id="main">
+		<script type="text/javascript">
+			document.addEventListener("progress", function() {
+				console.log("progressing");
+			});
+		</script>
+	</head>
+	<body>
+		<div id="main" class="ui container hide">
+			<div
+				style="border-bottom: 2px solid #aaa; margin: 2em 0; padding: 1em 0"
+			>
+				<span class="logo"><a href="#/home">ECHODIGITAL</a></span>
+				<span style="float: right">
+					<ul id="app" class="nav" style="display: flex; align-items: center; list-style-type: none; height: 100%;">
+						<a href="#/check-in"><li>Attendance</li></a
+						><a href="#/account"><li>My Account</li></a>
+						<li><i class="icon user outline large"></i></li>
+					</ul>
+					
+				</span>
+			</div>
+			<div class="ui centered grid" id="authForm">
+				<div
+					class="ten wide computer six wide tablet column computer only"
+				>
+					<img
+						class="ui fluid image"
+						src="http://placehold.it/600x250"
+					/>
+				</div>
+				<div
+					class="four wide computer six wide tablet twelve wide mobile column"
+				>
+					<form id="form" class="ui form">
+						<div class="field required">
+							<label>Email or Mobile Number</label
+							><input type="text" name="username" required="" />
+						</div>
+						<div class="field required">
+							<label>Password</label>
+							<input
+								type="password"
+								name="password"
+								required=""
+							/>
+						</div>
+						<div class="ui checkbox field">
+							<input
+								type="checkbox"
+								name="remember-me"
+								id="remember-me"
+							/>
+							<label for="remember-me">Keep me signed in</label>
+						</div>
+						<button type="button" class="ui green button fluid">
+							Sign In
+						</button>
+					</form>
+					<p class="text-center" style="margin: 0.5em">
+						<a class="text-muted"><em>Forgot Password?</em></a>
+					</p>
+				</div>
+			</div>
+
+			<!-- <div class="navbar" id="app">
+				<ul>
+					<a href="#/check-in"><li>Attendance</li></a
+					><a href="#/account"><li>My Account</li></a>
+				</ul>
+				<button
+					style="position: absolute; right: 1em"
+					onclick="toggleAuth()"
+				>
+					Log out
+				</button>
+			</div> -->
 		</div>
-		
+
 		<!-- Handles user authentication. Loads Login form or app based on the user auth status -->
 		<script type="text/javascript" src="./auth.js"></script>
 	</body>

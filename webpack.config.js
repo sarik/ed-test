@@ -63,6 +63,10 @@ module.exports = {
                 target: "http://localhost:8235",
                 pathRewrite: {"^/account" : ""}
             },
+             "/home": {
+                target: "http://localhost:8236",
+                pathRewrite: {"^/home" : ""}
+            },
         }
     }
 };
