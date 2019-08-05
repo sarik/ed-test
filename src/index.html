@@ -2,124 +2,270 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title></title>
-
-		<!-- <link
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>ECHO Digital</title>
+		<link
 			rel="stylesheet"
-			href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
-		/> -->
-
-		<!-- Bulma css -->
-		<link rel="stylesheet" type="text/css" href="./bulma.min.css" />
-		<!-- Font Awesome kit -->
-		<script src="https://kit.fontawesome.com/8d97143a95.js"></script>
-
+			href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"
+		/>
+		<script src="https://kit.fontawesome.com/adbb60565b.js"></script>
 		<script src="./system.js"></script>
-
 		<!-- Load the application -->
 		<script src="./main.js"></script>
-
 		<!-- Static navbar -->
-		<link rel="stylesheet" href="./style.css" />
-
+		<link rel="stylesheet" href="./css/echodigital.css" />
 		<script type="text/javascript">
 			document.addEventListener("progress", function() {
 				console.log("progressing");
 			});
 		</script>
+		<style>
+			:root {
+				--fa-primary-color: hsl(204, 86%, 53%);
+				--fa-secondary-color: #666;
+			}
+			#loginIcon {
+				margin-top: 0.2em;
+			}
+			#logoText {
+				letter-spacing: 0.2em;
+			}
+
+			#userDropdown {
+				width: 12rem;
+			}
+
+			#userDropdown .icon {
+				left: 1rem;
+				position: absolute;
+				text-align: center;
+				top: 0.375rem;
+				width: 1em;
+			}
+
+			@media screen and (min-width: 1024px) {
+				#userDropdown .navbar-item {
+					padding-right: 1rem;
+					white-space: normal;
+				}
+			}
+
+			#userDropdown .navbar-item {
+				padding-left: 3em;
+				position: relative;
+			}
+		</style>
 	</head>
+
 	<body>
-		<div id="main" class="ui container hide">
-			<div
-				style="border-bottom: 2px solid #aaa; margin: 2em 0; padding: 1em 0"
-			>
-				<h1 class="logo"><a href="#/home">ECHODIGITAL</a></h1>
-				<span style="float: right">
-					<ul
-						id="app"
-						class="nav"
-						style="display: flex; align-items: center; list-style-type: none; height: 100%;"
-					>
-						<a href="#/check-in"><li>Attendance</li></a
-						><a href="#/account"><li>My Account</li></a>
-						<li>
-							<span class="icon">
-								<i class="fas fa-home"></i>
-							</span>
-						</li>
-					</ul>
-				</span>
-			</div>
-			<div class="ui centered grid" id="authForm">
-				<div
-					class="ten wide computer six wide tablet column computer only"
-				>
-					<img
-						class="ui fluid image"
-						src="http://placehold.it/600x250"
-					/>
+		<nav
+			class="navbar has-shadow"
+			role="navigation"
+			aria-label="main navigation"
+		>
+			<div class="container">
+				<div class="navbar-brand">
+					<a class="navbar-item" href="/">
+						<span id="logoText"
+							><span class="has-text-info"
+								><strong>ECHO</strong></span
+							>DIGITAL</span
+						>
+					</a>
 				</div>
-				<div
-					class="four wide computer six wide tablet twelve wide mobile column"
-				>
-					<form id="form" class="ui form">
-						<div class="field required">
-							<label>Email or Mobile Number</label
-							><input type="text" name="username" required="" />
+				<div id="mainNavbar" class="navbar-menu">
+					<div class="navbar-start">
+						<a class="navbar-item" href="/home">
+							<span class="icon"><i class="fad fa-home"></i></span
+							>&nbsp;Home
+						</a>
+						<a class="navbar-item" href="/check-in">
+							<span class="icon"
+								><i class="fad fa-sign-in"></i></span
+							>&nbsp; Join a session
+						</a>
+						<a class="navbar-item">
+							<span class="icon"
+								><i class="fad fa-users-class"></i></span
+							>&nbsp; My programs
+						</a>
+					</div>
+					<div class="navbar-end">
+						<div class="navbar-item is-size-7">
+							Rebekkah Jordan, MPH
 						</div>
-						<div class="field required">
-							<label>Password</label>
-							<input
-								type="password"
-								name="password"
-								required=""
-							/>
+						<div class="navbar-item has-dropdown is-active">
+							<a class="navbar-link">
+								<figure class="image is-24x24">
+									<img
+										class="is-rounded"
+										src="./img/user_demo.jpg"
+									/>
+								</figure>
+							</a>
+							<div
+								class="navbar-dropdown is-right is-boxed"
+								id="userDropdown"
+							>
+								<a class="navbar-item" href="/user/my-profile">
+									<span class="icon"
+										><i
+											class="far fa-user-circle"
+										></i></span
+									>My profile
+								</a>
+								<a
+									class="navbar-item"
+									href="/user/my-notifications"
+								>
+									<span>
+										<span class="icon"
+											><i class="far fa-bell"></i></span
+										>Notifications
+									</span>
+								</a>
+								<a class="navbar-item" href="/user/my-settings">
+									<span>
+										<span class="icon"
+											><i class="far fa-cog"></i></span
+										>Settings</span
+									>
+								</a>
+								<hr class="navbar-divider" href="/log-out" />
+								<a class="navbar-item has-text-danger">
+									<span class="icon">
+										<i
+											class="far fa-sign-out has-text-danger"
+										></i>
+										Log out</span
+									>
+								</a>
+							</div>
 						</div>
-						<div class="ui checkbox field">
-							<input
-								type="checkbox"
-								name="remember-me"
-								id="remember-me"
-							/>
-							<label for="remember-me">Keep me signed in</label>
-						</div>
-						<button type="button" class="ui green button fluid">
-							Sign In
-						</button>
-					</form>
-					<p class="text-center" style="margin: 0.5em">
-						<a class="text-muted"><em>Forgot Password?</em></a>
-					</p>
+					</div>
 				</div>
 			</div>
-
-			<!-- <div class="navbar" id="app">
-				<ul>
-					<a href="#/check-in"><li>Attendance</li></a
-					><a href="#/account"><li>My Account</li></a>
-				</ul>
-				<button
-					style="position: absolute; right: 1em"
-					onclick="toggleAuth()"
-				>
-					Log out
-				</button>
-			</div> -->
-		</div>
-
+		</nav>
+		<section class="hero is-light is-fullheight-with-navbar">
+			<div class="hero-head">
+				<div class="section">
+					<div class="container">
+						<div class="columns">
+							<div class="column is-two-thirds">
+								<img
+									src="./img/banner_demo.jpg"
+									class="image is-fullwidth"
+									alt=""
+								/>
+							</div>
+							<div class="column">
+								<p class="title is-3">Login</p>
+								<p class="subtitle is-5">
+									Please sign in with your ECHO registered
+									email or phone number
+								</p>
+								<div class="field">
+									<label class="label">Email or Phone</label>
+									<div class="control">
+										<input class="input" type="text" />
+									</div>
+								</div>
+								<div class="field">
+									<label class="label">Password</label>
+									<div class="control has-icons-right">
+										<input class="input" type="password" />
+										<span class="icon is-small is-right">
+											<i class="far fa-eye"></i>
+										</span>
+									</div>
+									<p class="help">
+										<a href="/forgot-password"
+											>Forgot password?</a
+										>
+									</p>
+								</div>
+								<div class="field" style="display:none">
+									<div class="control">
+										<label class="checkbox">
+											<input type="checkbox" />
+											Remember me
+										</label>
+									</div>
+								</div>
+								<div class="field">
+									<div class="control">
+										<label class="checkbox">
+											<input type="checkbox" />
+											Keep me signed in
+										</label>
+									</div>
+								</div>
+								<div class="field">
+									<div class="control">
+										<a
+											class="button is-fullwidth is-primary is-medium"
+										>
+											<span><strong>Login </strong></span>
+											<span
+												class="icon is-small"
+												id="loginIcon"
+											>
+												<i
+													class="far fa-arrow-right"
+												></i>
+											</span>
+										</a>
+									</div>
+								</div>
+								<div class="is-divider" id="loginDivider"></div>
+								<p class="title is-5">New to ECHO Digital?</p>
+								<p class="subtitle is-7">
+									Don't have an ECHO Digital account yet?
+									Create one now:
+								</p>
+								<div class="field">
+									<div class="control">
+										<a
+											class="button is-fullwidth is-medium"
+										>
+											<span
+												><strong
+													>Join the Community
+												</strong></span
+											>
+											<span
+												class="icon is-small"
+												id="loginIcon"
+											>
+												<i
+													class="far fa-arrow-right"
+												></i>
+											</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
 		<div class="modal" id="i18n">
-		  <div class="modal-background"></div>
-		  <div class="modal-content">
-		  	<div class="box">
-		  		<button class="button" onclick="handleI18n()">click me</button>
-		  	</div>
-		  </div>
-		  <button class="modal-close is-large" aria-label="close" onclick="document.getElementById('i18n').classList.remove('is-active')"></button>
+			<div class="modal-background"></div>
+			<div class="modal-content">
+				<div class="box">
+					<button class="button" onclick="handleI18n()">
+						click me
+					</button>
+				</div>
+			</div>
+			<button
+				class="modal-close is-large"
+				aria-label="close"
+				onclick="document.getElementById('i18n').classList.remove('is-active')"
+			></button>
 		</div>
-		<!-- Handles user authentication. Loads Login form or app based on the user auth status -->
-		<script type="text/javascript" src="./auth.js"></script>
-		<script type="text/javascript" src="./script.js"></script>
+		<script type="text/javascript" src="js/auth.js"></script>
 	</body>
 </html>

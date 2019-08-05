@@ -38,13 +38,8 @@ module.exports = {
 	plugins: [
         new CopyWebpackPlugin([
             {from: path.resolve(__dirname, 'src/index.html')},
-            {from: path.resolve(__dirname, 'src/style.css')},
-            {from: path.resolve(__dirname, 'src/bulma.min.css')},
             {from: path.resolve(__dirname, 'libs/system.js')},
-            {from: path.resolve(__dirname, 'src/scripts/auth.js')},
-            {from: path.resolve(__dirname, 'src/scripts/script.js')},
-            {from: path.resolve(__dirname, 'src/translations/en.json')},
-            {from: path.resolve(__dirname, 'src/translations/hi.json')},
+            {from: path.resolve(__dirname, 'src/assets')},
         ]),
 		new CleanWebpackPlugin(['release'])
 	],
