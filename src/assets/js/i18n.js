@@ -1,5 +1,5 @@
-window.onload = async function(){
-	const language = await navigator.language
+
+	const language = navigator.language
 	console.log(language)
 	if(localStorage.language != language){
 		document.getElementById('i18n').className += " is-active"
@@ -7,7 +7,7 @@ window.onload = async function(){
 	else{
 		document.getElementById('i18n').remove()
 	}
-}
+
 
 function handleI18n(){
 	localStorage.setItem('language', navigator.language)
