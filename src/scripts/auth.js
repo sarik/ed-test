@@ -19,7 +19,7 @@ function populateSkeleton(){
 	grid.className="ui centered grid";
 	column = createNode('div');
 	column.className="column"
-	
+
 	append(grid, column)
 	column = createNode('div');
 	column.className="eight wide column"
@@ -42,9 +42,9 @@ function populate_form() {
 	form = createNode('form')
 	form.id="form"
 	form.className="ui form"
-	form.addEventListener("submit", handleSubmit);	
+	form.addEventListener("submit", handleSubmit);
 	append(segment, form);
-	
+
 
 	field = createNode('div');
 	field.className = "field required";
@@ -54,7 +54,7 @@ function populate_form() {
 	input.required = true;
 	label = createNode('label');
 	label.innerHTML = "Email or Mobile Number"
-	
+
 	append(field, label)
 	append(field , input);
 	append(form, field);
@@ -67,7 +67,7 @@ function populate_form() {
 	input.required = true;
 	label = createNode('label');
 	label.innerHTML = "Password"
-	
+
 	append(field, label)
 	append(field , input);
 	append(form, field);
