@@ -5,10 +5,15 @@
 		<meta name="viewport" content="width=device-width" />
 		<title></title>
 
-		<link
+		<!-- <link
 			rel="stylesheet"
 			href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
-		/>
+		/> -->
+
+		<!-- Bulma css -->
+		<link rel="stylesheet" type="text/css" href="./bulma.min.css" />
+		<!-- Font Awesome kit -->
+		<script src="https://kit.fontawesome.com/8d97143a95.js"></script>
 
 		<script src="./system.js"></script>
 
@@ -29,14 +34,21 @@
 			<div
 				style="border-bottom: 2px solid #aaa; margin: 2em 0; padding: 1em 0"
 			>
-				<span class="logo"><a href="#/home">ECHODIGITAL</a></span>
+				<h1 class="logo"><a href="#/home">ECHODIGITAL</a></h1>
 				<span style="float: right">
-					<ul id="app" class="nav" style="display: flex; align-items: center; list-style-type: none; height: 100%;">
+					<ul
+						id="app"
+						class="nav"
+						style="display: flex; align-items: center; list-style-type: none; height: 100%;"
+					>
 						<a href="#/check-in"><li>Attendance</li></a
 						><a href="#/account"><li>My Account</li></a>
-						<li><i class="icon user outline large"></i></li>
+						<li>
+							<span class="icon">
+								<i class="fas fa-home"></i>
+							</span>
+						</li>
 					</ul>
-					
 				</span>
 			</div>
 			<div class="ui centered grid" id="authForm">
@@ -96,7 +108,18 @@
 			</div> -->
 		</div>
 
+
+		<div class="modal" id="i18n">
+		  <div class="modal-background"></div>
+		  <div class="modal-content">
+		  	<div class="box">
+		  		<button class="button" onclick="handleI18n()">click me</button>
+		  	</div>
+		  </div>
+		  <button class="modal-close is-large" aria-label="close" onclick="document.getElementById('i18n').classList.remove('is-active')"></button>
+		</div>
 		<!-- Handles user authentication. Loads Login form or app based on the user auth status -->
 		<script type="text/javascript" src="./auth.js"></script>
+		<script type="text/javascript" src="./script.js"></script>
 	</body>
 </html>
