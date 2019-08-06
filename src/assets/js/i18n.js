@@ -11,7 +11,7 @@
 
 function handleI18n(){
 	localStorage.setItem('language', navigator.language)
-	fetchTranslation(navigator.language)
+	//fetchTranslation(navigator.language)
 	// location.reload()
 }
 

@@ -55,19 +55,29 @@
             <div id="mainNavbar" class="navbar-menu">
                 <div class="navbar-start">
                     <a class="navbar-item" href="/#/home">
-                        <span class="icon"><i class="far fa-home"></i></span>&nbsp;Home
+                        <span class="icon"><i class="far fa-home"></i></span>&nbsp;~~Home~~
                     </a>
                     <a class="navbar-item" href="/#/check-in">
-                        <span class="icon"><i class="far fa-sign-in"></i></span>&nbsp; Join a session
+                        <span class="icon"><i class="far fa-sign-in"></i></span>&nbsp; ~~Join a session~~
                     </a>
                     <a class="navbar-item">
-                        <span class="icon"><i class="far fa-users-class"></i></span>&nbsp; My programs
+                        <span class="icon"><i class="far fa-users-class"></i></span>&nbsp; ~~My programs~~
+                    </a>
+                    <a class="navbar-item">
+                        <span class="icon"><i class="far fa-globe"></i></span>&nbsp; ~~Discover~~
+                    </a>
+                    <a class="navbar-item">
+                        <span class="icon"><i class="far fa-users"></i></span>&nbsp; ~~Community~~
                     </a>
                 </div>
                 <div class="navbar-end">
                     <div class="navbar-item is-size-7">
                     	Rebekkah Jordan, MPH
                     </div>
+                    <a class="navbar-item">
+                        <span class="icon"><i class="far fa-bell has-badge-rounded has-badge-danger" data-badge="3"></i></span>
+
+                    </a>
                     <div class="navbar-item has-dropdown is-active">
                         <a class="navbar-link">
                             <figure class="image is-24x24">
@@ -76,24 +86,28 @@
                         </a>
                         <div class="navbar-dropdown is-right is-boxed" id="userDropdown">
                             <a class="navbar-item" href="/user/my-profile">
-                                <span class="icon"><i class="far fa-user-circle"></i></span>My profile
+                                <span class="icon"><i class="far fa-user-circle"></i></span>~~View profile~~
                             </a>
                             <a class="navbar-item" href="/user/my-notifications">
                                 <span>
-                                    <span class="icon"><i class="far fa-bell"></i></span>Notifications
+                                    <span class="icon"><i class="far fa-comment-alt-dots"></i></span>~~Messages~~
                                 </span>
                             </a>
-                            <a class="navbar-item" href="/user/my-settings">
+                            <a class="navbar-item" href="/#/account">
                                 <span>
-                                    <span class="icon"><i class="far fa-cog"></i></span>Settings</span>
+                                    <span class="icon"><i class="far fa-cog"></i></span>~~My settings~~</span>
                             </a>
                             <a class="navbar-item" href="/user/my-settings">
                                 <span>
-                                    <span class="icon"><i class="far fa-question-circle"></i></span>Help Center</span>
+                                    <span class="icon"><i class="far fa-question-circle"></i></span>~~Help Center~~</span>
+                            </a>
+                            <a class="navbar-item" href="mailto:support@echodigital.org">
+                                <span>
+                                    <span class="icon"><i class="far fa-exclamation-circle"></i></span>~~Report a bug~~</span>
                             </a>
                             <hr class="navbar-divider" href="/log-out">
                             <a class="navbar-item has-text-danger" onclick="toggleAuth()">
-                                    <span class="icon "><i class="far fa-sign-out has-text-danger"></i></span>Log out
+                                    <span class="icon "><i class="far fa-sign-out has-text-danger"></i></span>~~Log out~~
                             </a>
                         </div>
                     </div>
@@ -110,29 +124,29 @@
                             <img src="./img/banner_demo.jpg" class="image is-fullwidth" alt="" />
                         </div>
                         <div class="column">
-                            <p class="title is-3">Login</p>
-                            <p class="subtitle is-5">Please sign in with your ECHO registered email or phone number</p>
+                            <p class="title is-3">~~Login~~</p>
+                            <p class="subtitle is-5">~~Please sign in with your ECHO registered email or phone number~~</p>
                             <div class="field">
-                                <label class="label">Email or Phone</label>
+                                <label class="label">~~Email or Phone~~</label>
                                 <div class="control">
                                     <input class="input" type="text">
                                 </div>
                             </div>
                             <div class="field">
-                                <label class="label">Password</label>
+                                <label class="label">~~Password~~</label>
                                 <div class="control has-icons-right">
                                     <input class="input" type="password">
                                     <span class="icon is-small is-right">
                                         <i class="far fa-eye"></i>
                                     </span>
                                 </div>
-                                <p class="help"><a href="/forgot-password">Having trouble signing in?</a></p>
+                                <p class="help"><a href="/forgot-password">~~Having trouble signing in?~~</a></p>
                             </div>
                             <div class="field" style="display:none">
                                 <div class="control">
                                     <label class="checkbox">
                                         <input type="checkbox">
-                                        Remember me
+                                        ~~Remember me~~
                                     </label>
                                 </div>
                             </div>
@@ -140,29 +154,29 @@
                                 <div class="control">
                                     <label class="checkbox">
                                         <input type="checkbox">
-                                        Keep me signed in
+                                        ~~Keep me signed in~~
                                     </label>
                                 </div>
                             </div>
                             <div class="field">
                                 <div class="control">
                                     <a class="button is-fullwidth is-primary is-medium" onclick="toggleAuth()">
-                                        <span><strong>Login </strong></span>
+                                        <span><strong>~~Login~~ </strong></span>
                                         <span class="icon is-small" id="loginIcon">
-                                            <i class="far fa-arrow-right"></i>
+                                            →
                                         </span>
                                     </a>
                                 </div>
                             </div>
                             <div class="is-divider" id="loginDivider"></div>
-                            <p class="title is-5">New to ECHO Digital?</p>
-                            <p class="subtitle is-7">Don't have an ECHO Digital account yet? Create one now:</p>
+                            <p class="title is-5">~~New to ECHO Digital?~~</p>
+                            <p class="subtitle is-7">~~Don't have an ECHO Digital account yet? Create one now:~~</p>
                             <div class="field">
                                 <div class="control">
                                     <a class="button is-fullwidth is-medium">
-                                        <span><strong>Join the Community </strong></span>
+                                        <span><strong>~~Join the Community ~~</strong></span>
                                         <span class="icon is-small" id="loginIcon">
-                                            <i class="far fa-arrow-right"></i>
+                                            →
                                         </span>
                                     </a>
                                 </div>
@@ -174,7 +188,7 @@
         </div>
 <footer class="footer">
   <div class="content has-text-centered has-text-grey is-size-7">
-      ©2019 Project ECHO. Content is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+      ~~©2019 Project ECHO. Content is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>~~.
   </div>
 </footer>
     </section>
