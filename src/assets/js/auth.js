@@ -47,7 +47,7 @@ function getAuthToken(){
 }
 
 function loadForm(){
-	document.getElementById('app').remove()
+	document.getElementById('mainNavbar').remove()
 }
 
 function loadApp(){
