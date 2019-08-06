@@ -13,7 +13,6 @@
 // }
 
 window.onload = async function(){
-	console.log('window invoked')
 	const tokenStatus = await getTokenStatus();
 	tokenStatus ? loadApp() :  loadForm();
 	document.getElementById('main').classList.remove('hide')
@@ -21,7 +20,6 @@ window.onload = async function(){
 
 async function getTokenStatus(){
 	const currentTokenStatus = await window.localStorage.getItem("echoAuth");
-	console.log(currentTokenStatus)
 	return currentTokenStatus;
 }
 
