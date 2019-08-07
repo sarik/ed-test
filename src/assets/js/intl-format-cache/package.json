@@ -1,0 +1,62 @@
+{
+  "_from": "intl-format-cache@^4.1.6",
+  "_id": "intl-format-cache@4.1.6",
+  "_inBundle": false,
+  "_integrity": "sha512-A9iI5F9NgWINJ4gKZs0trME5UV/EBWq4DwSSUUijcHN6KdYDznr9pLzpuAk00orXbJi/e9SWHkKBEwEAVGNMGg==",
+  "_location": "/intl-format-cache",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "intl-format-cache@^4.1.6",
+    "name": "intl-format-cache",
+    "escapedName": "intl-format-cache",
+    "rawSpec": "^4.1.6",
+    "saveSpec": null,
+    "fetchSpec": "^4.1.6"
+  },
+  "_requiredBy": [
+    "/intl-messageformat"
+  ],
+  "_resolved": "https://registry.npmjs.org/intl-format-cache/-/intl-format-cache-4.1.6.tgz",
+  "_shasum": "a1f7101f435fa06cc2fe3a968f4b393663ca92a4",
+  "_spec": "intl-format-cache@^4.1.6",
+  "_where": "/Users/echoadmin/Documents/Echo/Spark/Frontend/Container/node_modules/intl-messageformat",
+  "author": {
+    "name": "Eric Ferraiuolo",
+    "email": "eferraiuolo@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/formatjs/formatjs/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "A memoizer factory for Intl format constructors.",
+  "devDependencies": {
+    "@formatjs/intl-relativetimeformat": "^2.5.2"
+  },
+  "gitHead": "5712b2950f1ca82c7ea987a88a490a28157838fc",
+  "homepage": "https://github.com/formatjs/formatjs",
+  "keywords": [
+    "intl",
+    "i18n"
+  ],
+  "license": "BSD-3-Clause",
+  "main": "dist/index",
+  "name": "intl-format-cache",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/formatjs/formatjs.git"
+  },
+  "scripts": {
+    "benchmark": "ts-node --project tsconfig.cjs.json tests/benchmark",
+    "build": "tsc && npm run mjs && tsc -p src/tsconfig.cjs.json && rollup -c rollup.config.js",
+    "clean": "rimraf dist lib",
+    "mjs": "find ./dist -depth -name \"*.js\" -exec sh -c 'f=\"{}\"; mv -- \"$f\" \"${f%.js}.mjs\"' \\;",
+    "prepublishOnly": "npm run build",
+    "test": "mocha --opts ../../mocha.opts tests/index.ts"
+  },
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "version": "4.1.6"
+}

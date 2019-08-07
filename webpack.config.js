@@ -41,7 +41,10 @@ module.exports = {
             {from: path.resolve(__dirname, 'libs/system.js')},
             {from: path.resolve(__dirname, 'src/assets')},
         ]),
-		new CleanWebpackPlugin(['release'])
+		new CleanWebpackPlugin(['release']),
+		new webpack.ProvidePlugin({
+		    IntlMessageFormat: ['src/assets/js/intl-messageformat/src/index', 'default'],
+		})
 	],
 	devtool: 'source-map',
 	externals: [

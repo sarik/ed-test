@@ -12,10 +12,15 @@
 // 	console.log('form submitted')
 // }
 
+const saveUsername = document.getElementsByName('save-username')[0]
+const username = document.getElementsByName('username')[0]
+
 window.onload = async function(){
 	const tokenStatus = await getTokenStatus();
 	tokenStatus ? loadApp() :  loadForm();
 	document.getElementById('main').classList.remove('hide')
+	saveUsername.checked = window.localStorage.getItem('username')
+	username.value = window.localStorage.getItem('username')
 };
 
 async function getTokenStatus(){
@@ -34,6 +39,12 @@ async function toggleAuth(){
 		await window.localStorage.removeItem("echoAuth");
 		authToken = null
 	} else {
+		if(saveUsername.checked){
+			window.localStorage.setItem("username", username.value);
+		}
+		else{
+			window.localStorage.removeItem("username");
+		}
 		await window.localStorage.setItem("echoAuth", "lolka");
 		authToken = 'some-auth-token'
 	}
