@@ -70,6 +70,10 @@ module.exports = {
                 target: "http://localhost:8236",
                 pathRewrite: {"^/home" : ""}
             },
+             "/discover": {
+                target: "http://localhost:8237",
+                pathRewrite: {"^/discover" : ""}
+            },
         }
     }
 };
