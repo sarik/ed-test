@@ -57,17 +57,14 @@
                     <a class="navbar-item" href="/#/home">
                         <span class="icon"><i class="far fa-home"></i></span>&nbsp;~~Home~~
                     </a>
-                    <a class="navbar-item" href="/#/check-in">
+                    <a class="navbar-item is-hidden-touch" href="/#/check-in">
                         <span class="icon"><i class="far fa-sign-in"></i></span>&nbsp; ~~Join a session~~
                     </a>
-                    <a class="navbar-item">
-                        <span class="icon"><i class="far fa-users-class"></i></span>&nbsp; ~~My programs~~
+                    <a class="navbar-item is-hidden-desktop" href="/#/check-in">
+                        <span class="icon"><i class="far fa-sign-in"></i></span>&nbsp; Join
                     </a>
                     <a class="navbar-item">
                         <span class="icon"><i class="far fa-globe"></i></span>&nbsp; ~~Discover~~
-                    </a>
-                    <a class="navbar-item">
-                        <span class="icon"><i class="far fa-users"></i></span>&nbsp; ~~Community~~
                     </a>
                     <a class="navbar-item is-hidden-desktop">
                         <span class="icon"><i class="far fa-user"></i></span>&nbsp; ~~Account~~
@@ -77,12 +74,109 @@
                     <div class="navbar-item is-size-7">
                     	Rebekkah Jordan, MPH
                     </div>
-                    <a class="navbar-item">
-                        <span class="icon"><i class="far fa-bell has-badge-rounded has-badge-danger" data-badge="3"></i></span>
+                    <div class="navbar-item" id="notifDropdownWrapper">
+                        <a class="navbar-link is-arrowless" onclick="toggleDropdown('notifDropdownWrapper')">
+                            <span class="icon"><i class="far fa-bell has-badge-rounded has-badge-danger" data-badge="3"></i></span>
+                        </a>
+                        <div class="navbar-dropdown is-right is-boxed" id="notifDropdown">
+                            <div class="navbar-item" onclick="toggleAuth()">
+                                <article class="media">
+                                  <figure class="media-left">
+                                    <p class="image is-32x32" style="border-radius:9999px;overflow:hidden">
+                                      <img src="./img/user_demo.jpg">
+                                    </p>
+                                  </figure>
+                                  <div class="media-content">
+                                    <div class="content">
+                                      <p>
+                                        <a href="">John smith</a> is inviting you to <a href="">Hepatitis C ECHO Program</a>
+                                        <br/><span class="is-size-7 has-text-grey">Yesterday, 2PM</span>
+                                      </p>
 
-                    </a>
-                    <div class="navbar-item has-dropdown" id="userDropdownWrapper">
-                        <a class="navbar-link" onclick="toggleDropdown('userDropdownWrapper')">
+                                    </div>
+                                    <nav class="level is-mobile">
+                                      <div class="level-left">
+                                        <a class="level-item">
+                                            <button class="button is-primary is-small is-rounded"><span class="icon is-small"><i class="far fa-check"></i> </span> &nbsp;Accept Invite</button>
+                                        </a>
+                                        <a class="level-item">
+                                            <button class="button is-small is-rounded"><span class="icon is-small"><i class="far fa-times"></i> </span> &nbsp;Reject</button>
+                                        </a>
+                                      </div>
+                                    </nav>
+                                  </div>
+                                </article>
+                            </div>
+                            <hr class="navbar-divider">
+                            <div class="navbar-item" onclick="toggleAuth()">
+                                <article class="media">
+                                  <figure class="media-left">
+                                    <p class="image is-32x32" style="border-radius:9999px;overflow:hidden">
+                                      <img src="./img/user_demo.jpg">
+                                    </p>
+                                  </figure>
+                                  <div class="media-content">
+                                    <div class="content">
+                                      <p>
+                                        <a href="">Andy Ortegon</a> is requesting to join <a href="">Autism ECHO Program</a>
+                                        <br/><span class="is-size-7 has-text-grey">3 days ago</span>
+                                      </p>
+                                    </div>
+                                    <nav class="level is-mobile">
+                                      <div class="level-left">
+                                        <a class="level-item">
+                                            <button class="button is-primary is-small is-rounded"><span class="icon is-small"><i class="far fa-check"></i> </span> &nbsp;Accept join request</button>
+                                        </a>
+                                        <a class="level-item">
+                                            <button class="button is-small is-rounded"><span class="icon is-small"><i class="far fa-times"></i> </span> &nbsp;Reject</button>
+                                        </a>
+
+                                      </div>
+                                    </nav>
+                                  </div>
+                                </article>
+                            </div>
+                            <hr class="navbar-divider">
+                            <div class="navbar-item" onclick="toggleAuth()">
+                                <article class="media">
+                                  <figure class="media-left">
+                                    <p class="image is-32x32 has-text-centered">
+                                      <i class="far fa-check-circle has-text-success fa-lg"></i>
+                                    </p>
+                                  </figure>
+                                  <div class="media-content">
+                                    <div class="content">
+                                      <p>
+                                        Your email <a href="">rebekkahjordan@gmail.com</a> has been successfully verified
+                                        <br/><span class="is-size-7 has-text-grey">1 week ago</span>
+                                      </p>
+                                    </div>
+                                  </div>
+                                </article>
+                            </div>
+                            <hr class="navbar-divider">
+                            <div class="navbar-item" onclick="toggleAuth()">
+                                <article class="media">
+                                  <figure class="media-left">
+                                    <p class="image is-32x32 has-text-centered">
+                                      <i class="far fa-exclamation-triangle has-text-warning fa-lg"></i>
+                                    </p>
+                                  </figure>
+                                  <div class="media-content">
+                                    <div class="content">
+                                      <p>
+                                        Liver Cancer ECHO's session on 14 Aug 2019 has been rescheduled to 17 Aug 2019
+                                        <br/><span class="is-size-7 has-text-grey">2 months ago</span>
+                                      </p>
+
+                                    </div>
+                                  </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navbar-item has-dropdown" id="notifDropdownWrapper">
+                        <a class="navbar-link" onclick="toggleDropdown('notifDropdownWrapper')">
                             <figure class="image is-24x24">
                                 <img class="is-rounded" src="./img/user_demo.jpg">
                             </figure>
@@ -188,12 +282,10 @@
                     </div>
                 </div>
             </div>
-        </div>
-<footer class="footer">
   <div class="content has-text-centered has-text-grey is-size-7">
       ~~©2019 Project ECHO. Content is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>~~.
   </div>
-</footer>
+        </div>
     </section>
 
 
@@ -225,13 +317,13 @@
 						    </div>
 						  </div>
 						</div>
-					  
+
 					   <button class="button is-primary" onclick="handleI18n()">
 							~~Translate~~
 						</button>
-					  
+
 					</div>
-					
+
 				</div>
 			</div>
 			<button class="modal-close is-large" aria-label="close" onclick="document.getElementById('i18n').classList.remove('is-active')"></button>
