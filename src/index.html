@@ -132,7 +132,7 @@
                             <div class="field">
                                 <label class="label">~~Email or Phone~~</label>
                                 <div class="control">
-                                    <input class="input" type="text">
+                                    <input class="input" type="text" name="username">
                                 </div>
                             </div>
                             <div class="field">
@@ -145,11 +145,11 @@
                                 </div>
                                 <p class="help"><a href="/forgot-password">~~Having trouble signing in?~~</a></p>
                             </div>
-                            <div class="field" style="display:none">
+                            <div class="field">
                                 <div class="control">
                                     <label class="checkbox">
-                                        <input type="checkbox">
-                                        ~~Remember me~~
+                                        <input type="checkbox" name="save-username">
+                                        ~~Save my Email/Phone~~
                                     </label>
                                 </div>
                             </div>
@@ -242,5 +242,39 @@
 
 		<!-- handles custom js for pure css components -->
 		<script type="text/javascript" src="js/script.js"></script>
+
+        <!-- INTL message format -->
+        <!-- <script src="js/intl-messageformat/src/index"></script> -->
+
+        <script type="text/javascript">
+            // var MESSAGES = {
+            //   'en-US': {
+            //     NUM_PHOTOS:
+            //       'You have {numPhotos, plural, ' +
+            //       '=0 {no photos.}' +
+            //       '=1 {one photo.}' +
+            //       'other {# photos.}}'
+            //   },
+             
+            //   'es-MX': {
+            //     NUM_PHOTOS:
+            //       'Usted {numPhotos, plural, ' +
+            //       '=0 {no tiene fotos.}' +
+            //       '=1 {tiene una foto.}' +
+            //       'other {tiene # fotos.}}'
+            //   }
+            // };
+             
+            // var output;
+             
+            // var enNumPhotos = new IntlMessageFormat(MESSAGES['en-US'].NUM_PHOTOS, 'en-US');
+            // output = enNumPhotos.format({ numPhotos: 1000 });
+            // console.log(output); // => "You have 1,000 photos."
+             
+            // var esNumPhotos = new IntlMessageFormat(MESSAGES['es-MX'].NUM_PHOTOS, 'es-MX');
+            // output = esNumPhotos.format({ numPhotos: 1000 });
+            // console.log(output); // => "Usted tiene 1,000 fotos."
+            var msg = new IntlMessageFormat('My name is name.', 'en-US');
+        </script>
 	</body>
 </html>
