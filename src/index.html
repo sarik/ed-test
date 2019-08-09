@@ -71,12 +71,12 @@
                     <div class="navbar-item is-size-7">
                     	Rebekkah Jordan, MPH
                     </div>
-                    <div class="navbar-item" id="notifDropdownWrapper">
-                        <a class="navbar-link is-arrowless" onclick="toggleDropdown('notifDropdownWrapper')">
+                    <div class="navbar-item" id="notifDropdownWrapper" onmouseenter="toggleDropdown('notifDropdownWrapper')" onmouseleave="toggleDropdown('notifDropdownWrapper')">
+                        <a class="navbar-link is-arrowless">
                             <span class="icon"><i class="far fa-bell has-badge-rounded has-badge-danger" data-badge="3"></i></span>
                         </a>
                         <div class="navbar-dropdown is-right is-boxed" id="notifDropdown">
-                            <div class="navbar-item" onclick="toggleAuth()">
+                            <div class="navbar-item">
                                 <article class="media">
                                   <figure class="media-left">
                                     <p class="image is-32x32" style="border-radius:9999px;overflow:hidden">
@@ -105,7 +105,7 @@
                                 </article>
                             </div>
                             <hr class="navbar-divider">
-                            <div class="navbar-item" onclick="toggleAuth()">
+                            <div class="navbar-item">
                                 <article class="media">
                                   <figure class="media-left">
                                     <p class="image is-32x32" style="border-radius:9999px;overflow:hidden">
@@ -134,7 +134,7 @@
                                 </article>
                             </div>
                             <hr class="navbar-divider">
-                            <div class="navbar-item" onclick="toggleAuth()">
+                            <div class="navbar-item">
                                 <article class="media">
                                   <figure class="media-left">
                                     <p class="image is-32x32 has-text-centered">
@@ -152,7 +152,7 @@
                                 </article>
                             </div>
                             <hr class="navbar-divider">
-                            <div class="navbar-item" onclick="toggleAuth()">
+                            <div class="navbar-item">
                                 <article class="media">
                                   <figure class="media-left">
                                     <p class="image is-32x32 has-text-centered">
@@ -172,13 +172,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="navbar-item has-dropdown" id="notifDropdownWrapper">
-                        <a class="navbar-link" onclick="toggleDropdown('notifDropdownWrapper')">
+                    <div class="navbar-item has-dropdown" id="userDropdown" onmouseenter="toggleDropdown('userDropdown')" onmouseleave="toggleDropdown('userDropdown')">
+                        <a class="navbar-link">
                             <figure class="image is-24x24">
                                 <img class="is-rounded" src="./img/user_demo.jpg">
                             </figure>
                         </a>
-                        <div class="navbar-dropdown is-right is-boxed" id="userDropdown">
+                        <div class="navbar-dropdown is-right is-boxed">
                             <a class="navbar-item" href="/user/my-profile">
                                 <span class="icon"><i class="far fa-user-circle"></i></span>~~View profile~~
                             </a>
@@ -200,7 +200,7 @@
                                     <span class="icon"><i class="far fa-exclamation-circle"></i></span>~~Report a bug~~</span>
                             </a>
                             <hr class="navbar-divider" href="/log-out">
-                            <a class="navbar-item has-text-danger" onclick="toggleAuth()">
+                            <a class="navbar-item has-text-danger" onclick="signOut()">
                                     <span class="icon "><i class="far fa-sign-out has-text-danger"></i></span>~~Log out~~
                             </a>
                         </div>
@@ -229,7 +229,7 @@
                             <div class="field">
                                 <label class="label">~~Password~~</label>
                                 <div class="control has-icons-right">
-                                    <input class="input" type="password">
+                                    <input class="input" type="password" name="password">
                                     <span class="icon is-small is-right">
                                         <i class="far fa-eye"></i>
                                     </span>
@@ -254,7 +254,7 @@
                             </div>
                             <div class="field">
                                 <div class="control">
-                                    <a class="button is-fullwidth is-primary is-medium" onclick="toggleAuth()">
+                                    <a class="button is-fullwidth is-primary is-medium" onclick="signIn(event)">
                                         <span><strong>~~Login~~ </strong></span>
                                         <span class="icon is-small" id="loginIcon">
                                             →
@@ -363,7 +363,7 @@
             // var esNumPhotos = new IntlMessageFormat(MESSAGES['es-MX'].NUM_PHOTOS, 'es-MX');
             // output = esNumPhotos.format({ numPhotos: 1000 });
             // console.log(output); // => "Usted tiene 1,000 fotos."
-            var msg = new IntlMessageFormat('My name is name.', 'en-US');
+            // var msg = new IntlMessageFormat('My name is name.', 'en-US');
         </script>
 	</body>
 </html>

@@ -31,26 +31,3 @@ export async function loadApp(name, hash, appURL, storeURL, globalEventDistribut
     // register the app with singleSPA and pass a reference to the store of the app as well as a reference to the globalEventDistributor
     singleSpa.registerApplication(name, () => SystemJS.import(appURL), hashPrefix(hash), customProps);
 }
-
-export async function isAuthenticated(){
-    //uncomment to import auth.js using SystemJS. Then use authToken to decide if user is logged in or not
-
-    // const x = await SystemJS.import('/auth.js').then(auth => auth.getAuthToken())
-    // console.log(x)
-    
-    const token = await localStorage.getItem('echoAuth');
-
-    if(token) {
-        return true;
-    };
-
-    return false;
-};
-
-export function authenticate(){
-
-};
-
-export function logout(){
-
-}

@@ -1,6 +1,18 @@
 import * as singleSpa from 'single-spa';
 import { GlobalEventDistributor } from './globalEventDistributor'
-import { loadApp, isAuthenticated } from './helper'
+import { loadApp } from './helper'
+import getCookie from './cookies.js'
+
+async function isAuthenticated(){
+    
+    const token = await getCookie('token');
+    // alert(token)
+    if(token) {
+        return true;
+    };
+
+    return false;
+};
 
 async function init() {
     const authenticationStatus = await isAuthenticated();
