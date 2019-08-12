@@ -4,7 +4,22 @@
   "description": "Container app that builds the foundation of multiple SPAs",
   "scripts": {
     "watch": "webpack-dev-server --port 8233",
-    "build": "webpack -p --progress"
+    "build": "webpack -p --progress",
+    "install:portal": "npm i",
+    "install:attendance": "cd ../ed-attendance-web-app/ && npm i",
+    "install:home": "cd ../ed-home-web-app/ && npm i",
+    "install:user-settings": "cd ../ed-user-settings-web-app/ && npm i",
+    "install-all": "npm run install:portal && npm run install:attendance && npm run install:home && npm run install:user-settings",
+    "start:portal": "npm run watch",
+    "start:attendance": "cd ../ed-attendance-web-app/ && npm run watch",
+    "start:home": "cd ../ed-home-web-app/ && npm run watch",
+    "start:user-settings": "cd ../ed-user-settings-web-app/ && npm run watch",
+    "start-all": "concurrently --kill-others --kill-others-on-fail -p name --names \"portal,attendance,home,user-settings\" \"npm run start:portal\" \"npm run start:attendance\" \"npm run start:home\" \"npm run start:user-settings\" ",
+    "pull:portal" : "git pull",
+    "pull:attendance": "cd ../ed-attendance-web-app/ && git pull",
+    "pull:home": "cd ../ed-home-web-app/ && git pull",
+    "pull:user-settings": "cd ../ed-user-settings-web-app/ && git pull",
+    "pull-all": "npm run pull:portal && npm run pull:attendance && npm run pull:home && npm run pull:user-settings"
   },
   "author": "Abhishek Bansal",
   "license": "MIT",
