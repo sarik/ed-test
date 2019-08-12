@@ -453,6 +453,11 @@ body {
 box-shadow: 0 1px 9px rgba(10,10,10,.13)
 }
 
+.homeBox {
+box-shadow: 0 10px 28px rgba(10,10,10,.07);
+border-radius:20px;
+}
+
 .panelHeader {
     padding: 0.6em;
     font-size: 0.7em;
