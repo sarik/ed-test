@@ -445,8 +445,8 @@
     font-family: sans-serif !important;
     }
 
-body {
-    background: #f9f9f9 !important;
+html, body {
+    background: #f1f0f0 !important;
 }
 
 .box {
@@ -521,3 +521,4 @@ border-radius:20px;
 .card-footer-item-right {
     border-radius:0px 0px 12px 0px;
 }
+
