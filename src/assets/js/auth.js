@@ -68,11 +68,12 @@ async function getTokenStatus() {
 // }
 
 async function signIn(event) {
-	console.log(event.target)
-	event.target.className += " is-loading"
-	event.target.setAttribute('disabled', true)
+	let currentTarget =  event.currentTarget
+	 currentTarget.className += " is-loading"
+	 currentTarget.setAttribute('disabled', true)
+	 
 	await fetch(
-		"https://66d09ceb-34ad-4a3e-bb58-99319e609f91.mock.pstmn.io/api/v1/auth/signin",
+		"http://localhost:2222/api/v1/signin",
 		{
 			method: "POST",
 			body: JSON.stringify({
@@ -83,8 +84,6 @@ async function signIn(event) {
 	)
 		.then(res => res.json())
 		.then(data => {
-			event.target.classList.remove("is-loading")
-			event.target.removeAttribute('disabled')
 			if(data.success){
 				if (saveUsername.checked) {
 					window.localStorage.setItem("username", username.value);
@@ -94,6 +93,8 @@ async function signIn(event) {
 				document.cookie = `token=${data.token}`
 				location.reload();
 			}
+			currentTarget.classList.remove("is-loading")
+			currentTarget.removeAttribute('disabled')
 		});
 }
 
