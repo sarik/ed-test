@@ -45,163 +45,304 @@
 </head>
 
 <body id="main">
-    <nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
+    <nav
+        class="navbar has-shadow"
+        role="navigation"
+        aria-label="main navigation"
+    >
         <div class="container">
             <div class="navbar-brand">
                 <a class="navbar-item" href="/#/home">
-                    <span id="logoText"><span class="has-text-info"><strong>ECHO</strong></span>DIGITAL</span>
+                    <span id="logoText"
+                        ><span class="has-text-info"><strong>ECHO</strong></span
+                        >DIGITAL</span
+                    >
                 </a>
             </div>
             <div id="mainNavbar" class="navbar-menu">
                 <div class="navbar-start">
                     <a class="navbar-item is-hidden-touch" href="/#/check-in">
-                        <span class="icon"><i class="far fa-sign-in"></i></span>&nbsp; ~~Join a session~~
+                        <span class="icon"><i class="far fa-sign-in"></i></span
+                        >&nbsp; ~~Join a session~~
                     </a>
                     <a class="navbar-item is-hidden-desktop" href="/#/check-in">
-                        <span class="icon"><i class="far fa-sign-in"></i></span>&nbsp; Join
+                        <span class="icon"><i class="far fa-sign-in"></i></span
+                        >&nbsp; Join
                     </a>
                     <a class="navbar-item" href="/#/discover">
-                        <span class="icon"><i class="far fa-globe"></i></span>&nbsp; ~~Discover~~
+                        <span class="icon"><i class="far fa-globe"></i></span
+                        >&nbsp; ~~Discover~~
                     </a>
                     <a class="navbar-item is-hidden-desktop">
-                        <span class="icon"><i class="far fa-user"></i></span>&nbsp; ~~Account~~
+                        <span class="icon"><i class="far fa-user"></i></span
+                        >&nbsp; ~~Account~~
                     </a>
                 </div>
                 <div class="navbar-end">
-                    <div class="navbar-item is-size-7">
-                    	Rebekkah Jordan, MPH
-                    </div>
-                    <div class="navbar-item" id="notifDropdownWrapper" onmouseenter="toggleDropdown('notifDropdownWrapper')" onmouseleave="toggleDropdown('notifDropdownWrapper')">
+                    <div class="navbar-item is-size-7" id="username"></div>
+                    <div
+                        class="navbar-item"
+                        id="notifDropdownWrapper"
+                        onmouseenter="toggleDropdown('notifDropdownWrapper')"
+                        onmouseleave="toggleDropdown('notifDropdownWrapper')"
+                    >
                         <a class="navbar-link is-arrowless">
-                            <span class="icon"><i class="far fa-bell has-badge-rounded has-badge-danger" data-badge="3"></i></span>
+                            <span class="icon"
+                                ><i
+                                    class="far fa-bell has-badge-rounded has-badge-danger"
+                                    data-badge="3"
+                                ></i
+                            ></span>
                         </a>
-                        <div class="navbar-dropdown is-right is-boxed" id="notifDropdown">
+                        <div
+                            class="navbar-dropdown is-right is-boxed"
+                            id="notifDropdown"
+                        >
                             <div class="navbar-item">
                                 <article class="media">
-                                  <figure class="media-left">
-                                    <p class="image is-32x32" style="border-radius:9999px;overflow:hidden">
-                                      <img src="./img/user_demo.jpg">
-                                    </p>
-                                  </figure>
-                                  <div class="media-content">
-                                    <div class="content">
-                                      <p>
-                                        <a href="">John smith</a> is inviting you to <a href="">Hepatitis C ECHO Program</a>
-                                        <br/><span class="is-size-7 has-text-grey">Yesterday, 2PM</span>
-                                      </p>
-
+                                    <figure class="media-left">
+                                        <p
+                                            class="image is-32x32"
+                                            style="border-radius:9999px;overflow:hidden"
+                                        >
+                                            <img src="./img/user_demo.jpg" />
+                                        </p>
+                                    </figure>
+                                    <div class="media-content">
+                                        <div class="content">
+                                            <p>
+                                                <a href="">John smith</a> is
+                                                inviting you to
+                                                <a href=""
+                                                    >Hepatitis C ECHO Program</a
+                                                >
+                                                <br /><span
+                                                    class="is-size-7 has-text-grey"
+                                                    >Yesterday, 2PM</span
+                                                >
+                                            </p>
+                                        </div>
+                                        <nav class="level is-mobile">
+                                            <div class="level-left">
+                                                <a class="level-item">
+                                                    <button
+                                                        class="button is-primary is-small is-rounded"
+                                                    >
+                                                        <span
+                                                            class="icon is-small"
+                                                            ><i
+                                                                class="far fa-check"
+                                                            ></i>
+                                                        </span>
+                                                        &nbsp;Accept Invite
+                                                    </button>
+                                                </a>
+                                                <a class="level-item">
+                                                    <button
+                                                        class="button is-small is-rounded"
+                                                    >
+                                                        <span
+                                                            class="icon is-small"
+                                                            ><i
+                                                                class="far fa-times"
+                                                            ></i>
+                                                        </span>
+                                                        &nbsp;Reject
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        </nav>
                                     </div>
-                                    <nav class="level is-mobile">
-                                      <div class="level-left">
-                                        <a class="level-item">
-                                            <button class="button is-primary is-small is-rounded"><span class="icon is-small"><i class="far fa-check"></i> </span> &nbsp;Accept Invite</button>
-                                        </a>
-                                        <a class="level-item">
-                                            <button class="button is-small is-rounded"><span class="icon is-small"><i class="far fa-times"></i> </span> &nbsp;Reject</button>
-                                        </a>
-                                      </div>
-                                    </nav>
-                                  </div>
                                 </article>
                             </div>
-                            <hr class="navbar-divider">
+                            <hr class="navbar-divider" />
                             <div class="navbar-item">
                                 <article class="media">
-                                  <figure class="media-left">
-                                    <p class="image is-32x32" style="border-radius:9999px;overflow:hidden">
-                                      <img src="./img/user_demo.jpg">
-                                    </p>
-                                  </figure>
-                                  <div class="media-content">
-                                    <div class="content">
-                                      <p>
-                                        <a href="">Andy Ortegon</a> is requesting to join <a href="">Autism ECHO Program</a>
-                                        <br/><span class="is-size-7 has-text-grey">3 days ago</span>
-                                      </p>
+                                    <figure class="media-left">
+                                        <p
+                                            class="image is-32x32"
+                                            style="border-radius:9999px;overflow:hidden"
+                                        >
+                                            <img src="./img/user_demo.jpg" />
+                                        </p>
+                                    </figure>
+                                    <div class="media-content">
+                                        <div class="content">
+                                            <p>
+                                                <a href="">Andy Ortegon</a> is
+                                                requesting to join
+                                                <a href=""
+                                                    >Autism ECHO Program</a
+                                                >
+                                                <br /><span
+                                                    class="is-size-7 has-text-grey"
+                                                    >3 days ago</span
+                                                >
+                                            </p>
+                                        </div>
+                                        <nav class="level is-mobile">
+                                            <div class="level-left">
+                                                <a class="level-item">
+                                                    <button
+                                                        class="button is-primary is-small is-rounded"
+                                                    >
+                                                        <span
+                                                            class="icon is-small"
+                                                            ><i
+                                                                class="far fa-check"
+                                                            ></i>
+                                                        </span>
+                                                        &nbsp;Accept join
+                                                        request
+                                                    </button>
+                                                </a>
+                                                <a class="level-item">
+                                                    <button
+                                                        class="button is-small is-rounded"
+                                                    >
+                                                        <span
+                                                            class="icon is-small"
+                                                            ><i
+                                                                class="far fa-times"
+                                                            ></i>
+                                                        </span>
+                                                        &nbsp;Reject
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        </nav>
                                     </div>
-                                    <nav class="level is-mobile">
-                                      <div class="level-left">
-                                        <a class="level-item">
-                                            <button class="button is-primary is-small is-rounded"><span class="icon is-small"><i class="far fa-check"></i> </span> &nbsp;Accept join request</button>
-                                        </a>
-                                        <a class="level-item">
-                                            <button class="button is-small is-rounded"><span class="icon is-small"><i class="far fa-times"></i> </span> &nbsp;Reject</button>
-                                        </a>
-
-                                      </div>
-                                    </nav>
-                                  </div>
                                 </article>
                             </div>
-                            <hr class="navbar-divider">
+                            <hr class="navbar-divider" />
                             <div class="navbar-item">
                                 <article class="media">
-                                  <figure class="media-left">
-                                    <p class="image is-32x32 has-text-centered">
-                                      <i class="far fa-check-circle has-text-success fa-lg"></i>
-                                    </p>
-                                  </figure>
-                                  <div class="media-content">
-                                    <div class="content">
-                                      <p>
-                                        Your email <a href="">rebekkahjordan@gmail.com</a> has been successfully verified
-                                        <br/><span class="is-size-7 has-text-grey">1 week ago</span>
-                                      </p>
+                                    <figure class="media-left">
+                                        <p
+                                            class="image is-32x32 has-text-centered"
+                                        >
+                                            <i
+                                                class="far fa-check-circle has-text-success fa-lg"
+                                            ></i>
+                                        </p>
+                                    </figure>
+                                    <div class="media-content">
+                                        <div class="content">
+                                            <p>
+                                                Your email
+                                                <a href=""
+                                                    >rebekkahjordan@gmail.com</a
+                                                >
+                                                has been successfully verified
+                                                <br /><span
+                                                    class="is-size-7 has-text-grey"
+                                                    >1 week ago</span
+                                                >
+                                            </p>
+                                        </div>
                                     </div>
-                                  </div>
                                 </article>
                             </div>
-                            <hr class="navbar-divider">
+                            <hr class="navbar-divider" />
                             <div class="navbar-item">
                                 <article class="media">
-                                  <figure class="media-left">
-                                    <p class="image is-32x32 has-text-centered">
-                                      <i class="far fa-exclamation-triangle has-text-warning fa-lg"></i>
-                                    </p>
-                                  </figure>
-                                  <div class="media-content">
-                                    <div class="content">
-                                      <p>
-                                        Liver Cancer ECHO's session on 14 Aug 2019 has been rescheduled to 17 Aug 2019
-                                        <br/><span class="is-size-7 has-text-grey">2 months ago</span>
-                                      </p>
-
+                                    <figure class="media-left">
+                                        <p
+                                            class="image is-32x32 has-text-centered"
+                                        >
+                                            <i
+                                                class="far fa-exclamation-triangle has-text-warning fa-lg"
+                                            ></i>
+                                        </p>
+                                    </figure>
+                                    <div class="media-content">
+                                        <div class="content">
+                                            <p>
+                                                Liver Cancer ECHO's session on
+                                                14 Aug 2019 has been rescheduled
+                                                to 17 Aug 2019
+                                                <br /><span
+                                                    class="is-size-7 has-text-grey"
+                                                    >2 months ago</span
+                                                >
+                                            </p>
+                                        </div>
                                     </div>
-                                  </div>
                                 </article>
                             </div>
                         </div>
                     </div>
-                    <div class="navbar-item has-dropdown" id="userDropdown" onmouseenter="toggleDropdown('userDropdown')" onmouseleave="toggleDropdown('userDropdown')">
+                    <div
+                        class="navbar-item has-dropdown"
+                        id="userDropdown"
+                        onmouseenter="toggleDropdown('userDropdown')"
+                        onmouseleave="toggleDropdown('userDropdown')"
+                    >
                         <a class="navbar-link">
                             <figure class="image is-24x24">
-                                <img class="is-rounded" src="./img/user_demo.jpg">
+                                <img
+                                    class="is-rounded"
+                                    src="./img/user_demo.jpg"
+                                    id="user-iconpic"
+                                />
                             </figure>
                         </a>
                         <div class="navbar-dropdown is-right is-boxed">
                             <a class="navbar-item" href="/user/my-profile">
-                                <span class="icon"><i class="far fa-user-circle"></i></span>~~View profile~~
+                                <span class="icon"
+                                    ><i class="far fa-user-circle"></i></span
+                                >~~View profile~~
                             </a>
-                            <a class="navbar-item" href="/user/my-notifications">
+                            <a
+                                class="navbar-item"
+                                href="/user/my-notifications"
+                            >
                                 <span>
-                                    <span class="icon"><i class="far fa-comment-alt-dots"></i></span>~~Messages~~
+                                    <span class="icon"
+                                        ><i
+                                            class="far fa-comment-alt-dots"
+                                        ></i></span
+                                    >~~Messages~~
                                 </span>
                             </a>
                             <a class="navbar-item" href="/#/account">
                                 <span>
-                                    <span class="icon"><i class="far fa-cog"></i></span>~~My settings~~</span>
+                                    <span class="icon"
+                                        ><i class="far fa-cog"></i></span
+                                    >~~My settings~~</span
+                                >
                             </a>
                             <a class="navbar-item" href="/user/my-settings">
                                 <span>
-                                    <span class="icon"><i class="far fa-question-circle"></i></span>~~Help Center~~</span>
+                                    <span class="icon"
+                                        ><i
+                                            class="far fa-question-circle"
+                                        ></i></span
+                                    >~~Help Center~~</span
+                                >
                             </a>
-                            <a class="navbar-item" href="mailto:support@echodigital.org">
+                            <a
+                                class="navbar-item"
+                                href="mailto:support@echodigital.org"
+                            >
                                 <span>
-                                    <span class="icon"><i class="far fa-exclamation-circle"></i></span>~~Report a bug~~</span>
+                                    <span class="icon"
+                                        ><i
+                                            class="far fa-exclamation-circle"
+                                        ></i></span
+                                    >~~Report a bug~~</span
+                                >
                             </a>
-                            <hr class="navbar-divider" href="/log-out">
-                            <a class="navbar-item has-text-danger" onclick="signOut()">
-                                    <span class="icon "><i class="far fa-sign-out has-text-danger"></i></span>~~Log out~~
+                            <hr class="navbar-divider" href="/log-out" />
+                            <a
+                                class="navbar-item has-text-danger"
+                                onclick="signOut()"
+                            >
+                                <span class="icon "
+                                    ><i
+                                        class="far fa-sign-out has-text-danger"
+                                    ></i></span
+                                >~~Log out~~
                             </a>
                         </div>
                     </div>
@@ -215,31 +356,53 @@
                 <div class="container">
                     <div class="columns is-centered is-variable is-6">
                         <div class="column is-6">
-                            <img src="./img/banner_demo.jpg" class="image is-fullwidth" alt="" />
+                            <img
+                                src="./img/banner_demo.jpg"
+                                class="image is-fullwidth"
+                                alt=""
+                            />
                         </div>
                         <div class="column is-3">
                             <p class="title is-3">~~Login~~</p>
-                            <p class="subtitle is-5">~~Please sign in with your ECHO registered email or phone number~~</p>
+                            <p class="subtitle is-5">
+                                ~~Please sign in with your ECHO registered email
+                                or phone number~~
+                            </p>
                             <div class="field">
                                 <label class="label">~~Email or Phone~~</label>
                                 <div class="control">
-                                    <input class="input" type="text" name="username">
+                                    <input
+                                        class="input"
+                                        type="text"
+                                        name="username"
+                                    />
                                 </div>
                             </div>
                             <div class="field">
                                 <label class="label">~~Password~~</label>
                                 <div class="control has-icons-right">
-                                    <input class="input" type="password" name="password">
+                                    <input
+                                        class="input"
+                                        type="password"
+                                        name="password"
+                                    />
                                     <span class="icon is-small is-right">
                                         <i class="far fa-eye"></i>
                                     </span>
                                 </div>
-                                <p class="help"><a href="/forgot-password">~~Having trouble signing in?~~</a></p>
+                                <p class="help">
+                                    <a href="/forgot-password"
+                                        >~~Having trouble signing in?~~</a
+                                    >
+                                </p>
                             </div>
                             <div class="field">
                                 <div class="control">
                                     <label class="checkbox">
-                                        <input type="checkbox" name="save-username">
+                                        <input
+                                            type="checkbox"
+                                            name="save-username"
+                                        />
                                         ~~Remember me~~
                                     </label>
                                 </div>
@@ -247,16 +410,22 @@
                             <div class="field">
                                 <div class="control">
                                     <label class="checkbox">
-                                        <input type="checkbox">
+                                        <input type="checkbox" />
                                         ~~Keep me signed in~~
                                     </label>
                                 </div>
                             </div>
                             <div class="field">
                                 <div class="control">
-                                    <a class="button is-fullwidth is-primary is-medium" onclick="signIn(event)">
+                                    <a
+                                        class="button is-fullwidth is-primary is-medium"
+                                        onclick="signIn(event)"
+                                    >
                                         <span><strong>~~Login~~ </strong></span>
-                                        <span class="icon is-small" id="loginIcon">
+                                        <span
+                                            class="icon is-small"
+                                            id="loginIcon"
+                                        >
                                             →
                                         </span>
                                     </a>
@@ -264,12 +433,22 @@
                             </div>
                             <div class="is-divider" id="loginDivider"></div>
                             <p class="title is-5">~~New to ECHO Digital?~~</p>
-                            <p class="subtitle is-7">~~Don't have an ECHO Digital account yet? Create one now:~~</p>
+                            <p class="subtitle is-7">
+                                ~~Don't have an ECHO Digital account yet? Create
+                                one now:~~
+                            </p>
                             <div class="field">
                                 <div class="control">
                                     <a class="button is-fullwidth is-medium">
-                                        <span><strong>~~Join the Community ~~</strong></span>
-                                        <span class="icon is-small" id="loginIcon">
+                                        <span
+                                            ><strong
+                                                >~~Join the Community ~~</strong
+                                            ></span
+                                        >
+                                        <span
+                                            class="icon is-small"
+                                            id="loginIcon"
+                                        >
                                             →
                                         </span>
                                     </a>
@@ -279,91 +458,122 @@
                     </div>
                 </div>
             </div>
-  <div class="content has-text-centered has-text-grey is-size-7">
-      ~~©2019 Project ECHO. Content is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>~~.
-  </div>
+            <div class="content has-text-centered has-text-grey is-size-7">
+                ~~©2019 Project ECHO. Content is licensed
+                <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+                    >CC BY NC SA 4.0</a
+                >~~.
+            </div>
         </div>
     </section>
 
+    <div class="modal" id="i18n">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="box">
+                <p>
+                    ~~We've detected that your device language is set to
+                    <strong>English (US)</strong>. Would you like to set English
+                    as your default language for ECHO Digital?~~
+                </p>
+                <br />
 
-		<div class="modal" id="i18n">
-			<div class="modal-background"></div>
-			<div class="modal-content">
-				<div class="box">
-					<p>~~We've detected that your device language is set to <strong>English (US)</strong>. Would you like to set English as your default language for ECHO Digital?~~</p><br/>
+                <div class="buttons is-right">
+                    <div class="dropdown" id="languageDropdown">
+                        <button
+                            class="button is-primary is-outlined"
+                            aria-haspopup="true"
+                            aria-controls="dropdown-menu"
+                            onclick="toggleDropdown('languageDropdown')"
+                        >
+                            <span>~~No, select another language~~</span>
+                            <span class="icon is-small">
+                                <i
+                                    class="fas fa-angle-down"
+                                    aria-hidden="true"
+                                ></i>
+                            </span>
+                        </button>
+                        <div
+                            class="dropdown-menu"
+                            id="dropdown-menu"
+                            role="menu"
+                        >
+                            <div class="dropdown-content">
+                                <a
+                                    class="dropdown-item"
+                                    onclick="handleI18n('hi')"
+                                >
+                                    हिंदी
+                                </a>
+                                <a
+                                    class="dropdown-item"
+                                    onclick="handleI18n('es')"
+                                >
+                                    Español
+                                </a>
+                                <a
+                                    href="#"
+                                    class="dropdown-item is-active"
+                                    onclick="handleI18n('de')"
+                                >
+                                    Deutsche
+                                </a>
+                            </div>
+                        </div>
+                    </div>
 
-					<div class="buttons is-right">
-						<div class="dropdown" id="languageDropdown">
-						    <button class="button is-primary is-outlined" aria-haspopup="true" aria-controls="dropdown-menu" onclick="toggleDropdown('languageDropdown')">
-						      <span>~~No, select another language~~</span>
-						      <span class="icon is-small">
-						        <i class="fas fa-angle-down" aria-hidden="true"></i>
-						      </span>
-						    </button>
-						  <div class="dropdown-menu" id="dropdown-menu" role="menu">
-						    <div class="dropdown-content">
-						      <a class="dropdown-item" onclick="handleI18n('hi')">
-						        हिंदी
-						      </a>
-						      <a class="dropdown-item" onclick="handleI18n('es')">
-						        Español
-						      </a>
-						      <a href="#" class="dropdown-item is-active" onclick="handleI18n('de')">
-						        Deutsche
-						      </a>
-						    </div>
-						  </div>
-						</div>
+                    <button class="button is-primary" onclick="handleI18n()">
+                        <strong>~~Set language as English (US)~~</strong>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <button
+            class="modal-close is-large"
+            aria-label="close"
+            onclick="document.getElementById('i18n').classList.remove('is-active')"
+        ></button>
+    </div>
 
-					   <button class="button is-primary" onclick="handleI18n()">
-							<strong>~~Set language as English (US)~~</strong>
-						</button>
+    <script type="text/javascript" src="js/auth.js"></script>
+    <script type="text/javascript" src="js/i18n.js"></script>
 
-					</div>
+    <!-- handles custom js for pure css components -->
+    <script type="text/javascript" src="js/script.js"></script>
 
-				</div>
-			</div>
-			<button class="modal-close is-large" aria-label="close" onclick="document.getElementById('i18n').classList.remove('is-active')"></button>
-		</div>
+    <!-- INTL message format -->
+    <!-- <script src="js/intl-messageformat/src/index"></script> -->
 
-		<script type="text/javascript" src="js/auth.js"></script>
-		<script type="text/javascript" src="js/i18n.js"></script>
+    <script type="text/javascript">
+        // var MESSAGES = {
+        //   'en-US': {
+        //     NUM_PHOTOS:
+        //       'You have {numPhotos, plural, ' +
+        //       '=0 {no photos.}' +
+        //       '=1 {one photo.}' +
+        //       'other {# photos.}}'
+        //   },
 
-		<!-- handles custom js for pure css components -->
-		<script type="text/javascript" src="js/script.js"></script>
+        //   'es-MX': {
+        //     NUM_PHOTOS:
+        //       'Usted {numPhotos, plural, ' +
+        //       '=0 {no tiene fotos.}' +
+        //       '=1 {tiene una foto.}' +
+        //       'other {tiene # fotos.}}'
+        //   }
+        // };
 
-        <!-- INTL message format -->
-        <!-- <script src="js/intl-messageformat/src/index"></script> -->
+        // var output;
 
-        <script type="text/javascript">
-            // var MESSAGES = {
-            //   'en-US': {
-            //     NUM_PHOTOS:
-            //       'You have {numPhotos, plural, ' +
-            //       '=0 {no photos.}' +
-            //       '=1 {one photo.}' +
-            //       'other {# photos.}}'
-            //   },
+        // var enNumPhotos = new IntlMessageFormat(MESSAGES['en-US'].NUM_PHOTOS, 'en-US');
+        // output = enNumPhotos.format({ numPhotos: 1000 });
+        // console.log(output); // => "You have 1,000 photos."
 
-            //   'es-MX': {
-            //     NUM_PHOTOS:
-            //       'Usted {numPhotos, plural, ' +
-            //       '=0 {no tiene fotos.}' +
-            //       '=1 {tiene una foto.}' +
-            //       'other {tiene # fotos.}}'
-            //   }
-            // };
-
-            // var output;
-
-            // var enNumPhotos = new IntlMessageFormat(MESSAGES['en-US'].NUM_PHOTOS, 'en-US');
-            // output = enNumPhotos.format({ numPhotos: 1000 });
-            // console.log(output); // => "You have 1,000 photos."
-
-            // var esNumPhotos = new IntlMessageFormat(MESSAGES['es-MX'].NUM_PHOTOS, 'es-MX');
-            // output = esNumPhotos.format({ numPhotos: 1000 });
-            // console.log(output); // => "Usted tiene 1,000 fotos."
-            // var msg = new IntlMessageFormat('My name is name.', 'en-US');
-        </script>
-	</body>
+        // var esNumPhotos = new IntlMessageFormat(MESSAGES['es-MX'].NUM_PHOTOS, 'es-MX');
+        // output = esNumPhotos.format({ numPhotos: 1000 });
+        // console.log(output); // => "Usted tiene 1,000 fotos."
+        // var msg = new IntlMessageFormat('My name is name.', 'en-US');
+    </script>
+</body>
 </html>

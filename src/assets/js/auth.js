@@ -36,9 +36,21 @@ window.onload = async function() {
 	const tokenStatus = await getTokenStatus();
 	tokenStatus ? loadApp() : loadForm();
 	document.getElementById("main").classList.remove("hide");
+	loadUserDetails()
 	saveUsername.checked = window.localStorage.getItem("username");
 	username.value = window.localStorage.getItem("username");
+
 };
+
+function loadUserDetails(){
+	let username = document.getElementById('username')
+	let userIconpic = document.getElementById("user-iconpic")
+	if(username)
+		{username.innerText= `${getCookie('firstName')} ${getCookie('lastName')}`}
+	if(userIconpic){
+		userIconpic.src = `${getCookie('iconpic')}` || "./img/user_demo.jpg";
+	}
+}
 
 async function getTokenStatus() {
 	const currentTokenStatus = await getCookie("token");
@@ -84,13 +96,17 @@ async function signIn(event) {
 	)
 		.then(res => res.json())
 		.then(data => {
+			console.log(data)
 			if(data.success){
 				if (saveUsername.checked) {
 					window.localStorage.setItem("username", username.value);
 				} else {
 					window.localStorage.removeItem("username");
 				}
-				document.cookie = `token=${data.token}`
+				document.cookie = `token=${data.token};`
+				document.cookie = `firstName=${data.user.firstName};`
+				document.cookie = `lastName=${data.user.lastName};`
+				document.cookie = `iconpic=${data.user.iconpic};`
 				location.reload();
 			}
 			currentTarget.classList.remove("is-loading")
