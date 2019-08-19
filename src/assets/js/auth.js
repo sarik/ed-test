@@ -107,6 +107,7 @@ async function signIn(event) {
 				document.cookie = `firstName=${data.user.firstName};`
 				document.cookie = `lastName=${data.user.lastName};`
 				document.cookie = `iconpic=${data.user.iconpic};`
+				document.cookie = `uuid=${data.user.uuid};`
 				location.reload();
 			}
 			currentTarget.classList.remove("is-loading")
