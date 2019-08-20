@@ -39,7 +39,9 @@ window.onload = async function() {
 	loadUserDetails()
 	saveUsername.checked = window.localStorage.getItem("username");
 	username.value = window.localStorage.getItem("username");
-
+	if(location.hash == ""){
+		window.location="/#/home"
+	}
 };
 
 function loadUserDetails(){
@@ -109,6 +111,7 @@ async function signIn(event) {
 				document.cookie = `iconpic=${data.user.iconpic};`
 				document.cookie = `uuid=${data.user.uuid};`
 				location.reload();
+
 			}
 			currentTarget.classList.remove("is-loading")
 			currentTarget.removeAttribute('disabled')
