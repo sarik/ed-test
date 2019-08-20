@@ -446,11 +446,11 @@
     }
 
 html, body {
-    background: #f1f0f0 !important;
+    background: #f7f9fc !important;
 }
 
 .box {
-box-shadow: 0 1px 9px rgba(10,10,10,.13)
+box-shadow: 0 4px 7px 0 rgba(0,0,0,.1)!important
 }
 
 .homeBox {
