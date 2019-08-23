@@ -578,10 +578,10 @@ border-radius:20px;
   opacity: 0;
   transform: translateY(1em);
 }
-.slide-in-enter-active {
+.slide-in-enter-done {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 150ms, transform 150ms;
+  transition: opacity 150ms ease, transform 150ms ease;
 }
 .slide-in-exit {
   opacity: 1;
