@@ -60,19 +60,19 @@
             </div>
             <div id="mainNavbar" class="navbar-menu">
                 <div class="navbar-start">
-                    <a class="navbar-item is-hidden-touch" href="/#/check-in">
+                    <a class="navbar-item is-hidden-touch formattedMessage" href="/#/check-in" intl-id="join-session">
                         <span class="icon"><i class="far fa-sign-in"></i></span
                         >&nbsp; ~~Join a session~~
                     </a>
-                    <a class="navbar-item is-hidden-desktop" href="/#/check-in">
+                    <a class="navbar-item is-hidden-desktop formattedMessage" href="/#/check-in" intl-id="join">
                         <span class="icon"><i class="far fa-sign-in"></i></span
-                        >&nbsp; Join
+                        >&nbsp; ~~Join~~
                     </a>
-                    <a class="navbar-item" href="/#/discover">
+                    <a class="navbar-item formattedMessage" href="/#/discover" intl-id="discover">
                         <span class="icon"><i class="far fa-globe"></i></span
                         >&nbsp; ~~Discover~~
                     </a>
-                    <a class="navbar-item is-hidden-desktop">
+                    <a class="navbar-item is-hidden-desktop formattedMessage" intl-id="Account" href="/#/account">
                         <span class="icon"><i class="far fa-user"></i></span
                         >&nbsp; ~~Account~~
                     </a>
@@ -287,7 +287,7 @@
                             </figure>
                         </a>
                         <div class="navbar-dropdown is-right is-boxed">
-                            <a class="navbar-item" href="/user/my-profile">
+                            <a class="navbar-item formattedMessage" href="/user/my-profile" intl-id="view-profile">
                                 <span class="icon"
                                     ><i class="far fa-user-circle"></i></span
                                 >~~View profile~~
@@ -296,7 +296,7 @@
                                 class="navbar-item"
                                 href="/user/my-notifications"
                             >
-                                <span>
+                                <span class="formattedMessage" intl-id="messages">
                                     <span class="icon"
                                         ><i
                                             class="far fa-comment-alt-dots"
@@ -305,14 +305,14 @@
                                 </span>
                             </a>
                             <a class="navbar-item" href="/#/account">
-                                <span>
+                                <span class="formattedMessage" intl-id="my-settings">
                                     <span class="icon"
                                         ><i class="far fa-cog"></i></span
                                     >~~My settings~~</span
                                 >
                             </a>
                             <a class="navbar-item" href="/user/my-settings">
-                                <span>
+                                <span class="formattedMessage" intl-id="help-center">
                                     <span class="icon"
                                         ><i
                                             class="far fa-question-circle"
@@ -324,7 +324,7 @@
                                 class="navbar-item"
                                 href="mailto:support@echodigital.org"
                             >
-                                <span>
+                                <span class="formattedMessage" intl-id="report-a-bug">
                                     <span class="icon"
                                         ><i
                                             class="far fa-exclamation-circle"
@@ -334,8 +334,9 @@
                             </a>
                             <hr class="navbar-divider" href="/log-out" />
                             <a
-                                class="navbar-item has-text-danger"
+                                class="navbar-item has-text-danger formattedMessage"
                                 onclick="signOut()"
+                                intl-id="log-out"
                             >
                                 <span class="icon "
                                     ><i
@@ -362,13 +363,13 @@
                             />
                         </div>
                         <div class="column is-3">
-                            <p class="title is-3">~~Login~~</p>
-                            <p class="subtitle is-5">
+                            <p class="title is-3 formattedMessage" intl-id="login">~~Login~~</p>
+                            <p class="subtitle is-5 formattedMessage" intl-id="please-sign-in-with-your-echo-registered-email-or-phone-number">
                                 ~~Please sign in with your ECHO registered email
                                 or phone number~~
                             </p>
                             <div class="field">
-                                <label class="label">~~Email or Phone~~</label>
+                                <label class="label formattedMessage" intl-id="email-or-phone">~~Email or Phone~~</label>
                                 <div class="control">
                                     <input
                                         class="input"
@@ -378,7 +379,7 @@
                                 </div>
                             </div>
                             <div class="field">
-                                <label class="label">~~Password~~</label>
+                                <label class="label formattedMessage" intl-id="password">~~Password~~</label>
                                 <div class="control has-icons-right">
                                     <input
                                         class="input"
@@ -390,14 +391,14 @@
                                     </span>
                                 </div>
                                 <p class="help">
-                                    <a href="/forgot-password"
+                                    <a class="formattedMessage" intl-id="having-trouble-signing-in" href="/forgot-password"
                                         >~~Having trouble signing in?~~</a
                                     >
                                 </p>
                             </div>
                             <div class="field">
                                 <div class="control">
-                                    <label class="checkbox">
+                                    <label class="checkbox formattedMessage" intl-id="remember-me">
                                         <input
                                             type="checkbox"
                                             name="save-username"
@@ -408,7 +409,7 @@
                             </div>
                             <div class="field">
                                 <div class="control">
-                                    <label class="checkbox">
+                                    <label class="checkbox formattedMessage" intl-id="keep-me-signed-in">
                                         <input type="checkbox" />
                                         ~~Keep me signed in~~
                                     </label>
@@ -420,7 +421,7 @@
                                         class="button is-fullwidth is-primary is-medium"
                                         onclick="signIn(event)"
                                     >
-                                        <span><strong>~~Login~~ </strong></span>
+                                        <span><strong class="formattedMessage" intl-id="login">~~Login~~ </strong></span>
                                         <span
                                             class="icon is-small"
                                             id="loginIcon"
@@ -431,17 +432,16 @@
                                 </div>
                             </div>
                             <div class="is-divider" id="loginDivider"></div>
-                            <p class="title is-5">~~New to ECHO Digital?~~</p>
-                            <p class="subtitle is-7">
+                            <p class="title is-5 formattedMessage" intl-id="new-to-echo-digital">~~New to ECHO Digital?~~</p>
+                            <p class="subtitle is-7 formattedMessage" intl-id="don-t-have-an-echo-Digital-account-yet-create-one-now">
                                 ~~Don't have an ECHO Digital account yet? Create
-                                one now:~~
+                                one now~~:
                             </p>
                             <div class="field">
                                 <div class="control">
                                     <a class="button is-fullwidth is-medium">
-                                        <span
-                                            ><strong
-                                                >~~Join the Community ~~</strong
+                                        <span>
+                                            <strong class="formattedMessage" intl-id="join-the-community">~~Join the Community ~~</strong
                                             ></span
                                         >
                                         <span
@@ -457,11 +457,11 @@
                     </div>
                 </div>
             </div>
-            <div class="content has-text-centered has-text-grey is-size-7">
-                ~~©2019 Project ECHO. Content is licensed
+            <div class="content has-text-centered has-text-grey is-size-7 formattedMessage" intl-id="project-echo-content-is-licensed">
+                ©2019 ~~Project ECHO. Content is licensed~~
                 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
-                    >CC BY NC SA 4.0</a
-                >~~.
+                    >~~CC BY NC SA 4.0~~</a
+                >.
             </div>
         </div>
     </section>
@@ -470,9 +470,9 @@
         <div class="modal-background"></div>
         <div class="modal-content">
             <div class="box">
-                <p>
+                <p class="formattedMessage" intl-id="we-ve-detected-that-your-device-language-is-set-to-local-language-would-you-like-to-set-local-language-as-your-default-language-for-echo-digital" variables='{"displayLanguage" : "English"}'>
                     ~~We've detected that your device language is set to
-                    <strong>English (US)</strong>. Would you like to set English
+                    {displayLanguage}. Would you like to set English
                     as your default language for ECHO Digital?~~
                 </p>
                 <br />
@@ -485,7 +485,7 @@
                             aria-controls="dropdown-menu"
                             onclick="toggleDropdown('languageDropdown')"
                         >
-                            <span>~~No, select another language~~</span>
+                            <span class="formattedMessage" intl-id="no-select-another-language">~~No, select another language~~</span>
                             <span class="icon is-small">
                                 <i
                                     class="fas fa-angle-down"
@@ -507,6 +507,12 @@
                                 </a>
                                 <a
                                     class="dropdown-item"
+                                    onclick="handleI18n('en')"
+                                >
+                                    English
+                                </a>
+                                <a
+                                    class="dropdown-item"
                                     onclick="handleI18n('es')"
                                 >
                                     Español
@@ -523,7 +529,7 @@
                     </div>
 
                     <button class="button is-primary" onclick="handleI18n()">
-                        <strong>~~Set language as English (US)~~</strong>
+                        <strong class="formattedMessage" intl-id="set-language-as-display-language" variables='{"displayLanguage":"English"}'>~~Set language as {displayLanguage}~~</strong>
                     </button>
                 </div>
             </div>
@@ -535,44 +541,58 @@
         ></button>
     </div>
 
+        <!-- handles custom js for pure css components -->
+    <script type="text/javascript" src="js/script.js"></script>
+
+    <script type="text/javascript">
+        document.querySelector('[intl-id="set-language-as-display-language"]').setAttribute('variables', '{' + '"displayLanguage"' + ':"' + getDisplayLanguage() + '"}')
+
+        document.querySelector('[intl-id="we-ve-detected-that-your-device-language-is-set-to-local-language-would-you-like-to-set-local-language-as-your-default-language-for-echo-digital"]').setAttribute('variables', '{' + '"displayLanguage"' + ':"' + getDisplayLanguage() + '"}')
+        
+    </script>
+
+    <!-- INTL message format -->
+    <script src="js/intl-messageformat.min.js"></script>
+    
     <script type="text/javascript" src="js/auth.js"></script>
     <script type="text/javascript" src="js/i18n.js"></script>
 
-    <!-- handles custom js for pure css components -->
-    <script type="text/javascript" src="js/script.js"></script>
-
-    <!-- INTL message format -->
-    <!-- <script src="js/intl-messageformat/src/index"></script> -->
-
     <script type="text/javascript">
-        // var MESSAGES = {
-        //   'en-US': {
-        //     NUM_PHOTOS:
-        //       'You have {numPhotos, plural, ' +
-        //       '=0 {no photos.}' +
-        //       '=1 {one photo.}' +
-        //       'other {# photos.}}'
-        //   },
 
-        //   'es-MX': {
-        //     NUM_PHOTOS:
-        //       'Usted {numPhotos, plural, ' +
-        //       '=0 {no tiene fotos.}' +
-        //       '=1 {tiene una foto.}' +
-        //       'other {tiene # fotos.}}'
-        //   }
-        // };
 
-        // var output;
+        // var language = window.localStorage.language || "en";
+        // console.log(language)
+        // const messages = localStorage.translation
+        //     ? JSON.parse(localStorage.translation)
+        //     : {};
 
-        // var enNumPhotos = new IntlMessageFormat(MESSAGES['en-US'].NUM_PHOTOS, 'en-US');
-        // output = enNumPhotos.format({ numPhotos: 1000 });
-        // console.log(output); // => "You have 1,000 photos."
 
-        // var esNumPhotos = new IntlMessageFormat(MESSAGES['es-MX'].NUM_PHOTOS, 'es-MX');
-        // output = esNumPhotos.format({ numPhotos: 1000 });
-        // console.log(output); // => "Usted tiene 1,000 fotos."
-        // var msg = new IntlMessageFormat('My name is name.', 'en-US');
+        // const formattedMessages = document.getElementsByClassName('formattedMessage')
+        // for(var i=0; i<formattedMessages.length;i++){
+        //     let formattedMessage = formattedMessages[i]
+        //     let childNodes = formattedMessage.childNodes
+        //     let intlId = formattedMessage.getAttribute('intl-id')
+
+        //     for(j=0; j<childNodes.length; j++){
+        //         let childNode = childNodes[j]
+        //         if(childNode.nodeType === 3 && childNode.nodeValue.trim() !== "" ){
+        //             if(messages[language][intlId]){
+        //                 let message = new IntlMessageFormat.IntlMessageFormat(messages[language][intlId], language)
+        //                 childNode.nodeValue = message.format()
+        //                 formattedMessage.insertBefore( document.createTextNode( '\u00A0' ), childNode );
+        //                 break;
+        //             }
+        //         }
+        //     }
+
+        // }
+
+
+
+        //     var enNumPhotos = new IntlMessageFormat.IntlMessageFormat(MESSAGES['en-US'].NUM_PHOTOS, 'en-US');
+        //     output = enNumPhotos.format({ numPhotos: 1 });
+        //     console.log(output); // => "You have 1,000 photos."
+        
     </script>
 </body>
 </html>

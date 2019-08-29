@@ -110,6 +110,7 @@ async function signIn(event) {
 				document.cookie = `lastName=${data.user.lastName};`
 				document.cookie = `iconpic=${data.user.iconpic};`
 				document.cookie = `uuid=${data.user.uuid};`
+				// localStorage.setItem('language', data.user.language)
 				location.reload();
 
 			}

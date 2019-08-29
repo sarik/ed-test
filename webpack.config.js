@@ -43,7 +43,7 @@ module.exports = {
         ]),
 		new CleanWebpackPlugin(['release']),
 		new webpack.ProvidePlugin({
-		    IntlMessageFormat: ['src/assets/js/intl-messageformat/src/index', 'default'],
+		    IntlMessageFormat: ['intl-messageformat', 'default'],
 		})
 	],
 	devtool: 'source-map',
