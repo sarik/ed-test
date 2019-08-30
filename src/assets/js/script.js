@@ -1,24 +1,34 @@
-function toggleDropdown(id){
-	let el = document.getElementById(id)
-	if(el.className.includes('is-active')){
-		el.classList.remove('is-active')
-	}
-	else{
-		el.className += " is-active"
+function toggleDropdown(id) {
+	let el = document.getElementById(id);
+	if (el.className.includes("is-active")) {
+		el.classList.remove("is-active");
+	} else {
+		el.className += " is-active";
 	}
 }
 
-function getDisplayLanguage(){
-	let lang = navigator.language
+function getDisplayLanguage() {
+	let lang = navigator.language;
 	var locallang = lang;
-	if(lang.indexOf('-') !== -1){
-		locallang = lang.split('-')[0];
-		var dialect = lang.split('-')[1]
-		return languageCodeMap[locallang] + '(' + dialect +')' 
+	if (lang.indexOf("-") !== -1) {
+		locallang = lang.split("-")[0];
+		var dialect = lang.split("-")[1];
+		return languageCodeMap[locallang] + "(" + dialect + ")";
 	}
 
-	return languageCodeMap[locallang]
+	return languageCodeMap[locallang];
 }
+
+const navItems = document.querySelector("#mainNavbar > .navbar-start").children;
+window.addEventListener("single-spa:app-change", evt => {
+	for (j = 0; j < navItems.length; j++) {
+		navItems[j].classList.remove("is-active");
+		navItems[j].classList.remove("is-tab");
+		if (window.location.href === navItems[j].href) {
+			navItems[j].className += " is-tab is-active";
+		}
+	}
+});
 
 const languageCodeMap = {
 	ab: "Abkhazian",
