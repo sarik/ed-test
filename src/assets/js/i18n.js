@@ -47,6 +47,7 @@ function fetchTranslation(language) {
 }
 
 var userLanguage = window.localStorage.language || "en";
+debugger;
 const messages = localStorage.translation
 	? JSON.parse(localStorage.translation)
 	: {};
