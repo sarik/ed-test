@@ -36,21 +36,17 @@
 	}
 }
 
-.ed-logo {
-	&__text {
-		letter-spacing: .2rem;
-	}
-}
 
-.ed-navbar {
-	&__item {padding-left: 3rem;
-	position: relative;}
-}
 
-@media screen and (min-width: 1024px) {
-  .ed-navbar {
-		&__item {
-      padding-right: 1rem;
-      white-space: normal;
-  }}
-}
+// .ed-navbar {
+// 	&__item {padding-left: 3rem;
+// 	position: relative;}
+// }
+
+// @media screen and (min-width: 1024px) {
+//   .ed-navbar {
+// 		&__item {
+//       padding-right: 1rem;
+//       white-space: normal;
+//   }}
+// }

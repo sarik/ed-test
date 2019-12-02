@@ -1,11 +1,34 @@
+/*
+ECH0 Default theme=>
+  Primary Accent: #00a69b
+  Shadow: #eee
+  Background: #fff
+  Text highlight: #00a69b
+  Text Standard: #424242
+
+
+ECH0 DARK theme=>
+  Primary Accent: #00a69b
+  Shadow: #424242
+  Background: #222
+  Text highlight: #00a69b
+  Text Standard: #eee
+
+*/
+
 
 // CUSTOM VARIABLES
+
+
 // General Colors
 $color-black: #000;
+
 $color-white: #fff;
-$color-gray-light: #ececec;
-$color-white-antique: #faebd5;
-$color-green: #51b583;
+
+$color-grey-light: #eee;
+$color-grey-dark: #424242;
+
+$color-turquiose: #00a69b;
 
 
 // Business colors
@@ -13,15 +36,18 @@ $color-echo-primary-light: #ed4133;
 $color-echo-primary: #c32d38;
 $color-echo-primary-dark: #9c1720;
 
-$color-echo-blue: #3344bb;
+//Default theme
+$color-primary-accent: $color-turquiose;
+$color-shadow: $color-grey-light;
+$color-background: $color-white;
+$color-text-highlight: $color-turquiose;
+$color-text-standard: $color-grey-dark;
 
-// $color-background: #f7f9fc;
-$color-primary: $color-black;
 
 // BULMA VARIABLES
-$primary: $color-green;
+$primary: $color-primary-accent;
 $title-color: $color-white;
-$subtitle-color: $color-gray-light;
+$subtitle-color: $color-grey-light;
 
 /* BULMA SASS MAP
  https://bulma.io/documentation/customize/variables/ */

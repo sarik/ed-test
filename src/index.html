@@ -7,8 +7,8 @@
         
         <!-- <link> Tags -->
         <link rel="stylesheet" href="./css/styles.css">
-        <link rel="stylesheet" href="./css/echo-custom.css">
-        <!-- <link rel="stylesheet" href="./css/echodigital.css" /> -->
+        <!-- <link rel="stylesheet" href="./css/echo-custom.css"> -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         <script type="text/javascript"> 
         // Doesn't even get called ever. Delete?
 
@@ -20,27 +20,26 @@
 
 <body id="main">
     <nav
-        class="navbar has-shadow"
+        class="navbar has-shadow ed-navbar"
         role="navigation"
         aria-label="main navigation"
     >
         <div class="container">
             <div class="navbar-brand">
-                <a class="navbar-item" href="/#/home">
+                <a class="navbar-item ed-navbar__logo" href="/#/home">
                     <span id="logoText"
-                    class="ed-logo__text"
-                        ><span class=" has-text-info"><strong>ECHO</strong></span
+                        ><span class="ed-navbar__logo--highlight ">ECHO</span
                         >DIGITAL</span
                     >
                 </a>
             </div>
             <!-- mainNavbar: replaces authForm after login success -->
-            <div id="mainNavbar" class="navbar-menu">
+            <div id="mainNavbar" class="navbar-menu ed-navbar">
                 <div class="ed-toast notification is-danger" id="toast-unavailable">
                     Sorry! This option is not available!
                 </div>
                 <div class="navbar-start">
-                    <a class="navbar-item is-hidden-touch formattedMessage" href="/#/check-in" intl-id="join-session">
+                    <a class="navbar-item is-hidden-touch formattedMessage ed-navbar__item" href="/#/check-in" intl-id="join-session">
                         <span class="icon"><i class="far fa-sign-in"></i></span
                         >&nbsp; Join a session
                     </a>
