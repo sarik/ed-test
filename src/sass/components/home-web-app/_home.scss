@@ -1,0 +1,28 @@
+.ed-home-bg--default {
+	background: linear-gradient(to top left, $color-echo-primary-light, $color-echo-primary, $color-echo-primary-dark); 
+}
+
+.ed-home-card {
+  box-shadow: 0 1rem 2.8rem rgba($color-black, 0.15);
+	border-radius: .3rem;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	
+	@media screen and (min-width: 1216px) {
+		height: 15rem;
+		padding: 3rem;
+	}
+
+	@media screen and (min-width: 1024px) and (max-width: 1215px) {
+		height: 15rem;
+		padding: 3rem;
+	}
+	@media screen and (min-width: 769px) and (max-width: 1023px) {
+		height: 1.6rem;
+		padding: 3rem;
+	}
+}
+
+// Yet to be implemented
