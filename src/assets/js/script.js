@@ -19,6 +19,28 @@ function getDisplayLanguage() {
 	return languageCodeMap[locallang];
 }
 
+function showToast(toastId) {
+	let toast= document.getElementById(toastId);
+	toast.classList.add('ed-toast--show');
+	setTimeout(function() {toast.className = toast.className.replace('ed-toast--show', "")},2000);
+}
+
+
+// Set a theme by default
+const currentTheme = localStorage.getItem("theme");
+currentTheme ? "" : localStorage.setItem("theme", "light");
+
+function toggleDarkMode() {
+	//store in cookies?
+	if (currentTheme === "light") {
+		localStorage.setItem("theme", "dark");
+	} else {
+		localStorage.setItem("theme", "light");
+	}
+	
+	location.reload();
+}
+
 const navItems = document.querySelector("#mainNavbar > .navbar-start").children;
 window.addEventListener("single-spa:app-change", evt => {
 	for (j = 0; j < navItems.length; j++) {

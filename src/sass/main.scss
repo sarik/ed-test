@@ -2,6 +2,7 @@
 @import "abstracts/variables";
 @import "abstracts/mixins";
 
+@import "themes/dark";
 // VENDORS
 @import "vendors/bulma.scss";
 
@@ -13,3 +14,4 @@
 
 // COMPONENTS --main file--
 @import "components/components.main";
+

@@ -1,0 +1,35 @@
+.ed-attend-user-img {
+  margin: auto .3rem;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.ed-attend-panel {
+  &__header {
+    // .panelHeader
+  padding: 0.6em;
+  font-size: 0.7em;
+  margin-bottom: 0 !important;
+  border-radius: 0 !important;
+
+  }
+
+  &__container {
+  // .attendancePanelContainer
+  box-shadow: 0 2px 13px rgba(10, 10, 10, 0.15);
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  position: relative;
+  margin-bottom: 1em;
+  overflow: hidden;
+  }
+
+  &__search {
+    // .attendeeSearch
+  font-size: 0.85em;
+  border: none;
+  box-shadow: none;
+  background: none;
+
+  }
+}
