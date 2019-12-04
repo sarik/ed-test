@@ -1,0 +1,56 @@
+.ed-port-user-dropdown {
+  //delete this
+  width: 12rem;
+  
+  .icon {
+    left: 1rem;
+    position: absolute;
+    text-align: center;
+    top: .375rem;
+    width: 1rem;
+  }
+
+  .navbar-item {
+    padding-left: 3rem;
+    position: relative;
+  }
+}
+
+.ed-nav-user {
+
+	&__dropdown {
+		width: 12rem;
+	}
+
+	&__icon {
+		left: 1rem;
+  position: absolute;
+  text-align: center;
+  top: 0.375rem;
+  width: 1em;
+	}
+
+	&__text {
+		padding-left: 3rem;
+	position: relative;
+	}
+}
+
+.ed-logo {
+	&__text {
+		letter-spacing: .2rem;
+	}
+}
+
+.ed-navbar {
+	&__item {padding-left: 3rem;
+	position: relative;}
+}
+
+@media screen and (min-width: 1024px) {
+  .ed-navbar {
+		&__item {
+      padding-right: 1rem;
+      white-space: normal;
+  }}
+}

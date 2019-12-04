@@ -3,44 +3,19 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>ECHO Digital</title>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"
-		/>
-		<script src="https://kit.fontawesome.com/adbb60565b.js"></script>
-		<script src="./system.js"></script>
-		<!-- Load the application -->
-		<script src="./main.js"></script>
-		<!-- Static navbar -->
-		<link rel="stylesheet" href="./css/echodigital.css" />
-		<script type="text/javascript">
-			document.addEventListener("progress", function() {
-				console.log("progressing");
-			});
-		</script>
-		<style>
-			:root {
-				--fa-primary-color: hsl(204, 86%, 53%);
-				--fa-secondary-color: #666;
-			}
-			#loginIcon {
-				margin-top: 0.2em;
-			}
-			#logoText {
-				letter-spacing: 0.2em;
-			}
-		</style>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>ECHO Digital</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
-        <script src="https://kit.fontawesome.com/adbb60565b.js"></script>
-        <script src="./system.js"></script>
-        <!-- Load the application -->
-        <script src="./main.js"></script>
-        <!-- Static navbar -->
-        <link rel="stylesheet" href="./css/echodigital.css" />
+        
+        <!-- <link> Tags -->
+        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="./css/echo-custom.css">
+        <!-- <link rel="stylesheet" href="./css/echodigital.css" /> -->
+        <script type="text/javascript"> 
+        // Doesn't even get called ever. Delete?
+
+        // document.addEventListener("progress", function() {
+        //     console.log("progressing");
+        // });
+		</script>
     </head>
 
 <body id="main">
@@ -53,12 +28,17 @@
             <div class="navbar-brand">
                 <a class="navbar-item" href="/#/home">
                     <span id="logoText"
-                        ><span class="has-text-info"><strong>ECHO</strong></span
+                    class="ed-logo__text"
+                        ><span class=" has-text-info"><strong>ECHO</strong></span
                         >DIGITAL</span
                     >
                 </a>
             </div>
+            <!-- mainNavbar: replaces authForm after login success -->
             <div id="mainNavbar" class="navbar-menu">
+                <div class="ed-toast notification is-danger" id="toast-unavailable">
+                    Sorry! This option is not available!
+                </div>
                 <div class="navbar-start">
                     <a class="navbar-item is-hidden-touch formattedMessage" href="/#/check-in" intl-id="join-session">
                         <span class="icon"><i class="far fa-sign-in"></i></span
@@ -68,10 +48,11 @@
                         <span class="icon"><i class="far fa-sign-in"></i></span
                         >&nbsp; Join
                     </a>
-                    <a class="navbar-item formattedMessage" href="/#/discover" intl-id="discover">
+                    <!-- <a class="navbar-item formattedMessage" href="/#/discover" intl-id="discover">
                         <span class="icon"><i class="far fa-globe"></i></span
                         >&nbsp; Discover
-                    </a>
+                    </a> -->
+                    <a class=" navbar-item" id="dark-mode" onclick="toggleDarkMode()"> <i class="fas fa-lightbulb" ></i> </a>
                     <a class="navbar-item is-hidden-desktop formattedMessage" intl-id="Account" href="/#/account">
                         <span class="icon"><i class="far fa-user"></i></span
                         >&nbsp; Account
@@ -272,7 +253,7 @@
                         </div>
                     </div>
                     <div
-                        class="navbar-item has-dropdown"
+                        class="navbar-item has-dropdown ed-nav-user__dropdown"
                         id="userDropdown"
                         onmouseenter="toggleDropdown('userDropdown')"
                         onmouseleave="toggleDropdown('userDropdown')"
@@ -287,22 +268,21 @@
                             </figure>
                         </a>
                         <div class="navbar-dropdown is-right is-boxed">
-                            <a class="navbar-item formattedMessage" href="/user/my-profile" intl-id="view-profile">
+                            <a class="navbar-item ed-nav-user__text ed-u-disabled formattedMessage" intl-id="view-profile">
                                 <span class="icon"
-                                    ><i class="far fa-user-circle"></i></span
-                                >View profile
+                                    ><i class="far fa-user-circle"></i>
+                                    </span>
+                                        View profile
+
                             </a>
                             <a
-                                class="navbar-item"
+                                class="navbar-item ed-nav-user-text formattedMessage ed-u-disabled"
                                 href="/user/my-notifications"
+                                intl-id="messages"
                             >
-                                <span class="formattedMessage" intl-id="messages">
-                                    <span class="icon"
-                                        ><i
-                                            class="far fa-comment-alt-dots"
-                                        ></i></span
-                                    >Messages
-                                </span>
+                                    <span class="icon">
+                                        <i class="far fa-comment-alt-dots"></i>
+                                    </span>Messages
                             </a>
                             <a class="navbar-item" href="/#/account">
                                 <span class="formattedMessage" intl-id="my-settings">
@@ -311,7 +291,7 @@
                                     >My settings</span
                                 >
                             </a>
-                            <a class="navbar-item" href="/user/my-settings">
+                            <a class="navbar-item ed-u-disabled" href="/user/my-settings">
                                 <span class="formattedMessage" intl-id="help-center">
                                     <span class="icon"
                                         ><i
@@ -350,6 +330,7 @@
             </div>
         </div>
     </nav>
+    <!-- authForm: main login form -->
     <section class="hero is-light is-fullheight-with-navbar" id="authForm">
         <div class="hero-head">
             <div class="section">
@@ -464,9 +445,9 @@
         </div>
     </section>
 
-    <div class="modal" id="i18n">
+    <div class="modal ed-portal-modal" id="i18n">
         <div class="modal-background"></div>
-        <div class="modal-content">
+        <div class="modal-content ed-u-overflow-visible">
             <div class="box">
                 <p class="formattedMessage" intl-id="we-ve-detected-that-your-device-language-is-set-to-local-language-would-you-like-to-set-local-language-as-your-default-language-for-echo-digital" variables='{"displayLanguage" : "English"}'>
                     We've detected that your device language is set to {displayLanguage}. Would you like to set English as your default language for ECHO Digital?
@@ -536,6 +517,15 @@
             onclick="document.getElementById('i18n').classList.remove('is-active')"
         ></button>
     </div>
+
+    <!-- CDNs -->
+    <script src="https://kit.fontawesome.com/adbb60565b.js"></script>
+
+    <!-- <script> Tags-->
+
+        <!-- Load the application -->
+    <script src="./system.js"></script>
+    <script src="./main.js"></script>
 
         <!-- handles custom js for pure css components -->
     <script type="text/javascript" src="js/script.js"></script>

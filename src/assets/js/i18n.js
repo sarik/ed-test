@@ -17,7 +17,7 @@ const intialMessage = {
 
 
 if (localStorage.language != language) {
-	localStorage.setItem("translation", JSON.stringify({ [navigator.language]: intialMessage[navigator.language.split('-')[0]]}))
+	// localStorage.setItem("translation", JSON.stringify({ [navigator.language]: intialMessage[navigator.language.split('-')[0]]}))
 	document.getElementById("i18n").className += " is-active";
 } else {
 	document.getElementById("i18n").remove();
@@ -47,7 +47,6 @@ function fetchTranslation(language) {
 }
 
 var userLanguage = window.localStorage.language || "en";
-debugger;
 const messages = localStorage.translation
 	? JSON.parse(localStorage.translation)
 	: {};

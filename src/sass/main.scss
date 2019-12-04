@@ -1,0 +1,17 @@
+// ABSTRACTS
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+@import "themes/dark";
+// VENDORS
+@import "vendors/bulma.scss";
+
+// BASE/RESETS
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+@import "base/animations";
+
+// COMPONENTS --main file--
+@import "components/components.main";
+
