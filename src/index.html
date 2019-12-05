@@ -301,19 +301,19 @@
       <!-- </div> -->
     </nav>
     <!-- authForm: main login form -->
-    <section class="hero is-light is-fullheight-with-navbar" id="authForm">
+    <section class="hero ed-login is-fullheight-with-navbar" id="authForm" >
       <!-- <div class="hero-head" > -->
       <div class="section">
-        <div class="container">
-          <div class="columns is-centered is-variable is-6">
-            <div class="column is-6">
+        <div class="container" >
+          <div class="columns is-8 ed-login__content is-variable " >
+            <!-- <div class="column is-6">
               <img
                 src="./img/banner_demo.jpg"
                 class="image is-fullwidth"
                 alt=""
               />
-            </div>
-            <div class="column is-3 ed-form">
+            </div> -->
+            <div class="column is-5 ed-login__content--left">
               <div class="ed-form__group">
                 <p
                   class=" is-3 formattedMessage ed-form__title"
@@ -325,7 +325,7 @@
                   class="ed-form__subtitle is-5 formattedMessage"
                   intl-id="please-sign-in-with-your-echo-registered-email-or-phone-number"
                 >
-                  Please sign in with your ECHO registered email or phone number
+                  Please sign in with your ECHO registered email
                 </p>
               </div>
               <div class=" ed-form__group">
@@ -358,9 +358,9 @@
                   name="password"
                   id="login-password"
                 />
-                <span class="ed-form__icon" onclick="toggleShowPassword()">
+                <button class="ed-form__icon" onclick="toggleShowPassword()">
                   <i id="show-password-icon" class="far fa-eye"></i>
-                </span>
+                </button>
 
                 <p class="ed-form__help">
                   <a
@@ -425,13 +425,13 @@
                 </p>
               </div>
             </div>
+            <div class="column is-5"></div>
           </div>
         </div>
       </div>
       <div
         class="content has-text-centered has-text-grey is-size-7 formattedMessage"
         intl-id="project-echo-content-is-licensed"
-        style="background: #195;"
       >
         ©2019 Project ECHO. Content is licensed
         <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
