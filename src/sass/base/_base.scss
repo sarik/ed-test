@@ -7,10 +7,7 @@
 }
 
 html {
-  font-size: 100%;
+  font-size: 62.5%; //1rem === 10px
+  // font-size: 100%; //to test stuff 1rem === 16px
   box-sizing: border-box;
-}
-
-body, button, input, select, textarea {
-  font-family: 'Roboto', sans-serif;
 }

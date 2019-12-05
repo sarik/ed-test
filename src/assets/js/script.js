@@ -25,6 +25,18 @@ function showToast(toastId) {
 	setTimeout(function() {toast.className = toast.className.replace('ed-toast--show', "")},2000);
 }
 
+function toggleShowPassword() {
+	let passwordInput = document.getElementById("login-password");
+	let passwordIcon = document.getElementById("show-password-icon")
+  if (passwordInput.type === "password") {
+		passwordInput.type = "text";
+		passwordIcon.classList.add("fa-eye-slash")
+  } else {
+		passwordInput.type = "password";
+		passwordIcon.classList.remove("fa-eye-slash")
+  }
+}
+
 
 // Set a theme by default
 const currentTheme = localStorage.getItem("theme");

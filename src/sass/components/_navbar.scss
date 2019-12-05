@@ -1,0 +1,78 @@
+.ed-navbar {
+  display: flex;
+  flex-flow: row nowarp;
+  align-items: center;
+
+  background-color: $color-primary-accent;
+  color: $color-text-default;
+  
+  &__logo {
+    font-size: 2rem;  
+    padding: 1rem;
+    letter-spacing: .2rem;
+    color: inherit;
+    transition: all 1s;
+    
+    &:hover{
+      color: $color-background;
+    }
+    
+    &:hover &--highlight {
+      color: $color-text-default;
+    }
+    
+    &--highlight {
+      transition: all 1s;
+      color: $color-background;
+    }
+  }
+  
+  &__item {
+    &:hover {
+      color: $color-background;
+    }
+  }
+}
+
+
+.ed-navbar-menu {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  &__section {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-right: 3rem;
+  }
+
+  &__item {
+    font-size: 1.6rem;
+    margin: auto 1rem;
+    transition: all .2s;
+    color: $color-text-default;
+    z-index: 400;
+    
+    &:hover {
+      color: $color-background;
+    }
+    
+    &:active {
+      transform: translateY(10%);
+    }
+
+    &--greeting {
+      color: $color-text-default;
+    }
+    
+    &--static {
+      font-size: 1.3rem;
+      color: $color-background;
+    }
+
+  }
+
+}

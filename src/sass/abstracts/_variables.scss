@@ -4,7 +4,7 @@ ECH0 Default theme=>
   Shadow: #eee
   Background: #fff
   Text highlight: #00a69b
-  Text Standard: #424242
+  Text Default: #424242
 
 
 ECH0 DARK theme=>
@@ -12,7 +12,7 @@ ECH0 DARK theme=>
   Shadow: #424242
   Background: #222
   Text highlight: #00a69b
-  Text Standard: #eee
+  Text Default: #eee
 
 */
 
@@ -41,13 +41,13 @@ $color-primary-accent: $color-turquiose;
 $color-shadow: $color-grey-light;
 $color-background: $color-white;
 $color-text-highlight: $color-turquiose;
-$color-text-standard: $color-grey-dark;
+$color-text-default: $color-grey-dark;
 
 
 // BULMA VARIABLES
-$primary: $color-primary-accent;
-$title-color: $color-white;
-$subtitle-color: $color-grey-light;
+$primary: #57b846;
+// $title-color: $color-white;
+// $subtitle-color: $color-grey-light;
 
 /* BULMA SASS MAP
  https://bulma.io/documentation/customize/variables/ */

@@ -1,0 +1,95 @@
+.ed-form {
+  font-size: 1.6rem;
+
+  &__title {
+    font-size: 3rem;
+
+    &--secondary {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__subtitle {
+    &--secondary {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__input {
+
+    font-size: 1.6rem;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    border: 3px solid transparent;
+    box-shadow: 0 .2rem .4rem rgba($color-black, .4);
+
+    &:focus,
+    &:active {
+      outline: none;
+      border-bottom: 3px solid $primary;
+      box-shadow: 0 .4rem .6rem rgba($color-black, .4);
+    }
+    
+    &:focus:invalid {
+      border-bottom: 3px solid $danger;
+
+    }
+  }
+
+  &__label {
+  }
+
+  &__icon {
+    position: absolute;
+    right: .5rem;
+    top: 50%;
+    transform: translateY(-40%);
+  }
+
+  &__btn {
+    
+    text-align: center;
+    width: 100%;
+    font-size: 1.6rem;
+    margin: auto;
+    padding: 0.5rem 1.2rem;
+    border-radius: 3px;
+    background-color: $color-shadow;
+    color: $color-text-default;
+    transition: all .2s;
+    box-shadow: 0 .2rem .4rem rgba($color-black, .4);
+    
+    &:hover {
+      filter: brightness(90%);
+      transform: translateY(-5%);
+      box-shadow: 0 .4rem .6rem rgba($color-black, .4);
+    }
+    
+    &:active {
+      filter: brightness(95%);
+      transform: translateY(5%);
+      box-shadow: 0 .1rem .3rem rgba($color-black, .4);
+
+    }
+    
+    &--green {
+      background-color: $primary;
+      color: $color-white;
+    }
+  }
+
+  &__help {
+    font-size: 1.2rem;
+  }
+
+  &__group {
+    font-size: 1.6rem;
+    width: 90%;
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+}
