@@ -7172,7 +7172,7 @@ textarea {
   .ed-login__content {
     width: 70vw;
     margin: 0 5rem;
-    background: linear-gradient(105deg, #fff 50%, transparent 50%), url(.././img/banner_demo.jpg);
+    background: linear-gradient(105deg, #fff 50%, transparent 50%), url(.././img/login-img.jpg);
     box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.4);
     padding: 2rem;
     border-radius: 3px; }
