@@ -29,6 +29,40 @@ $breakpoint arguement choices:
 [1024 - 1800] is where our normal styles apply
 ## add a 1800+ option for big desktops?
 */
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent; }
+  50% {
+    border-color: orange; } }
+
+html[data-theme="dark"] {
+  --rgb-primary-accent: 0,166,155;
+  --rgb-shadow: 66,66,66;
+  --rgb-background: 34,34,34;
+  --rgb-text-highlight: 0,166,155;
+  --rgb-text-default: 238,238,238;
+  --rgb-color-red-light: 237,65,51;
+  --rgb-color-red: 195,45,56;
+  --rgb-color-red-dark: 156,23,32; }
+
+html {
+  --rgb-primary-accent: 0,166,155;
+  --rgb-shadow: 238,238,238;
+  --rgb-background: 255,255,255;
+  --rgb-text-highlight: 0,166,155;
+  --rgb-text-default: 66,66,66;
+  --rgb-color-red-light: 237,65,51;
+  --rgb-color-red: 195,45,56;
+  --rgb-color-red-dark: 156,23,32; }
+
 /*! bulma.io v0.8.0 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {
@@ -7143,6 +7177,11 @@ html {
   font-size: 62.5%;
   box-sizing: border-box; }
 
+a {
+  color: inherit; }
+  a:hover {
+    color: inherit; }
+
 body,
 button,
 input,
@@ -7168,19 +7207,33 @@ textarea {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, #00a69b 5%, #fff 80%); }
+  position: relative;
+  background: linear-gradient(to bottom, #00a69b 5%, #fff 80%);
+  background-position: left;
+  background-size: cover; }
+  .ed-login__welcome {
+    color: #00a69b;
+    font-size: 5rem;
+    font-weight: 600;
+    margin: 0 auto; }
   .ed-login__content {
     width: 70vw;
     margin: 0 5rem;
-    background: linear-gradient(105deg, #fff 50%, transparent 50%), url(.././img/login-img.jpg);
-    box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.4);
+    background: linear-gradient(105deg, transparent 50%, #fff 50%), url(.././img/login-img.jpg);
+    box-shadow: 0 0.4rem 0.7rem rgba(0, 0, 0, 0.4);
     padding: 2rem;
-    border-radius: 3px; }
-    .ed-login__content--left {
+    border-radius: 3px;
+    z-index: 1; }
+    .ed-login__content--right {
       display: flex;
       flex-flow: column nowrap;
       justify-content: center;
       align-items: center; }
+    .ed-login__content--left {
+      background-position: center;
+      background-size: cover;
+      padding: 0;
+      position: relative; }
 
 .ed-toast {
   position: fixed;
@@ -7209,7 +7262,7 @@ textarea {
     .ed-navbar__logo:hover .ed-navbar__logo--highlight {
       color: #424242; }
     .ed-navbar__logo--highlight {
-      transition: all 1s;
+      transition: all .5s;
       color: #fff; }
   .ed-navbar__item:hover {
     color: #fff; }
@@ -7251,14 +7304,15 @@ textarea {
   .ed-form__subtitle--secondary {
     font-size: 1.2rem; }
   .ed-form__input {
-    transition: all 2s ease;
+    transition: all 0.3s ease;
     background-color: #eee;
     font-size: 1.6rem;
     width: 100%;
     padding: 0.5rem 1rem;
     border-radius: 3px;
     border: 3px solid transparent;
-    box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.4); }
+    box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.4);
+    color: #424242; }
     .ed-form__input:focus, .ed-form__input:active {
       outline: none;
       border-bottom: 3px solid #57b846;
@@ -7269,7 +7323,7 @@ textarea {
     font-size: 1.6rem;
     background: none;
     position: absolute;
-    right: .5rem;
+    right: 0.5rem;
     top: 50%;
     transform: translateY(-35%);
     border: 0;
@@ -7284,32 +7338,75 @@ textarea {
     width: 100%;
     font-size: 1.6rem;
     margin: auto;
-    padding: 0.5rem 1.2rem;
+    padding: 1rem 1.5rem;
+    border: 0;
     border-radius: 3px;
     background-color: #eee;
     color: #424242;
-    transition: all .2s;
-    box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.4); }
+    transition: all 0.2s;
+    box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.5); }
     .ed-form__btn:hover {
       filter: brightness(90%);
       transform: translateY(-5%);
       box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.4); }
-    .ed-form__btn:active {
+    .ed-form__btn:active, .ed-form__btn:focus {
+      outline: none;
       filter: brightness(95%);
       transform: translateY(5%);
-      box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.4); }
+      box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.6); }
     .ed-form__btn--green {
       background-color: #57b846;
       color: #fff; }
   .ed-form__help {
     font-size: 1.2rem; }
   .ed-form__group {
+    color: #424242;
     font-size: 1.6rem;
     width: 90%;
     position: relative;
-    transition: all .2s ease; }
+    transition: all 0.2s ease; }
     .ed-form__group:not(:last-child) {
       margin-bottom: 2rem; }
+
+.ed-dropdown {
+  position: relative;
+  font-size: 1.6rem;
+  cursor: pointer; }
+  .ed-dropdown__content {
+    display: none;
+    border-radius: 3px;
+    overflow: hidden;
+    text-align: left;
+    position: absolute;
+    right: 0;
+    min-width: 16rem;
+    box-shadow: 0 0.4rem 1rem rgba(var(--rgb-text-default), 0.4);
+    z-index: 2;
+    background-color: rgba(var(--rgb-background), 1);
+    color: rgba(var(--rgb-text-default), 1); }
+  .ed-dropdown__item {
+    border-bottom: 4px solid transparent;
+    padding: 0.5rem 1rem; }
+    .ed-dropdown__item:hover {
+      color: rgba(var(--rgb-primary-accent), 1);
+      border-bottom: 4px solid rgba(var(--rgb-primary-accent), 1);
+      opacity: 0.95; }
+    .ed-dropdown__item:active {
+      background-color: linear-gradient(to top,rgba(255, 255, 255,5),rgba(255, 255, 255,5)) rgba(var(--rgb-background), 1);
+      color: linear-gradient(to top,rgba(255, 255, 255,5),rgba(255, 255, 255,5)) rgba(var(--rgb-primary-accent), 1);
+      border-bottom: 4px solid linear-gradient(to top,rgba(255, 255, 255,5),rgba(255, 255, 255,5)) rgba(var(--rgb-primary-accent), 1); }
+    .ed-dropdown__item--red {
+      color: rgba(var(--rgb-color-red), 1); }
+      .ed-dropdown__item--red:hover {
+        color: rgba(var(--rgb-color-red-light), 1);
+        border-bottom: 4px solid rgba(var(--rgb-color-red-light), 1); }
+      .ed-dropdown__item--red:active {
+        background-color: linear-gradient(to top,rgba(255, 255, 255,5),rgba(255, 255, 255,5)) rgba(var(--rgb-background), 1);
+        color: rgba(var(--rgb-color-red-dark), 1);
+        border-bottom: 4px solid rgba(var(--rgb-color-red-dark), 1); }
+  .ed-dropdown:hover .ed-dropdown__content {
+    display: flex;
+    flex-flow: column nowrap; }
 
 .ed-port-user-dropdown {
   width: 12rem; }

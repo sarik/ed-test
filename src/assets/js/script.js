@@ -38,17 +38,24 @@ function toggleShowPassword() {
 }
 
 
+
 // Set a theme by default
 const currentTheme = localStorage.getItem("theme");
 currentTheme ? "" : localStorage.setItem("theme", "light");
 
+document.getElementsByTagName("html")[0].setAttribute("data-theme", localStorage.getItem("theme"))
+
 function toggleDarkMode() {
 	//store in cookies?
+	
+	
 	if (currentTheme === "light") {
 		localStorage.setItem("theme", "dark");
 	} else {
 		localStorage.setItem("theme", "light");
 	}
+	
+
 	
 	location.reload();
 }

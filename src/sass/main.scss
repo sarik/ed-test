@@ -1,8 +1,11 @@
 // ABSTRACTS
 @import "abstracts/variables";
 @import "abstracts/mixins";
+@import "abstracts/animations";
+@import "abstracts/functions";
 
 @import "themes/dark";
+@import "themes/default";
 // VENDORS
 @import "vendors/bulma.scss";
 

@@ -43,7 +43,7 @@
             href="/#/check-in"
             intl-id="join-session"
           >
-            <span class="icon"><i class="far fa-sign-in"></i></span>&nbsp; Join
+            <span class="icon"><i class="far fa-webcam"></i></span>&nbsp; Join
             a session
           </a>
           <a
@@ -225,10 +225,19 @@
             </div>
           </div>
 
-          <div class="ed-navbar__dropdown" style="background-color:#ef4;">
-            <figure class="image is-32x32" style="background-color:#4fe;">
+          <div class="ed-dropdown" >
+            <figure class="image is-32x32" >
               <img src="./img/user_demo.jpg" alt="" class="is-rounded" />
             </figure>
+
+            <div class="ed-dropdown__content">
+                <span intl-id="view-profile" class="formattedMessage ed-dropdown__item ed-u-disabled"><i class="far fa-id-badge"></i>&nbsp; View Profile</span>
+                <span intl-id="messages" class="formattedMessage ed-dropdown__item ed-u-disabled"><i class="fas fa-envelope-open-text"></i>&nbsp; Messages</span>
+                <span intl-id="my-settings" class="formattedMessage ed-dropdown__item"><i class="fas fa-sliders-h"><a></i>&nbsp; My Settings</a></span>
+                <span intl-id="help-center" class="formattedMessage ed-dropdown__item ed-u-disabled"><i class="far fa-question-circle"></i>&nbsp; Help Center</span>
+                <span intl-id="report-a-bug" class="formattedMessage ed-dropdown__item ed-u-disabled"><i class="fas fa-bug"></i>&nbsp; Report a bug</span>
+                <span intl-id="log-out" class="formattedMessage ed-dropdown__item ed-dropdown__item--red" onclick="signOut()"><i class="far fa-sign-out-alt"></i>&nbsp; Log-out</span>
+            </div>
           </div>
 
           <!-- <div
@@ -313,7 +322,11 @@
                 alt=""
               />
             </div> -->
-            <div class="column is-5 ed-login__content--left">
+            <div class="column is-7 ed-login__content--left">
+                <h1 class="ed-login__welcome">
+                </h1>
+            </div>
+            <div class="column is-5 ed-login__content--right">
               <div class="ed-form__group">
                 <p
                   class=" is-3 formattedMessage ed-form__title"
@@ -331,7 +344,7 @@
               <div class=" ed-form__group">
                 <label
                   class="ed-form__label formattedMessage"
-                  for="login-name"
+                  for="login-username"
                   intl-id="email-or-phone"
                 >
                   Email
@@ -340,7 +353,7 @@
                   class=" ed-form__input"
                   type="email"
                   name="username"
-                  id="login-name"
+                  id="login-username"
                   autofocus
                 />
               </div>
@@ -391,13 +404,13 @@
               </div>
 
               <div class="ed-form__group">
-                <p
+                <button
                   onclick="signIn(event)"
                   class="ed-form__btn ed-form__btn--green formattedMessage"
                   intl-id="login"
                 >
                   Login &rarr;
-                </p>
+              </button>
               </div>
 
               <!-- <div class="is-divider" id="loginDivider"></div> -->
@@ -417,15 +430,15 @@
               </div>
 
               <div class="ed-form__group">
-                <p
+                <button
                   class="ed-form__btn formattedMessage"
                   intl-id="join-the-community"
                 >
                   Join the Community &rarr;
-                </p>
+                </button>
               </div>
             </div>
-            <div class="column is-5"></div>
+            
           </div>
         </div>
       </div>

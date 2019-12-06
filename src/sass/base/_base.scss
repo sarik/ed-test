@@ -11,3 +11,10 @@ html {
   // font-size: 100%; //to test stuff 1rem === 16px
   box-sizing: border-box;
 }
+
+a{
+  color: inherit;
+  &:hover {
+    color: inherit;
+  }
+}

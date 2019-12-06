@@ -16,10 +16,7 @@ ECH0 DARK theme=>
 
 */
 
-
 // CUSTOM VARIABLES
-
-
 // General Colors
 $color-black: #000;
 
@@ -30,22 +27,30 @@ $color-grey-dark: #424242;
 
 $color-turquiose: #00a69b;
 
+$color-green: #57b846;
 
-// Business colors
-$color-echo-primary-light: #ed4133;
-$color-echo-primary: #c32d38;
-$color-echo-primary-dark: #9c1720;
+$color-red-light: #ed4133;
+$color-red: #c32d38;
+$color-red-dark: #9c1720;
 
 //Default theme
 $color-primary-accent: $color-turquiose;
+// $color-primary-accent: #63f;  //demo purposes delete later
 $color-shadow: $color-grey-light;
 $color-background: $color-white;
 $color-text-highlight: $color-turquiose;
 $color-text-default: $color-grey-dark;
 
+// Dark Theme
+// $color-primary-accent: $color-turquiose;
+// // $color-primary-accent: #63f;  //demo purposes delete later
+// $color-shadow: $color-grey-dark;
+// $color-background: #222;
+// $color-text-highlight: $color-turquiose;
+// $color-text-default: $color-grey-light;
 
 // BULMA VARIABLES
-$primary: #57b846;
+$primary: $color-green;
 $title-color: $color-white;
 $subtitle-color: $color-grey-light;
 
