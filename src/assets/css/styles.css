@@ -2815,7 +2815,7 @@ a.tag:hover {
     vertical-align: middle; }
 
 .title {
-  color: #363636;
+  color: #fff;
   font-size: 2rem;
   font-weight: 600;
   line-height: 1.125; }
@@ -2842,7 +2842,7 @@ a.tag:hover {
     font-size: 0.75rem; }
 
 .subtitle {
-  color: #4a4a4a;
+  color: #eee;
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.25; }
@@ -7251,6 +7251,7 @@ textarea {
   .ed-form__subtitle--secondary {
     font-size: 1.2rem; }
   .ed-form__input {
+    transition: all 2s ease;
     background-color: #eee;
     font-size: 1.6rem;
     width: 100%;
@@ -7305,7 +7306,8 @@ textarea {
   .ed-form__group {
     font-size: 1.6rem;
     width: 90%;
-    position: relative; }
+    position: relative;
+    transition: all .2s ease; }
     .ed-form__group:not(:last-child) {
       margin-bottom: 2rem; }
 
