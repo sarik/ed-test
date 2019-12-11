@@ -1,28 +1,100 @@
-.ed-home-bg--default {
-	background: linear-gradient(to top left, $color-red-light, $color-red, $color-red-dark); 
+// .ed-home-bg--default {
+// 	background:  rgbabackground--rgb-background), 1); 
+// }
+
+// .ed-home-card {
+//   box-shadow: 0 1rem 2.8rem rgba($color-black, 0.15);
+// 	border-radius: .3rem;
+// 	display: flex;
+// 	flex-flow: column nowrap;
+// 	justify-content: flex-start;
+// 	align-items: center;
+	
+// 	@media screen and (min-width: 1216px) {
+// 		height: 15rem;
+// 		padding: 3rem;
+// 	}
+
+// 	@media screen and (min-width: 1024px) and (max-width: 1215px) {
+// 		height: 15rem;
+// 		padding: 3rem;
+// 	}
+// 	@media screen and (min-width: 769px) and (max-width: 1023px) {
+// 		height: 1.6rem;
+// 		padding: 3rem;
+// 	}
+// }
+
+// Yet to be implemented
+
+.ed-ho-card {
+	background: rgba(var(--rgb-background), 1);
+	color: rgba(var(--rgb-text-default), 1);
+	
+	font-size: $text-default-size;
+	padding: 4rem;
+	margin: 3rem;
+	
+	display: inline-block;
+	width: 35rem;
+	text-align: center;
+	border: 0;
+	border-radius: 3px;
+	box-shadow: 0 .4rem 1rem rgba($color-black, .4);
+	
+	transition: all .3s;
+	
+	&:hover {
+		transform: translateY(-3%);
+		color: rgba(var(--rgb-text-default), 1);
+		box-shadow: 0 .6rem 1.2rem rgba($color-black, .3);
+	}
+	
+	&:active {
+		transform: translateY(3%);
+		box-shadow: 0 .3rem .6rem rgba($color-black, .5);
+
+	}
+
+	&__icon {
+
+	}
+
+	&__title {
+		font-size: 2.5rem;
+		text-transform: capitalize;
+		display: flex;
+		flex-flow: column nowrap;
+	}
+
+	&__description {
+		margin-top: 1rem;
+	}
 }
 
-.ed-home-card {
-  box-shadow: 0 1rem 2.8rem rgba($color-black, 0.15);
-	border-radius: .3rem;
+.ed-ho-message {
+	font-size: 2rem;
+	width: 85%;
+	margin: 0 auto 2rem auto;
+	&__title {
+		font-size: 4rem;
+		font-weight: 600;
+		color: rgba(var(--rgb-text-highlight), 1);
+	}
+	
+	&__subtitle {
+		color: rgba(var(--rgb-text-default), 1);
+	}
+}
+
+.ed-ho-main {
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
 	align-items: center;
-	
-	@media screen and (min-width: 1216px) {
-		height: 15rem;
-		padding: 3rem;
-	}
+	background: rgba(var(--rgb-shadow), 1);
 
-	@media screen and (min-width: 1024px) and (max-width: 1215px) {
-		height: 15rem;
-		padding: 3rem;
-	}
-	@media screen and (min-width: 769px) and (max-width: 1023px) {
-		height: 1.6rem;
-		padding: 3rem;
-	}
 }
-
-// Yet to be implemented

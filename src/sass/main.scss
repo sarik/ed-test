@@ -16,8 +16,10 @@
 @import "base/animations";
 
 // LAYOUTS
+@import "layouts/tile";
 
-@import "layouts/login";
+// PAGES
+@import "pages/login";
 
 // COMPONENTS --main file--
 @import "components/components.main";

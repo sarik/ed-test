@@ -3,8 +3,8 @@
   flex-flow: row nowarp;
   align-items: center;
 
-  background-color: $color-primary-accent;
-  color: $color-text-default;
+  background-color: rgba(var(--rgb-primary-accent),1);
+  color: rgba(var(--rgb-text-default),1);
   
   &__logo {
     font-size: 2rem;  
@@ -14,22 +14,22 @@
     transition: all 1s;
     
     &:hover{
-      color: $color-background;
+      color: rgba(var(--rgb-background),1);
     }
     
     &:hover &--highlight {
-      color: $color-text-default;
+      color: rgba(var(--rgb-text-default),1);
     }
     
     &--highlight {
       transition: all .5s;
-      color: $color-background;
+      color: rgba(var(--rgb-background),1);
     }
   }
   
   &__item {
     &:hover {
-      color: $color-background;
+      color: rgba(var(--rgb-background),1);
     }
   }
 }
@@ -53,11 +53,11 @@
     font-size: 1.6rem;
     margin: auto 1rem;
     transition: all .2s;
-    color: $color-text-default;
+    color: rgba(var(--rgb-text-default),1);
     z-index: 400;
     
     &:hover {
-      color: $color-background;
+      color: rgba(var(--rgb-background),1);
     }
     
     &:active {
@@ -65,12 +65,12 @@
     }
 
     &--greeting {
-      color: $color-text-default;
+      color: rgba(var(--rgb-text-default),1);
     }
     
     &--static {
       font-size: 1.3rem;
-      color: $color-background;
+      color: rgba(var(--rgb-background),1);
     }
 
   }

@@ -1,6 +1,35 @@
 .ed-u-disabled {
-  pointer-events: none;
-  opacity: .5;
+  // display: none !important;
+  pointer-events: none !important;
+  position: relative;
+
+  &::after {
+    content: "DISABLED";
+    background: rgba($color-black, .9);
+    color: $color-red;
+    font-size: 2rem;
+    font-weight: 600;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+
+    transform: translate(-50%,-50%);
+
+  }
+
+}
+
+.ed-u-highlight {
+  color: rgba(var(--rgb-text-highlight), 1) !important;
+
 }
 
 .ed-u-flex-centered{
@@ -10,4 +39,10 @@
 
 .ed-u-overflow-visible {
   overflow: visible !important;
+}
+
+.ed-u-align {
+  &--right {
+    text-align: right !important;
+  }
 }

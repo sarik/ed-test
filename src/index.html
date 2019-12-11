@@ -43,8 +43,8 @@
             href="/#/check-in"
             intl-id="join-session"
           >
-            <span class="icon"><i class="far fa-webcam"></i></span>&nbsp; Join
-            a session
+            <span class="icon"><i class="far fa-webcam"></i></span>&nbsp; Join a
+            session
           </a>
           <a
             class="navbar-item is-hidden-desktop formattedMessage"
@@ -89,7 +89,7 @@
               ></i
             ></span>
 
-            <div class="navbar-dropdown is-right is-boxed" id="notifDropdown">
+            <div class="navbar-dropdown is-hidden is-right is-boxed" id="notifDropdown">
               <div class="navbar-item">
                 <article class="media">
                   <figure class="media-left">
@@ -225,18 +225,45 @@
             </div>
           </div>
 
-          <div class="ed-dropdown" >
-            <figure class="image is-32x32" >
+          <div class="ed-dropdown">
+            <figure class="image is-32x32">
               <img src="./img/user_demo.jpg" alt="" class="is-rounded" />
             </figure>
 
             <div class="ed-dropdown__content">
-                <span intl-id="view-profile" class="formattedMessage ed-dropdown__item ed-u-disabled"><i class="far fa-id-badge"></i>&nbsp; View Profile</span>
-                <span intl-id="messages" class="formattedMessage ed-dropdown__item ed-u-disabled"><i class="fas fa-envelope-open-text"></i>&nbsp; Messages</span>
-                <span intl-id="my-settings" class="formattedMessage ed-dropdown__item"><i class="fas fa-sliders-h"><a></i>&nbsp; My Settings</a></span>
-                <span intl-id="help-center" class="formattedMessage ed-dropdown__item ed-u-disabled"><i class="far fa-question-circle"></i>&nbsp; Help Center</span>
-                <span intl-id="report-a-bug" class="formattedMessage ed-dropdown__item ed-u-disabled"><i class="fas fa-bug"></i>&nbsp; Report a bug</span>
-                <span intl-id="log-out" class="formattedMessage ed-dropdown__item ed-dropdown__item--red" onclick="signOut()"><i class="far fa-sign-out-alt"></i>&nbsp; Log-out</span>
+              <span
+                intl-id="view-profile"
+                class="formattedMessage ed-dropdown__item ed-u-disabled"
+              >
+                <i class="far fa-id-badge"></i>&nbsp; View Profile
+              </span>
+              <span
+                intl-id="messages"
+                class="formattedMessage ed-dropdown__item ed-u-disabled"
+              >
+                <i class="fas fa-envelope-open-text"></i>&nbsp; Messages</span
+              >
+              <a href="/#/account" class="ed-dropdown__item">
+                <span intl-id="my-settings" class="formattedMessage">
+                  <i class="fas fa-sliders-h"></i>&nbsp; My Settings
+                </span>
+              </a>
+              <span
+                intl-id="help-center"
+                class="formattedMessage ed-dropdown__item ed-u-disabled"
+                ><i class="far fa-question-circle"></i>&nbsp; Help Center
+              </span>
+              <span
+                intl-id="report-a-bug"
+                class="formattedMessage ed-dropdown__item ed-u-disabled"
+                ><i class="fas fa-bug"></i>&nbsp; Report a bug
+              </span>
+              <span
+                intl-id="log-out"
+                class="formattedMessage ed-dropdown__item ed-dropdown__item--red"
+                onclick="signOut()"
+                ><i class="far fa-sign-out-alt"></i>&nbsp; Log-out
+              </span>
             </div>
           </div>
 
@@ -310,11 +337,11 @@
       <!-- </div> -->
     </nav>
     <!-- authForm: main login form -->
-    <section class="hero ed-login is-fullheight-with-navbar" id="authForm" >
+    <section class="hero ed-login is-fullheight-with-navbar" id="authForm">
       <!-- <div class="hero-head" > -->
       <div class="section">
-        <div class="container" >
-          <div class="columns is-8 ed-login__content is-variable " >
+        <div class="container">
+          <div class="columns is-8 ed-login__content is-variable ">
             <!-- <div class="column is-6">
               <img
                 src="./img/banner_demo.jpg"
@@ -323,8 +350,7 @@
               />
             </div> -->
             <div class="column is-7 ed-login__content--left">
-                <h1 class="ed-login__welcome">
-                </h1>
+              <h1 class="ed-login__welcome"></h1>
             </div>
             <div class="column is-5 ed-login__content--right">
               <div class="ed-form__group">
@@ -358,12 +384,13 @@
                 />
               </div>
 
-              <div class="ed-form__group" >
+              <div class="ed-form__group">
                 <label
                   class="ed-form__label formattedMessage"
                   intl-id="password"
                   for="login-password"
-                  >Password</label>
+                  >Password</label
+                >
 
                 <input
                   class="ed-form__input"
@@ -410,7 +437,7 @@
                   intl-id="login"
                 >
                   Login &rarr;
-              </button>
+                </button>
               </div>
 
               <!-- <div class="is-divider" id="loginDivider"></div> -->
@@ -438,7 +465,6 @@
                 </button>
               </div>
             </div>
-            
           </div>
         </div>
       </div>
@@ -446,6 +472,9 @@
         class="content has-text-centered has-text-grey is-size-7 formattedMessage"
         intl-id="project-echo-content-is-licensed"
       >
+        <a class="has-text-link" onclick="toggleDarkMode()"
+          >&larr;<i class="fas fa-adjust"></i>Dark Mode&rarr;</a
+        >
         ©2019 Project ECHO. Content is licensed
         <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
           >CC BY NC SA 4.0</a

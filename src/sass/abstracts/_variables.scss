@@ -35,7 +35,6 @@ $color-red-dark: #9c1720;
 
 //Default theme
 $color-primary-accent: $color-turquiose;
-// $color-primary-accent: #63f;  //demo purposes delete later
 $color-shadow: $color-grey-light;
 $color-background: $color-white;
 $color-text-highlight: $color-turquiose;
@@ -51,8 +50,8 @@ $color-text-default: $color-grey-dark;
 
 // BULMA VARIABLES
 $primary: $color-green;
-$title-color: $color-white;
-$subtitle-color: $color-grey-light;
+$title-color: $color-text-highlight;
+// $subtitle-color: $color-grey-light;
 
 /* BULMA SASS MAP
  https://bulma.io/documentation/customize/variables/ */
@@ -60,5 +59,7 @@ $subtitle-color: $color-grey-light;
 // $color-echo-green:
 
 // GLOBAL VARIABLES
+
+$text-default-size: 1.6rem;
 
 //COMPONENT VARIABLES

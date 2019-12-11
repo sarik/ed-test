@@ -1,5 +1,5 @@
 .ed-attend-user-img {
-  margin: auto .3rem;
+  margin: auto 0.3rem;
   border-radius: 100%;
   overflow: hidden;
 }
@@ -7,29 +7,128 @@
 .ed-attend-panel {
   &__header {
     // .panelHeader
-  padding: 0.6em;
-  font-size: 0.7em;
-  margin-bottom: 0 !important;
-  border-radius: 0 !important;
-
+    padding: 0.6em;
+    // font-size: 0.7em;
+    margin-bottom: 0 !important;
+    border-radius: 0 !important;
   }
 
   &__container {
-  // .attendancePanelContainer
-  box-shadow: 0 2px 13px rgba(10, 10, 10, 0.15);
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  position: relative;
-  margin-bottom: 1em;
-  overflow: hidden;
+    // .attendancePanelContainer
+  }
+  
+  &__search {
+    // .attendeeSearch
+    // font-size: 0.85em;
+  }
+}
+
+// delete above stuff after youre done with Modal
+
+
+.ed-at-modal {
+  font-size: $text-default-size;
+  background-color: rgba(var(--rgb-background), 1);
+  color: rgba(var(--rgb-text-default), 1);
+
+  &__header {
+    text-align: right;
+    background-color: rgba(var(--rgb-text-default), 1);
+    color: rgba(var(--rgb-background), 1)
+  }
+  
+  &__panel {
+    background-color: rgba(var(--rgb-shadow), 1);
+    box-shadow: 0 .4rem 1rem rgba($color-black,  0.08);
+    border: 1px solid rgba(var(--rgb-shadow), 1);
+    border-radius: 3px;
+    position: relative;
+    margin-bottom: 1rem;
+    overflow: hidden;
   }
 
   &__search {
-    // .attendeeSearch
-  font-size: 0.85em;
-  border: none;
-  box-shadow: none;
-  background: none;
-
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: stretch;
+    align-items: center;
+    padding: .5rem;
+    font-size: $text-default-size;
+    color: rgba(var(--rgb-text-default), 1);
+    width: 100%;
   }
+  
+  &__input {
+    font-size: inherit;
+    color: inherit;
+    border: none;
+    box-shadow: none;
+    background: rgba(var(--rgb-shadow), 1);
+    
+    &::placeholder {
+      color: rgba(var(--rgb-text-default), .7);
+    }
+  }
+
+  &__btn {
+    height: 100%;
+    padding: 1rem;
+    border: 0;
+    border-radius: 0 3px 3px 0;
+    background-color: rgba(var(--rgb-text-highlight), 1);
+  }
+}
+
+.ed-at-main {
+  background: rgba(var(--rgb-shadow), 1);
+  font-size: $text-default-size;
+  padding-top: 2rem;
+  min-height: 100vh;
+}
+
+.ed-at-heading {
+  &__primary {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  &__secondary {
+    font-size: $text-default-size;
+    color: rgba(var(--rgb-text-default), 0.75);
+  }
+
+  &__tertiary {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  &--faded {
+    color: rgba(var(--rgb-text-default), 0.8);
+  }
+}
+
+.ed-at-program {
+  border-radius: 3px;
+  background-color: rgba(var(--rgb-background), 1);
+  color: rgba(var(--rgb-text-default), 1);
+
+  &__text {
+  }
+}
+
+
+.ed-at-btn {
+  cursor: pointer;
+  display: inline-block;
+  font-size: $text-default-size;
+  padding: 1rem 1.2rem;
+  border-radius: 3px;
+  background-color: rgba(var(--rgb-text-highlight), 1);
+  color: $color-white;
+
+  &--disabled {
+    pointer-events: disabled;
+    opacity: .4;
+  }
+
 }
