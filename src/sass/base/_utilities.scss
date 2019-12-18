@@ -1,11 +1,11 @@
 .ed-u-disabled {
-  // display: none !important;
+  display: none !important;
   pointer-events: none !important;
   position: relative;
 
   &::after {
     content: "DISABLED";
-    background: rgba($color-black, .9);
+    background: rgba($color-black, 0.9);
     color: $color-red;
     font-size: 2rem;
     font-weight: 600;
@@ -21,18 +21,15 @@
     width: 100%;
     border-radius: 3px;
 
-    transform: translate(-50%,-50%);
-
+    transform: translate(-50%, -50%);
   }
-
 }
 
 .ed-u-highlight {
   color: rgba(var(--rgb-text-highlight), 1) !important;
-
 }
 
-.ed-u-flex-centered{
+.ed-u-flex-centered {
   justify-content: center;
   align-items: center;
 }
@@ -45,4 +42,24 @@
   &--right {
     text-align: right !important;
   }
+}
+
+.ed-u-no-scroll {
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+}
+
+.ed-u-inline {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.ed-u-show-grid {
+  display: grid !important;
+}
+
+.ed-u-smooth-transition {
+  transition: all 4s;
 }

@@ -12,17 +12,21 @@ html {
   // font-size: 100%; //to test stuff 1rem === 16px
 
   @include ed-respond(tablet) {
-    font-size: 56.25%; //1rem === 9px 
+    font-size: 56.25%; //1rem === 9px
   }
 
   @include ed-respond(mobile) {
-    font-size:  50%; //1rem === 8px
+    font-size: 56.25%; //1rem === 9px
   }
-
 }
 
 body {
   box-sizing: border-box;
+}
+
+i {
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
 }
 
 a {

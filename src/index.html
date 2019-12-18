@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
       rel="stylesheet"
     />
+
     <script type="text/javascript">
       // Doesn't even get called ever. Delete?
 
@@ -28,7 +29,7 @@
       aria-label="main navigation"
     >
       <a class="ed-navbar__logo" href="/#/home">
-        <span class="ed-navbar__logo--highlight ">ECHO</span>DIGITAL
+        E<span style="color:#c32d38;">C</span>HO<span class="ed-navbar__logo--highlight ">DIGITAL</span>
       </a>
 
       <div class="ed-toast notification is-danger" id="toast-unavailable">
@@ -36,7 +37,7 @@
       </div>
       <!-- <div class="container"> -->
       <!-- mainNavbar: replaces authForm after login success -->
-      <div id="mainNavbar" class="ed-navbar-menu">
+      <div id="mainNavbar" class="ed-navbar-menu is-hidden-mobile">
         <div class="navbar-start ed-navbar-menu__section">
           <a
             class="is-hidden-touch formattedMessage ed-navbar-menu__item"
@@ -89,7 +90,10 @@
               ></i
             ></span>
 
-            <div class="navbar-dropdown is-hidden is-right is-boxed" id="notifDropdown">
+            <div
+              class="navbar-dropdown is-hidden is-right is-boxed"
+              id="notifDropdown"
+            >
               <div class="navbar-item">
                 <article class="media">
                   <figure class="media-left">
@@ -248,6 +252,28 @@
                   <i class="fas fa-sliders-h"></i>&nbsp; My Settings
                 </span>
               </a>
+              <span class="ed-dropdown__item" onclick="toggleDarkMode()">
+                <i class="far fa-language"></i>&nbsp; Change Language
+                <div class="ed-dropdown__submenu">
+                  <div class="ed-dropdown__subcontent">
+                    <span class="ed-dropdown__subitem">
+                        (&#x958) Hindi
+                    </span>
+                    <span class="ed-dropdown__subitem">
+                      (en) English
+                    </span>
+                    <span class="ed-dropdown__subitem">
+                      (és) Spanish
+                    </span>
+                    <span class="ed-dropdown__subitem">
+                      (de) German
+                    </span>
+                  </div>
+                </div>
+              </span>
+              <span class="ed-dropdown__item" id="theme-switch" onclick="toggleDarkMode()">
+                <i class="fas fa-moon" id="theme-switch-icon"></i>&nbsp; Switch Theme
+              </span>
               <span
                 intl-id="help-center"
                 class="formattedMessage ed-dropdown__item ed-u-disabled"
