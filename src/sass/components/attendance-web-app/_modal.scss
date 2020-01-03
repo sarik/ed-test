@@ -8,7 +8,7 @@
   top: 0;
   left: 0;
   background: #0005;
-  z-index: 40;
+  z-index: 120;
   animation: $transition-default-time ed-a-fade-in;
   transition: all $transition-default-time;
   display: flex;
@@ -28,7 +28,7 @@
     padding: 1rem;
     border-radius: 100%;
     border: none;
-    z-index: 41;
+    z-index: 121;
   }
 
   &-btn {
@@ -40,46 +40,21 @@
     display: inline-block;
     position: relative;
     overflow: hidden;
-    z-index: 42;
-
-    &::before {
-      content: "";
-      background: rgba(var(--rgb-text-highlight), 1);
-      position: absolute;
-      height: 100%;
-      width: 0%;
-      top: 0;
-      left: 0;
-      z-index: -40;
-
-      transition: all 0.3s ease-in-out;
-    }
+    z-index: 121;
+    transition: all $transition-default-time;
 
     &:hover {
-      opacity: 0.95;
+      background: darken($primary, 5);
       color: $color-white;
-      animation-fill-mode: backwards;
-      &:before {
-        width: 110%;
-      }
     }
 
     &--secondary {
       background: rgba(var(--rgb-background), 1);
       color: rgba(var(--rgb-text-default), 1);
 
-      &::before {
-        background: $color-black;
-        width: 100%;
-        transform: translateX(100%);
-      }
-
       &:hover {
-        // color: rgba(var(--rgb-text-default), 1);
-        color: $color-white;
-        &:before {
-          transform: translateX(0%);
-        }
+        background: $color-grey-light;
+        color: rgba(var(--rgb-text-default), 1);
       }
     }
   }
@@ -124,8 +99,7 @@
 
     height: 50%;
     width: 50%;
-    // min-height: 250px;
-    // min-width: 500px;
+    max-width: 850px;
 
     display: flex;
     flex-flow: column nowrap;
@@ -145,8 +119,6 @@
       height: 80vh;
       width: 80vw;
       min-height: 580px;
-      // overflow-y: scroll;
-      // min-width: 1000px;
     }
   }
 
@@ -480,8 +452,8 @@
     &-icon {
       &--body {
         font-size: 6rem;
-        height: 128px;
-        width: 128px;
+        height: 96px;
+        width: 96px;
       }
     }
 
@@ -568,7 +540,7 @@
         height: 40px;
         width: 100%;
         border-bottom: 0;
-        z-index: 50;
+        z-index: 120;
         background: rgba(var(--rgb-background), 1);
         box-shadow: 0 0.5rem 0.5rem rgba(var(--rgb-shadow-2), 0.12),
           0 0.2rem 0.5rem rgba(var(--rgb-shadow-2), 0.12);

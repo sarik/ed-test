@@ -1,0 +1,206 @@
+.is-active {
+  .fa-caret-square-right {
+    transition: all 0.2s;
+    transform: rotateZ(90deg);
+  }
+}
+#wc-footer {
+  transition: all 0.2s;
+  height: 60px;
+  padding: 5px;
+
+  &:before {
+    border-top: 2px $primary;
+  }
+
+  &-left {
+    & ~ div {
+      height: 1px;
+    }
+  }
+}
+
+#dialog-join {
+  width: 100% !important;
+}
+.meeting-client-inner {
+  top: unset !important;
+  bottom: 0 !important;
+}
+
+.meeting-app,
+.meeting-client {
+  position: fixed !important;
+  top: unset !important;
+  bottom: 0 !important;
+  left: 0 !important;
+}
+
+.meeting-app,
+.meeting-client-inner,
+.main-layout,
+.meeting-client {
+  height: 90vh !important;
+  width: 80vw !important;
+}
+
+#sv-active-main,
+#sv-active-video,
+.active-main {
+  height: 100% !important;
+  width: auto !important;
+}
+
+#wc-container-right {
+  position: fixed !important;
+  right: 80vw !important;
+  top: 0 !important;
+  height: 90vh !important;
+}
+
+.ed-zoom {
+  &-controls {
+    padding: 1rem;
+    margin-left: auto;
+
+    display: flex;
+    flex-flow: end;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &-btn {
+    z-index: 102;
+    text-align: center;
+    font-size: 1.6rem;
+    width: 18rem;
+    padding: 0.5rem 1.2rem;
+    margin: 1.5rem 1rem;
+    background: transparent;
+    color: $color-white;
+    border: 1px solid $color-white;
+    border-radius: 500px;
+    cursor: pointer;
+    transition: all $transition-default-time;
+
+    i {
+      width: 1.8rem;
+      margin: auto 0.5rem;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      transform: translateY(5%);
+    }
+
+    &--red {
+      color: $color-red-light;
+      border-color: $color-red-light;
+    }
+  }
+
+  &-logo {
+    height: 100%;
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  &-program {
+    &-info {
+      display: flex;
+      margin: auto 1rem;
+    }
+
+    &-name {
+      margin: auto 1rem;
+      font-size: 1.8rem;
+    }
+  }
+
+  &-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+
+    background: $color-black-2;
+    color: $color-white;
+    font-size: 1.6rem;
+
+    &-main {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      height: 10vh;
+      width: 100%;
+      z-index: 102;
+
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    &-secondary {
+      z-index: 102;
+      position: absolute;
+      top: 10vh;
+      right: 0;
+
+      height: calc(100% - 10vh);
+      width: 20vw;
+
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &-pop {
+    &-info {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      display: center;
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 90%;
+      width: 80%;
+    }
+
+    &-options {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-btn {
+      cursor: pointer;
+      font-size: 1.6rem;
+      padding: 1rem 1.2rem;
+      margin: 1rem;
+      border-radius: 0.5rem;
+      transition: all 0.2s;
+      width: 10rem;
+      flex-basis: 18rem;
+      background-color: $primary;
+
+      &--red {
+        background-color: $color-red-light;
+      }
+    }
+  }
+}

@@ -7,7 +7,7 @@
 }
 
 html {
-  font-size: 62.5%; //1rem === 10px
+  font-size: 62.5% !important; //1rem === 10px
 
   // font-size: 100%; //to test stuff 1rem === 16px
 
@@ -34,4 +34,13 @@ a {
   &:hover {
     color: inherit;
   }
+}
+
+#zmmtg-root {
+  height: 0% !important;
+  width: 0% !important;
+}
+
+.image {
+  z-index: unset;
 }

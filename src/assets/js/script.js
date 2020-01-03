@@ -7,6 +7,24 @@ function toggleDropdown(id) {
   }
 }
 
+function toggleNavbarDropdown(id) {
+  const toggleDropdown = document.getElementById(id);
+  toggleDropdown.classList.toggle("ed-u-enabled");
+}
+
+function toggleNavbarMobile() {
+  const navBurger = document.getElementById("nav-burger");
+  // const navMenu = document.getElementById("nav-mobile-menu");
+  const navMenu = document.getElementsByClassName("ed-navbar-mobile-menu");
+
+  navBurger.classList.toggle("fa-bars");
+  navBurger.classList.toggle("fa-times");
+
+  for (let item = 0; item < navMenu.length; item++) {
+    navMenu[item].classList.toggle("ed-navbar-mobile-menu--enable");
+  }
+}
+
 function getDisplayLanguage() {
   let lang = navigator.language;
   var locallang = lang;
@@ -22,7 +40,7 @@ function getDisplayLanguage() {
 function showToast(toastId) {
   let toast = document.getElementById(toastId);
   toast.classList.add("ed-toast--show");
-  setTimeout(function() {
+  setTimeout(function () {
     toast.className = toast.className.replace("ed-toast--show", "");
   }, 2000);
 }
@@ -65,16 +83,16 @@ function toggleDarkMode() {
   location.reload();
 }
 
-const navItems = document.querySelector("#mainNavbar > .navbar-start").children;
-window.addEventListener("single-spa:app-change", evt => {
-  for (j = 0; j < navItems.length; j++) {
-    navItems[j].classList.remove("is-active");
-    navItems[j].classList.remove("is-tab");
-    if (window.location.href === navItems[j].href) {
-      navItems[j].className += " is-tab is-active";
-    }
-  }
-});
+// const navItems = document.querySelector("#mainNavbar > .navbar-start").children;
+// window.addEventListener("single-spa:app-change", evt => {
+//   for (j = 0; j < navItems.length; j++) {
+//     navItems[j].classList.remove("is-active");
+//     navItems[j].classList.remove("is-tab");
+//     if (window.location.href === navItems[j].href) {
+//       navItems[j].className += " is-tab is-active";
+//     }
+//   }
+// });
 
 const languageCodeMap = {
   ab: "Abkhazian",
