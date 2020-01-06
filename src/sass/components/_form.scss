@@ -1,0 +1,113 @@
+.ed-form {
+  font-size: 1.6rem;
+  margin: 0 auto;
+  
+  &__title {
+    font-size: 3rem;
+    
+    &--secondary {
+      font-size: 1.6rem;
+    }
+  }
+  
+  &__subtitle {
+    &--secondary {
+      font-size: 1.2rem;
+    }
+  }
+  
+  &__input {
+    transition: all 0.3s ease;
+    // background-color: $color-shadow;
+    background-color: rgba(var(--rgb-shadow), 1);
+    font-size: 1.6rem;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    border: 3px solid transparent;
+    box-shadow: 0 0.2rem 0.4rem rgba($color-black, 0.1);
+    color: rgba(var(--rgb-text-default), 1) ;
+    
+    &:focus,
+    &:active {
+      outline: none;
+      border-bottom: 3px solid $primary;
+      box-shadow: 0 0.4rem 0.6rem rgba($color-black, 0.08);
+    }
+    
+    &:focus:invalid {
+      border-bottom: 3px solid $danger;
+    }
+  }
+  
+  &__label {
+  }
+  
+  &__icon {
+    font-size: 1.6rem;
+    background: none;
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-40%);
+    border: 0;
+    padding: 0;
+    
+    &:focus {
+      outline: none;
+      text-shadow: 0 0.2rem 0.4rem rgba($color-black, 0.4);
+      transform: translateY(-35%) scale(1.05);
+      color: $primary;
+    }
+  }
+  
+  &__btn {
+    text-align: center;
+    width: 100%;
+    font-size: 1.6rem;
+    margin: auto;
+    padding: 1rem 1.5rem;
+    border: 0;
+    border-radius: 3px;
+    // background-color: $color-shadow;
+    background-color: rgba(var(--rgb-shadow), 1);
+    color: rgba(var(--rgb-text-default), 1) ;
+    transition: all 0.2s;
+    box-shadow: 0 0.2rem 0.4rem rgba($color-black, 0.15);
+    
+    &:hover {
+      filter: brightness(90%);
+      transform: translateY(-5%);
+      box-shadow: 0 0.4rem 0.6rem rgba($color-black, 0.3);
+    }
+    
+    &:active,
+    &:focus {
+      outline: none;
+      filter: brightness(95%);
+      transform: translateY(5%);
+      box-shadow: 0 0.1rem 0.3rem rgba($color-black, 0.15);
+    }
+    
+    &--green {
+      background-color: $primary;
+      color: $color-white;
+    }
+  }
+  
+  &__help {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  &__group {
+    color: rgba(var(--rgb-text-default), 1) ;
+    font-size: 1.6rem;
+    width: 90%;
+    position: relative;
+    transition: all 0.2s ease;
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+}
