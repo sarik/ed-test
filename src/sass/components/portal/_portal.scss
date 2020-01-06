@@ -16,41 +16,37 @@
   }
 }
 
-.ed-nav-user {
+// .ed-nav-user {
 
-	&__dropdown {
-		width: 12rem;
-	}
+// 	&__dropdown {
+// 		width: 12rem;
+// 	}
 
-	&__icon {
-		left: 1rem;
-  position: absolute;
-  text-align: center;
-  top: 0.375rem;
-  width: 1em;
-	}
+// 	&__icon {
+// 		left: 1rem;
+//   position: absolute;
+//   text-align: center;
+//   top: 0.375rem;
+//   width: 1em;
+// 	}
 
-	&__text {
-		padding-left: 3rem;
-	position: relative;
-	}
-}
+// 	&__text {
+// 		padding-left: 3rem;
+// 	position: relative;
+// 	}
+// }
 
-.ed-logo {
-	&__text {
-		letter-spacing: .2rem;
-	}
-}
 
-.ed-navbar {
-	&__item {padding-left: 3rem;
-	position: relative;}
-}
 
-@media screen and (min-width: 1024px) {
-  .ed-navbar {
-		&__item {
-      padding-right: 1rem;
-      white-space: normal;
-  }}
-}
+// .ed-navbar {
+// 	&__item {padding-left: 3rem;
+// 	position: relative;}
+// }
+
+// @media screen and (min-width: 1024px) {
+//   .ed-navbar {
+// 		&__item {
+//       padding-right: 1rem;
+//       white-space: normal;
+//   }}
+// }

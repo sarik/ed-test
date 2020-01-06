@@ -1,27 +1,59 @@
+/*
+ECH0 Default theme=>
+  Primary Accent: #00a69b
+  Shadow: #eee
+  Background: #fff
+  Text highlight: #00a69b
+  Text Default: #424242
+
+
+ECH0 DARK theme=>
+  Primary Accent: #00a69b
+  Shadow: #424242
+  Background: #222
+  Text highlight: #00a69b
+  Text Default: #eee
+
+*/
 
 // CUSTOM VARIABLES
 // General Colors
 $color-black: #000;
+$color-black-2: #202225;
+
 $color-white: #fff;
-$color-gray-light: #ececec;
-$color-white-antique: #faebd5;
-$color-green: #51b583;
 
+$color-grey-light: #eee;
+$color-grey: #d3d3d3;
+$color-grey-dark: #424242;
 
-// Business colors
-$color-echo-primary-light: #ed4133;
-$color-echo-primary: #c32d38;
-$color-echo-primary-dark: #9c1720;
+$color-turquiose: #00a69b;
 
-$color-echo-blue: #3344bb;
+$color-green: #57b846;
 
-// $color-background: #f7f9fc;
-$color-primary: $color-black;
+$color-red-light: #ed4133;
+$color-red: #c32d38;
+$color-red-dark: #9c1720;
+
+//Default theme
+$color-primary-accent: $color-turquiose;
+$color-shadow: $color-grey-light;
+$color-background: $color-white;
+$color-text-highlight: $color-turquiose;
+$color-text-default: $color-grey-dark;
+
+// Dark Theme
+// $color-primary-accent: $color-turquiose;
+// // $color-primary-accent: #63f;  //demo purposes delete later
+// $color-shadow: $color-grey-dark;
+// $color-background: #222;
+// $color-text-highlight: $color-turquiose;
+// $color-text-default: $color-grey-light;
 
 // BULMA VARIABLES
 $primary: $color-green;
-$title-color: $color-white;
-$subtitle-color: $color-gray-light;
+$title-color: $color-text-highlight;
+// $subtitle-color: $color-grey-light;
 
 /* BULMA SASS MAP
  https://bulma.io/documentation/customize/variables/ */
@@ -29,5 +61,8 @@ $subtitle-color: $color-gray-light;
 // $color-echo-green:
 
 // GLOBAL VARIABLES
+
+$text-default-size: 1.6rem;
+$transition-default-time: 0.2s;
 
 //COMPONENT VARIABLES

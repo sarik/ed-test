@@ -7,6 +7,40 @@
 }
 
 html {
-  font-size: 100%;
+  font-size: 62.5% !important; //1rem === 10px
+
+  // font-size: 100%; //to test stuff 1rem === 16px
+
+  @include ed-respond(tablet) {
+    font-size: 56.25%; //1rem === 9px
+  }
+
+  @include ed-respond(mobile) {
+    font-size: 56.25%; //1rem === 9px
+  }
+}
+
+body {
   box-sizing: border-box;
+}
+
+i {
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
+
+a {
+  color: inherit;
+  &:hover {
+    color: inherit;
+  }
+}
+
+#zmmtg-root {
+  height: 0% !important;
+  width: 0% !important;
+}
+
+.image {
+  z-index: unset;
 }

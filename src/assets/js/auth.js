@@ -48,7 +48,7 @@ function loadUserDetails(){
 	let username = document.getElementById('username')
 	let userIconpic = document.getElementById("user-iconpic")
 	if(username)
-		{username.innerText= `${getCookie('firstName')} ${getCookie('lastName')}`}
+		{username.append(`${getCookie('firstName')} ${getCookie('lastName')}`)}
 	if(userIconpic){
 		userIconpic.src = `${getCookie('iconpic')}` || "./img/user_demo.jpg";
 	}
