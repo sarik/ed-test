@@ -28,7 +28,9 @@ $color-grey: #d3d3d3;
 $color-grey-dark: #424242;
 
 $color-turquiose: #00a69b;
-
+$color-amber: #ffbf00;
+$color-blue-light-2: #E5F0FD;  
+$color-blue-light-1: #5569FF;   
 $color-green: #57b846;
 
 $color-red-light: #ed4133;
@@ -52,6 +54,7 @@ $color-text-default: $color-grey-dark;
 
 // BULMA VARIABLES
 $primary: $color-green;
+$warning: $color-amber;
 $title-color: $color-text-highlight;
 // $subtitle-color: $color-grey-light;
 
@@ -62,7 +65,7 @@ $title-color: $color-text-highlight;
 
 // GLOBAL VARIABLES
 
-$text-default-size: 1.6rem;
+$text-default-size: 1rem;
 $transition-default-time: 0.2s;
 
 //COMPONENT VARIABLES

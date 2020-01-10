@@ -86,19 +86,19 @@ async function signIn(event) {
 	 currentTarget.className += " is-loading"
 	 currentTarget.setAttribute('disabled', true)
 	 
+	//  body: JSON.stringify({
+	// 	 username: document.getElementsByName('username')[0].value,
+	// 	 password: document.getElementsByName('password')[0].value
+	//  })
 	await fetch(
-		"http://localhost:2222/api/v1/signin",
+		"http://localhost:2222/api/v1/signin/",
 		{
-			method: "POST",
-			body: JSON.stringify({
-				username: document.getElementsByName('username')[0].value,
-				password: document.getElementsByName('password')[0].value
-			})
+			method: "POST"
 		}
 	)
 		.then(res => res.json())
 		.then(data => {
-			console.log(data)
+			console.log("data:  ", data)
 			if(data.success){
 				if (saveUsername.checked) {
 					window.localStorage.setItem("username", username.value);
@@ -125,9 +125,15 @@ function signOut(){
 }
 
 function loadForm() {
-	document.getElementById("mainNavbar").remove();
+	document.getElementById("loader").remove()
+	document.getElementById("authForm").style = "display: flex;"
+	
 }
 
 function loadApp() {
-	document.getElementById("authForm").remove();
+	document.getElementById("loader").remove()
+	document.getElementById("mainNavbar").style = "display: block;"
+}
+
+function showLoader() {
 }

@@ -1,3 +1,6 @@
+#authForm {
+  display: none;
+}
 .ed-login {
   display: flex;
   flex-flow: column nowrap;
@@ -15,22 +18,22 @@
 
   &__welcome {
     color: rgba(var(--rgb-primary-accent), 1);
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: 600;
     margin: 0 auto;
   }
 
   &__content {
     width: 70vw;
-    margin: 0 5rem;
+    margin: 0 3rem;
     background: linear-gradient(
         105deg,
         transparent 50%,
         rgba(var(--rgb-background), 1) 50%
       ),
       url(.././img/login-img.jpg);
-    box-shadow: 0 0.6rem 0.6rem rgba($color-black, 0.08);
-    padding: 2rem;
+    box-shadow: 0 0.4rem 0.4rem rgba($color-black, 0.08);
+    padding: 1.25rem;
     border-radius: 3px;
     z-index: 1;
 

@@ -9,6 +9,32 @@
 
 @keyframes ed-a-spin {
   0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes ed-a-shake {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  
+  25% {
+    transform: translate(5%, -5%);
+  }
+
+  50% {
+    transform: translate(-3%, 3%);
+  }
+
+  75% {
+    transform: translate(1%, -1%);
+  }
+
+  100% {
+    transform: translate(0, 0);
   }
 }
 
