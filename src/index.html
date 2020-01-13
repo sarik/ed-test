@@ -259,11 +259,35 @@
                 <div class="ed-dropdown__submenu" id="navbar-lang-dropdown"
                   onmouseleave="toggleNavbarDropdown('navbar-lang-dropdown')">
                   <div class="ed-dropdown__subcontent">
+                    <span class="ed-dropdown__subitem" onclick="handleI18n('en')">
+                      (en) English
+                    </span>
                     <span class="ed-dropdown__subitem" onclick="handleI18n('hi')">
                       (&#x958) हिंदी
                     </span>
-                    <span class="ed-dropdown__subitem" onclick="handleI18n('en')">
-                      (en) English
+                    <span class="ed-dropdown__subitem">
+                      (দ্য) বাংলা
+                    </span>
+                    <span class="ed-dropdown__subitem">
+                      (એ) ગુજરતી
+                    </span>
+                    <span class="ed-dropdown__subitem">
+                      (म) मराठी
+                    </span>
+                    <span class="ed-dropdown__subitem">
+                      (ਪੰ) ਪੰਜਾਬੀ
+                    </span>
+                    <span class="ed-dropdown__subitem">
+                      (த) தமிழ்
+                    </span>
+                    <span class="ed-dropdown__subitem">
+                      (తె) తెలుగు
+                    </span>
+                    <span class="ed-dropdown__subitem">
+                      (ಕ) ಕನ್ನಡ
+                    </span>
+                    <span class="ed-dropdown__subitem">
+                      (മ) മലയാളം
                     </span>
                   </div>
                 </div>
@@ -289,18 +313,20 @@
 
   </nav>
   <!-- authForm: main login form -->
+
+  <!-- <section class="ed-login" id="authForm">
+    <div class="ed-login-container">
+      <div class="ed-login-container-left">Login Form</div>
+      <div class="ed-login-container-right">Images here</div>
+    </div>
+  </section> -->
+
+  
+
   <section class="hero ed-login is-fullheight-with-navbar" id="authForm">
-    <!-- <div class="hero-head" > -->
     <div class="section">
       <div class="container">
         <div class="columns is-8 ed-login__content is-variable ">
-          <!-- <div class="column is-6">
-              <img
-                src="./img/banner_demo.jpg"
-                class="image is-fullwidth"
-                alt=""
-              />
-            </div> -->
           <div class="column is-7 ed-login__content--left">
             <h1 class="ed-login__welcome"></h1>
           </div>
@@ -351,7 +377,6 @@
               </button>
             </div>
 
-            <!-- <div class="is-divider" id="loginDivider"></div> -->
             <div class="ed-form__group">
               <p class="ed-form__title--secondary formattedMessage" intl-id="new-to-echo-digital">
                 New to ECHO Digital?
@@ -371,13 +396,25 @@
         </div>
       </div>
     </div>
-    <div class="content has-text-centered has-text-grey is-size-7 formattedMessage"
+    <div class="ed-login-languages">
+      <span id="login-lang-en" onclick="handleI18n('en')">English</span>
+      <span id="login-lang-hi"onclick="handleI18n('hi')">हिंदी</span>
+      <span id="login-lang-ba">বাংলা</span>
+      <span id="login-lang-gu">ગુજરતી</span>
+      <span id="login-lang-ma">मराठी</span>
+      <span id="login-lang-pu">ਪੰਜਾਬੀ</span>
+      <span id="login-lang-ta">தமிழ்</span>
+      <span id="login-lang-te">తెలుగు</span>
+      <span id="login-lang-ka">ಕನ್ನಡ</span>
+      <span id="login-lang-ma">മലയാളം</span>
+      </div>
+    <div  style="opacity: 0;"
+    class="content has-text-centered has-text-grey is-size-7 formattedMessage"
       intl-id="project-echo-content-is-licensed">
       <a class="has-text-link" onclick="toggleDarkMode()">&larr;<i class="fas fa-adjust"></i>Dark Mode&rarr;</a>
       ©2019 Project ECHO. Content is licensed
       <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
     </div>
-    <!-- </div> -->
   </section>
 
   <!-- language selection portal -->

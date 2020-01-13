@@ -7,6 +7,23 @@ function toggleDropdown(id) {
   }
 }
 
+
+function loginSelectedLanguage() {
+  let setLanguage = localStorage.getItem("language");
+
+  if (setLanguage) {
+    document
+      .getElementById(`login-lang-${setLanguage}`)
+      .classList.add("ed-login-languages--active");
+    } else {
+      document
+        .getElementById(`login-lang-en`)
+        .classList.add("ed-login-languages--active");
+  }
+}
+
+loginSelectedLanguage();
+
 function toggleNavbarDropdown(id) {
   const toggleDropdown = document.getElementById(id);
   toggleDropdown.classList.toggle("ed-u-enabled");
@@ -40,7 +57,7 @@ function getDisplayLanguage() {
 function showToast(toastId) {
   let toast = document.getElementById(toastId);
   toast.classList.add("ed-toast--show");
-  setTimeout(function () {
+  setTimeout(function() {
     toast.className = toast.className.replace("ed-toast--show", "");
   }, 2000);
 }

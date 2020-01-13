@@ -7343,6 +7343,8 @@ textarea {
   background: linear-gradient(to bottom, rgba(var(--rgb-background), 1) 5%, rgba(var(--rgb-primary-accent), 1) 80%);
   background-position: left;
   background-size: cover; }
+  .ed-login .columns {
+    max-width: 1000px; }
   .ed-login__welcome {
     color: rgba(var(--rgb-primary-accent), 1);
     font-size: 3rem;
@@ -7369,6 +7371,26 @@ textarea {
       flex-flow: column nowrap;
       justify-content: center;
       align-items: center; }
+
+.ed-login-languages {
+  max-width: 70%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  color: rgba(var(--rgb-background), 1);
+  font-weight: 500; }
+  .ed-login-languages span {
+    padding: .25rem .75rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    border-radius: 2000px;
+    transition: all 0.2s; }
+    .ed-login-languages span:hover {
+      transform: scale(1.2); }
+  .ed-login-languages--active {
+    background: rgba(0, 0, 0, 0.25);
+    transform: scale(1.1); }
 
 .ed-toast {
   position: fixed;
@@ -7761,7 +7783,7 @@ textarea {
   height: 90vh !important; }
 
 .ed-zoom-controls {
-  padding: .6rem;
+  padding: 0.6rem;
   margin-left: auto;
   display: flex;
   flex-flow: end;
@@ -7773,8 +7795,8 @@ textarea {
   text-align: center;
   font-size: 1rem;
   width: 11.25rem;
-  padding: 0.3rem .75rem;
-  margin: .9rem .6rem;
+  padding: 0.3rem 0.75rem;
+  margin: 0.9rem 0.6rem;
   background: transparent;
   color: #fff;
   border: 1px solid #fff;
@@ -7800,10 +7822,10 @@ textarea {
 
 .ed-zoom-program-info {
   display: flex;
-  margin: auto .6rem; }
+  margin: auto 0.6rem; }
 
 .ed-zoom-program-name {
-  margin: auto .6rem;
+  margin: auto 0.6rem;
   font-size: 1.125rem; }
 
 .ed-zoom-nav {
@@ -7859,8 +7881,8 @@ textarea {
 .ed-zoom-pop-btn {
   cursor: pointer;
   font-size: 1rem;
-  padding: .6rem .75rem;
-  margin: .6rem;
+  padding: 0.6rem 0.75rem;
+  margin: 0.6rem;
   border-radius: 0.3rem;
   transition: all 0.2s;
   width: 6.25rem;
@@ -7873,26 +7895,74 @@ textarea {
   position: fixed !important;
   width: 80vw !important;
   left: 0 !important;
-  bottom: 0 !important; }
+  bottom: 0 !important;
+  transition: all 0.2s; }
 
 .ed-present-video {
   position: fixed !important;
   top: 10vh !important;
   width: 20vw !important;
-  height: 22.5vh !important; }
+  height: 22.5vh !important;
+  transition: all 0.2s; }
 
 .ed-present-case {
   position: fixed;
   top: 15vh;
   left: 25vw;
   height: 60vh;
-  width: 50vw; }
+  width: 50vw;
+  transition: all 0.2s;
+  animation: ed-a-fade-in 0.2s linear; }
   .ed-present-case__slide {
     width: 50vw;
-    height: 70vh; }
+    height: 70vh;
+    transition: all 0.2s; }
   .ed-present-case img {
     width: 100%;
-    height: auto; }
+    height: 100%; }
+
+.ed-community-box {
+  width: 18vw;
+  height: 60vh;
+  margin: 1rem;
+  padding: 0.5rem;
+  background: #fff;
+  color: #000;
+  justify-self: flex-end;
+  overflow-y: scroll;
+  border-radius: 5px; }
+  .ed-community-box header {
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: .5rem;
+    border-bottom: 1px solid #000;
+    padding: .5rem; }
+
+.ed-participant {
+  display: flex;
+  margin: .5rem auto;
+  font-size: .8rem;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 95%;
+  border-bottom: 1px solid black;
+  transition: all 0.2s; }
+  .ed-participant figure {
+    margin: 0.5rem; }
+  .ed-participant hr {
+    width: 50%;
+    color: #d3d3d3; }
+  .ed-participant:hover {
+    background: #eeeeee;
+    transform: scale(1.1); }
+
+.ed-participant-details {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  cursor: pointer; }
 
 .nps-main {
   width: 100%;
@@ -8640,6 +8710,29 @@ hr {
   width: 100%; }
   .ed-fe-form hr {
     width: 100%; }
+
+.ed-fe-form-tags {
+  margin: .25rem;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center; }
+  .ed-fe-form-tags span {
+    border-radius: 100%;
+    margin: .2rem; }
+
+.ed-fe-toast {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.2s; }
+  .ed-fe-toast--show {
+    opacity: 1;
+    visibility: visible; }
 
 .ed-fe-form-group {
   width: 100%;

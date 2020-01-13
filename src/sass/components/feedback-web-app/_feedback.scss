@@ -18,6 +18,36 @@
   }
 }
 
+.ed-fe-form-tags {
+  margin: .25rem;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  
+  span {
+    border-radius: 100%;
+    margin: .2rem;
+  }
+}
+
+.ed-fe-toast {
+  // animation: ed-a-fade-in $transition-default-time linear;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all $transition-default-time;
+
+  &--show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 .ed-fe-form-group {
   width: 100%;
   display: flex;
