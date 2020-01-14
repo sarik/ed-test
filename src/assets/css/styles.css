@@ -7916,9 +7916,13 @@ textarea {
   .ed-present-case__slide {
     width: 50vw;
     height: 70vh;
-    transition: all 0.2s; }
+    transition: all 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
   .ed-present-case img {
-    width: 100%;
+    width: auto;
+    margin: auto;
     height: 100%; }
 
 .ed-community-box {
@@ -8273,6 +8277,16 @@ textarea {
         color: rgba(var(--rgb-color-red), 1); }
     .ed-at-modal-invite__icon {
       margin: 0.3rem .6rem; }
+    .ed-at-modal-invite__caption {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center; }
+      .ed-at-modal-invite__caption p {
+        width: 10rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
     .ed-at-modal-invite__left {
       width: 100%;
       height: 100%;
@@ -8510,15 +8524,19 @@ textarea {
   z-index: 123; }
 
 .ed-pre-carousel {
-  width: 90%; }
+  width: 90%;
+  margin-top: 1rem; }
 
 .ed-pre-page {
   width: 100vw;
-  min-height: 70vh;
+  height: 80vh;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center; }
+  .ed-pre-page img {
+    height: 100%;
+    width: auto; }
 
 .ed-pre-nav-btns {
   display: flex;

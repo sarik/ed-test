@@ -14,15 +14,21 @@
 
 .ed-pre-carousel {
   width: 90%;
+  margin-top: 1rem;
 }
 
 .ed-pre-page {
   width: 100vw;
-  min-height: 70vh;
+  height: 80vh;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+
+  img {
+    height: 100%;
+    width: auto;
+  }
 }
 
 .ed-pre-nav-btns {

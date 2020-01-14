@@ -3,8 +3,6 @@
   position: fixed;
   height: 105vh;
   width: 100vw;
-  // max-height: 105vh;
-  // max-width: 100%; 
   top: 0;
   left: 0;
   background: #0005;
@@ -229,6 +227,16 @@
     }
 
     &__caption {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      p {
+        width: 10rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
     }
 
     &__left {

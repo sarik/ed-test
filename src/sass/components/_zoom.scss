@@ -240,10 +240,14 @@
       width: 50vw;
       height: 70vh;
       transition: all $transition-default-time;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     img {
-      width: 100%;
+      width: auto;
+      margin: auto;
       height: 100%;
     }
   }
