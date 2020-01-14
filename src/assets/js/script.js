@@ -7,6 +7,18 @@ function toggleDropdown(id) {
   }
 }
 
+localStorage.setItem('zoomLoad', "0");
+function zoomLoaded() {
+  console.log("zoom loaded function called");
+  // let zoomArray = localStorage.getItem('zoomLoad');
+  // let updateNumber = zoomArray + 1
+  // localStorage.setItem('zoomLoad', `${updateNumber}`);
+
+  // if(zoomArray === 7) {
+  //   console.log("zoom loaded");
+  // }
+
+}
 
 function loginSelectedLanguage() {
   let setLanguage = localStorage.getItem("language");

@@ -306,3 +306,18 @@
   cursor: pointer;
 
 }
+
+.ed-zoom-loaded-icon {
+  display: none;
+  position: fixed;
+  bottom: .5rem;
+  right: .5rem;
+  font-size: .5rem;
+  color: $primary;
+  animation: ed-a-fade-in 1.5s infinite ease-in-out;
+  z-index: 125;
+
+  &--active {
+    display: inline-block;
+  }
+}

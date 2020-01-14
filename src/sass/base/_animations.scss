@@ -82,7 +82,11 @@
 
 @keyframes ed-a-fade-in {
   0% {
-    opacity: 0;
+    opacity: 100%;
+  }
+
+  50% {
+    opacity: 0%;
   }
 
   100% {

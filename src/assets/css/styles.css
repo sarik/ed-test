@@ -7310,7 +7310,9 @@ textarea {
 
 @keyframes ed-a-fade-in {
   0% {
-    opacity: 0; }
+    opacity: 100%; }
+  50% {
+    opacity: 0%; }
   100% {
     opacity: 100%; } }
 
@@ -7967,6 +7969,18 @@ textarea {
   justify-content: center;
   align-items: flex-start;
   cursor: pointer; }
+
+.ed-zoom-loaded-icon {
+  display: none;
+  position: fixed;
+  bottom: .5rem;
+  right: .5rem;
+  font-size: .5rem;
+  color: #57b846;
+  animation: ed-a-fade-in 1.5s infinite ease-in-out;
+  z-index: 125; }
+  .ed-zoom-loaded-icon--active {
+    display: inline-block; }
 
 .nps-main {
   width: 100%;
