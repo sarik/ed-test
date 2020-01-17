@@ -321,3 +321,33 @@
     display: inline-block;
   }
 }
+
+.ed-follow-up {
+  // background: $color-grey-light;
+  padding: 1rem;
+  margin: .5rem;
+  border: 1px solid rgba($color-grey,1);
+  border-radius: 10px;
+  
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  
+}
+
+.ed-follow-up-details {
+  margin: .5rem;
+  padding: .5rem;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+
+  &--blue {
+    background: $color-blue-light-2;
+    color: $color-blue-light-1;
+  }
+
+}

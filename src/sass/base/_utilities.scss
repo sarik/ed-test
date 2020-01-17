@@ -50,8 +50,8 @@
 
 .ed-u-no-scroll {
   position: fixed;
-  width: 100%;
-  overflow: hidden;
+  width: 100vw;
+  overflow: auto;
 }
 
 .ed-u-inline {
@@ -66,4 +66,74 @@
 
 .ed-u-smooth-transition {
   transition: all 4s;
+}
+
+.ed-u-margin {
+  &-sm {
+    margin: 0.5rem !important;
+  }
+
+  &-md {
+    margin: 1rem !important;
+  }
+
+  &-lg {
+    margin: 1.5rem !important;
+  }
+
+  &-bottom {
+    &-sm {
+      margin-bottom: 0.5rem !important;
+    }
+
+    &-md {
+      margin-bottom: 1rem !important;
+    }
+
+    &-lg {
+      margin-bottom: 1.5rem !important;
+    }
+  }
+
+  &-top {
+    &-sm {
+      margin-top: 0.5rem !important;
+    }
+
+    &-md {
+      margin-top: 1rem !important;
+    }
+
+    &-lg {
+      margin-top: 1.5rem !important;
+    }
+  }
+
+  &-left {
+    &-sm {
+      margin-left: 0.5rem !important;
+    }
+
+    &-md {
+      margin-left: 1rem !important;
+    }
+
+    &-lg {
+      margin-left: 1.5rem !important;
+    }
+  }
+
+  &-right {
+    &-sm {
+      margin-right: 0.5rem !important;
+    }
+
+    &-md {
+      margin-right: 1rem !important;
+    }
+
+    &-lg {
+      margin-right: 1.5rem !important;
+    }
+  }
 }

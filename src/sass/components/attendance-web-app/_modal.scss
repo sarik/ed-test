@@ -7,7 +7,7 @@
   left: 0;
   background: #0005;
   z-index: 120;
-  animation: $transition-default-time ed-a-fade-in;
+  // animation: $transition-default-time ed-a-fade-in;
   transition: all $transition-default-time;
   display: flex;
   flex-flow: column nowrap;
@@ -92,12 +92,12 @@
   }
 
   &-display {
-    overflow: hidden;
+    overflow: auto;
     animation: $transition-default-time ed-a-scale-out backwards;
 
     height: 50%;
     width: 50%;
-    max-width: 850px;
+    max-width: 950px;
 
     display: flex;
     flex-flow: column nowrap;
@@ -150,7 +150,7 @@
     max-height: 520px;
 
     & > * {
-      animation: $transition-default-time ed-a-fade-in;
+      // animation: $transition-default-time ed-a-fade-in;
     }
   }
 
@@ -168,6 +168,10 @@
       justify-content: stretch;
       align-items: flex-start;
       width: 100%;
+    }
+
+    &__user-details {
+      padding-left: .5rem;
     }
 
     &__header {
@@ -196,7 +200,7 @@
           font-weight: 900;
           content: "\f058";
           color: $primary;
-          animation: ed-a-fade-in 0.1s;
+          // animation: ed-a-fade-in 0.1s;
         }
       }
 
@@ -206,7 +210,7 @@
       }
 
       &--display {
-        animation: ed-a-back-wave ease-in-out 0.2s;
+        // animation: ed-a-back-wave ease-in-out 0.2s;
       }
     }
 
@@ -223,7 +227,7 @@
     }
 
     &__icon {
-      margin: 0.3rem .6rem;
+      margin: 0.3rem .2rem;
     }
 
     &__caption {
@@ -251,7 +255,7 @@
 
     &__right {
       height: 440px;
-      overflow-y: scroll;
+      overflow-y: auto;
       width: 100%;
       padding: .9rem;
     }
@@ -319,7 +323,6 @@
 
       &__names {
         overflow: hidden;
-        overflow-y: scroll;
         white-space: nowrap;
         text-overflow: ellipsis;
       }

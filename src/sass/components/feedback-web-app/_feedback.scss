@@ -64,9 +64,11 @@
 .ed-fe-info-grid {
   display: grid;
   width: 100%;
+  grid-template-columns: repeat(6, 1fr);
   grid-template-areas:
-    "session session resource"
-    "attendance attendance resource";
+    "tips tips tips remarks remarks remarks"
+    "session session session session resource resource"
+    "attendance attendance attendance attendance resource resource";
   gap: 1rem;
 
   .ed-fe-info-box {
@@ -77,6 +79,26 @@
     padding: 1rem;
     border: 0px solid black;
   }
+
+  .ed-fe-echo-tips {
+    grid-area: remarks;
+
+
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .ed-fe-session-tips {
+    grid-area: tips;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
 
   .ed-fe-next-session {
     grid-area: session;
