@@ -7968,7 +7968,7 @@ textarea {
     justify-content: center;
     align-items: center; }
     .ed-present-case__slide--part-active {
-      height: 4vh !important;
+      height: 42vh !important;
       width: 30vw !important; }
   .ed-present-case img {
     width: auto;
@@ -8062,6 +8062,21 @@ textarea {
     color: #4c5ee7;
     transform: scale(1.05); }
 
+.ed-zoom-part-description, .ed-zoom-part-tags {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  border-radius: 3px;
+  padding: 1rem;
+  margin: 0.5rem;
+  background: #eeeeee;
+  color: black; }
+  .ed-zoom-part-description .ed-zoom-part__title, .ed-zoom-part-tags .ed-zoom-part__title {
+    font-size: 1.1rem;
+    font-weight: 600; }
+
 .ed-zoom-part-info {
   display: flex;
   flex-flow: column nowrap;
@@ -8074,7 +8089,7 @@ textarea {
   top: 10vh;
   right: 20vw; }
   .ed-zoom-part-info .tag {
-    margin: 0.5rem; }
+    margin: 1.5px; }
 
 .ed-zoom-part--active {
   position: fixed !important;
