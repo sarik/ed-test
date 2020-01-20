@@ -367,6 +367,9 @@
       color: $color-blue-light-1;
       transform: scale(1.05);
     }
+        h3 {
+          margin: 0;
+        }
   }
 
   &-description,
@@ -379,12 +382,12 @@
     border-radius: 3px;
 
     padding: 1rem;
+    font-size: .8rem;
     margin: 0.5rem;
     background: rgba($color-grey-light, 1);
     color: rgba($color-black, 1);
     
     .ed-zoom-part__title {
-      font-size: 1.1rem;
       font-weight: 600;
     }
   }

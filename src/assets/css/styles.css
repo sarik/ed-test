@@ -8061,6 +8061,8 @@ textarea {
   .ed-zoom-part-close:hover {
     color: #4c5ee7;
     transform: scale(1.05); }
+  .ed-zoom-part-close h3 {
+    margin: 0; }
 
 .ed-zoom-part-description, .ed-zoom-part-tags {
   display: flex;
@@ -8070,11 +8072,11 @@ textarea {
   width: 80%;
   border-radius: 3px;
   padding: 1rem;
+  font-size: .8rem;
   margin: 0.5rem;
   background: #eeeeee;
   color: black; }
   .ed-zoom-part-description .ed-zoom-part__title, .ed-zoom-part-tags .ed-zoom-part__title {
-    font-size: 1.1rem;
     font-weight: 600; }
 
 .ed-zoom-part-info {
