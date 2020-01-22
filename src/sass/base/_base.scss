@@ -6,18 +6,24 @@
   box-sizing: inherit;
 }
 
+
+body,html {
+  min-width: 100vw !important ;
+  min-height: 100vh !important ;
+}
+
 html {
-  font-size: 62.5% !important; //1rem === 10px
+  // font-size: 62.5% !important; //1rem === 10px
 
-  // font-size: 100%; //to test stuff 1rem === 16px
+  font-size: 100% !important; //to test stuff 1rem === 16px
 
-  @include ed-respond(tablet) {
-    font-size: 56.25%; //1rem === 9px
-  }
+  // @include ed-respond(tablet) {
+  //   font-size: 56.25%; //1rem === 9px
+  // }
 
-  @include ed-respond(mobile) {
-    font-size: 56.25%; //1rem === 9px
-  }
+  // @include ed-respond(mobile) {
+  //   font-size: 56.25%; //1rem === 9px
+  // }
 }
 
 body {
@@ -25,8 +31,8 @@ body {
 }
 
 i {
-  margin-left: 0.3rem;
-  margin-right: 0.3rem;
+  margin-left: 3px;
+  margin-right: 3px;
 }
 
 a {
