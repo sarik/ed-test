@@ -1,22 +1,22 @@
 @import "./modal";
-
+@import "./pre-session";
 .ed-at-main {
   border-top: 3px solid rgba(var(--rgb-primary-accent), 1);
 
   background: rgba(var(--rgb-background), 1);
   font-size: $text-default-size;
-  padding-top: 2rem;
+  padding-top: 1.25rem;
   min-height: 100vh;
 }
 
 .ed-at-heading {
   &__primary {
-    font-size: 2rem;
+    font-size: 1.25rem;
     font-weight: 600;
   }
 
   &-primary {
-    font-size: 2rem;
+    font-size: 1.3rem;
     font-weight: 600;
   }
 
@@ -31,17 +31,17 @@
       font-weight: 300;
       background: RGB(238, 246, 253);
       color: rgb(40, 80, 150);
-      border-radius: 1rem;
+      border-radius: .6rem;
     }
   }
 
   &__tertiary {
-    font-size: 1.6rem;
+    font-size: 1rem;
     font-weight: 500;
   }
 
   &-tertiary {
-    font-size: 1.8rem;
+    font-size: 1.125rem;
     font-weight: 700;
   }
 
@@ -68,11 +68,11 @@
 
   font-size: $text-default-size;
   border: 0px solid rgba(var(--rgb-text-default), 1);
-  box-shadow: 0 0 0.5rem 0 rgba(var(--rgb-shadow-2), 0.2),
-    0 0.2rem 0.5rem 0 rgba(var(--rgb-shadow-2), 0.2);
-  border-radius: 1rem;
-  padding: 1rem 1.5rem;
-  margin: 2rem auto;
+  box-shadow: 0 0 0.3rem 0 rgba(var(--rgb-shadow-2), 0.2),
+    0 0.125rem 0.3rem 0 rgba(var(--rgb-shadow-2), 0.2);
+  border-radius: .6rem;
+  padding: .6rem .9rem;
+  margin: 1.25rem auto;
 
   &-header {
     grid-area: card-head;
@@ -85,8 +85,8 @@
 
     &-countdown {
       grid-area: header-countdown;
-      padding: 0.5rem;
-      margin: 0.5rem;
+      padding: 0.3rem;
+      margin: 0.3rem;
 
       display: flex;
       flex-flow: row nowrap;
@@ -96,7 +96,7 @@
 
     &-img {
       grid-area: header-img;
-      padding: 0 0.5rem;
+      padding: 0 0.3rem;
     }
 
     &-title {
@@ -119,14 +119,14 @@
 
     &-speakers {
       grid-area: body-speakers;
-      margin: 1rem 0;
+      margin: .6rem 0;
 
       &-icon {
-        margin-right: 0.5rem;
+        margin-right: 0.3rem;
       }
 
       &__info {
-        margin-right: 3rem;
+        margin-right: 1.8rem;
       }
 
       &__brief {
@@ -162,7 +162,7 @@
 @include ed-respond(mobile) {
   .ed-at-card {
     display: grid;
-    grid-gap: 0.5rem 0.5rem;
+    grid-gap: 0.3rem 0.3rem;
     grid-template-areas:
       "card-head"
       "card-body"
@@ -177,7 +177,7 @@
         "foo header-time";
 
       &-time {
-        margin-top: 1.5rem;
+        margin-top: .9rem;
       }
     }
     &-body {
@@ -186,9 +186,9 @@
       background: RGB(238, 246, 253);
       // color: rgb(40, 80, 150);
 
-      padding: 1rem;
-      margin: 1rem;
-      border-radius: 0 0 0.5rem 0.5rem;
+      padding: .6rem;
+      margin: .6rem;
+      border-radius: 0 0 0.3rem 0.3rem;
       transition: all 1s;
       animation: $transition-default-time ed-move-below;
 
@@ -233,7 +233,7 @@
         }
 
         &__info {
-          margin: 1rem 1rem;
+          margin: .6rem .6rem;
         }
 
         &__brief {
@@ -253,9 +253,9 @@
   cursor: pointer;
   display: inline-block;
   font-size: $text-default-size;
-  padding: 1rem 1.2rem;
-  margin: 1rem;
-  border-radius: 0.5rem;
+  padding: .6rem .75rem;
+  margin: .6rem;
+  border-radius: 0.3rem;
   transition: all $transition-default-time;
   background-color: rgba(var(--rgb-text-highlight), 1);
   color: $color-white;

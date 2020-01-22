@@ -1,15 +1,13 @@
 .ed-at-modal {
   font-size: $text-default-size;
   position: fixed;
-  height: 100vh;
+  height: 105vh;
   width: 100vw;
-  max-height: 100%;
-  max-width: 100%;
   top: 0;
   left: 0;
   background: #0005;
   z-index: 120;
-  animation: $transition-default-time ed-a-fade-in;
+  // animation: $transition-default-time ed-a-fade-in;
   transition: all $transition-default-time;
   display: flex;
   flex-flow: column nowrap;
@@ -19,20 +17,20 @@
 
   &-close {
     line-height: 1;
-    font-size: 2rem;
+    font-size: 1.25rem;
     font-weight: 600;
     position: absolute;
-    top: 2rem;
-    right: 2rem;
+    top: 1.25rem;
+    right: 1.25rem;
     background: $color-white;
-    padding: 1rem;
+    padding: .6rem;
     border-radius: 100%;
     border: none;
-    z-index: 121;
+    z-index: 124;
   }
 
   &-btn {
-    padding: 1rem;
+    padding: .6rem;
     background-color: $primary;
     color: $color-white;
     width: 100%;
@@ -79,7 +77,7 @@
   &-icon {
     border-radius: 5000px;
     border: 1px solid rgba(var(--rgb-text-default), 1);
-    margin: 1rem;
+    margin: .6rem;
     overflow: hidden;
     position: relative;
     display: flex;
@@ -87,19 +85,19 @@
     align-items: center;
 
     &--body {
-      font-size: 4rem;
-      height: 64px;
-      width: 64px;
+      font-size: 2.5rem;
+      height: 4rem;
+      width: 4rem;
     }
   }
 
   &-display {
-    overflow: hidden;
+    overflow: auto;
     animation: $transition-default-time ed-a-scale-out backwards;
 
     height: 50%;
     width: 50%;
-    max-width: 850px;
+    max-width: 950px;
 
     display: flex;
     flex-flow: column nowrap;
@@ -108,9 +106,9 @@
 
     background: rgba(var(--rgb-background), 1);
 
-    border-radius: 1rem;
-    box-shadow: 0 0 0.5rem 0 rgba(var(--rgb-shadow-2), 0.12),
-      0 0.2rem 0.5rem 0 rgba(var(--rgb-shadow-2), 0.12);
+    border-radius: .6rem;
+    box-shadow: 0 0 0.3rem 0 rgba(var(--rgb-shadow-2), 0.12),
+      0 0.125rem 0.3rem 0 rgba(var(--rgb-shadow-2), 0.12);
     transition: all $transition-default-time;
 
     // Dynamicly added based on type. [Doesn't follow strict naming convention]
@@ -123,8 +121,8 @@
   }
 
   &-header {
-    padding: 1rem 0.5rem;
-    min-height: 5rem;
+    padding: .6rem 0.3rem;
+    min-height: 3rem;
     align-self: stretch;
     min-height: 40px;
     border-bottom: 1px solid rgba(var(--rgb-text-default), 0.5);
@@ -136,13 +134,13 @@
     .image,
     img {
       display: inline-block;
-      margin-left: 0.5rem;
-      margin-right: 1rem;
+      margin-left: 0.3rem;
+      margin-right: .6rem;
     }
   }
 
   &-body {
-    margin: 0.5rem;
+    margin: 0.3rem;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -152,7 +150,7 @@
     max-height: 520px;
 
     & > * {
-      animation: $transition-default-time ed-a-fade-in;
+      // animation: $transition-default-time ed-a-fade-in;
     }
   }
 
@@ -172,6 +170,10 @@
       width: 100%;
     }
 
+    &__user-details {
+      padding-left: .5rem;
+    }
+
     &__header {
     }
 
@@ -180,7 +182,7 @@
       flex-flow: nowrap;
       justify-content: flex-start;
       align-items: center;
-      padding: 1rem 0.5rem;
+      padding: .6rem 0.3rem;
       cursor: pointer;
       transition: all $transition-default-time;
       position: relative;
@@ -198,23 +200,23 @@
           font-weight: 900;
           content: "\f058";
           color: $primary;
-          animation: ed-a-fade-in 0.1s;
+          // animation: ed-a-fade-in 0.1s;
         }
       }
 
       &:hover {
         background: rgba(var(--rgb-shadow), 0.5);
-        transform: translateX(0.5rem);
+        transform: translateX(0.3rem);
       }
 
       &--display {
-        animation: ed-a-back-wave ease-in-out 0.2s;
+        // animation: ed-a-back-wave ease-in-out 0.2s;
       }
     }
 
     &__remove {
       position: absolute;
-      right: 1rem;
+      right: .6rem;
       color: rgba(var(--rgb-text-default), 0.8);
 
       &:hover,
@@ -225,10 +227,20 @@
     }
 
     &__icon {
-      margin: 0.5rem 1rem;
+      margin: 0.3rem .2rem;
     }
 
     &__caption {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      p {
+        width: 10rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
     }
 
     &__left {
@@ -243,9 +255,9 @@
 
     &__right {
       height: 440px;
-      overflow-y: scroll;
+      overflow-y: auto;
       width: 100%;
-      padding: 1.5rem;
+      padding: .9rem;
     }
 
     &-search {
@@ -259,24 +271,24 @@
 
       &__icon {
         transition: all $transition-default-time;
-        font-size: 2rem;
-        width: 2rem;
+        font-size: 1.25rem;
+        width: 1.25rem;
         position: absolute;
-        right: 1rem;
+        right: .6rem;
         top: 50%;
         transform: translateY(-50%);
       }
 
       &__input {
         transition: all $transition-default-time;
-        padding: 1rem;
+        padding: .6rem;
         width: 100%;
         font-size: $text-default-size;
         border: 0 solid transparent;
         border-bottom: 2px solid transparent;
         &:focus {
           border-bottom: 2px solid $primary;
-          padding-left: 3.2rem;
+          padding-left: 2rem;
           outline: none;
         }
         &::placeholder {
@@ -286,13 +298,13 @@
       }
 
       &__input:focus + &__icon {
-        right: calc(100% - 3rem);
+        right: calc(100% - .625rem);
       }
     }
 
     &-list {
-      box-shadow: 0 0 0.5rem 0 rgba(var(--rgb-shadow-2), 0.12),
-        0 0.2rem 0.5rem 0 rgba(var(--rgb-shadow-2), 0.12);
+      box-shadow: 0 0 0.3rem 0 rgba(var(--rgb-shadow-2), 0.12),
+        0 0.125rem 0.3rem 0 rgba(var(--rgb-shadow-2), 0.12);
       width: 90%;
       height: 100%;
       height: 340px;
@@ -304,21 +316,20 @@
 
       &__header {
         text-align: center;
-        padding: 1rem;
+        padding: .6rem;
         background: rgba(var(--rgb-shadow), 1);
-        box-shadow: 0 3px 0.5rem rgba(var(--rgb-shadow-2), 0.2);
+        box-shadow: 0 3px 0.3rem rgba(var(--rgb-shadow-2), 0.2);
       }
 
       &__names {
         overflow: hidden;
-        overflow-y: scroll;
         white-space: nowrap;
         text-overflow: ellipsis;
       }
     }
 
     &-add-guest {
-      padding-top: 1rem;
+      padding-top: .6rem;
       display: flex;
       flex-flow: column nowrap;
       justify-content: center;
@@ -333,7 +344,7 @@
     justify-content: center;
     align-items: center;
     flex-flow: row nowrap;
-    padding: 0.5rem;
+    padding: 0.3rem;
 
     position: relative;
 
@@ -345,35 +356,35 @@
       border-radius: 0;
       transition: all $transition-default-time;
       padding-bottom: 0;
-      padding-left: 3.2rem;
+      padding-left: 2rem;
 
       &::placeholder {
         color: rgba(var(--rgb-text-default), 0.7);
       }
 
       &:focus {
-        padding: 0.5rem;
+        padding: 0.3rem;
         outline: none;
         border-bottom: 2px solid rgb(40, 80, 150);
       }
     }
 
     input:focus + button {
-      right: 1rem;
+      right: .6rem;
     }
   }
 
   &__add-btn {
     transition: all $transition-default-time;
     position: absolute;
-    right: calc(100% - 3rem);
+    right: calc(100% - 1.875rem);
     top: 50%;
     transform: translateY(-50%);
 
     color: rgb(40, 80, 150);
     background: none;
     border: 0;
-    font-size: 2rem;
+    font-size: 1.25rem;
   }
 
   &-landing {
@@ -426,7 +437,7 @@
   }
 
   &-footer {
-    min-height: 5rem;
+    min-height: 3rem;
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
@@ -451,7 +462,7 @@
 
     &-icon {
       &--body {
-        font-size: 6rem;
+        font-size: 3.75rem;
         height: 96px;
         width: 96px;
       }
@@ -485,12 +496,12 @@
         height: inherit;
         width: 100%;
         position: absolute;
-        top: 16rem;
+        top: 10rem;
 
         display: flex;
         flex-flow: column-reverse nowrap;
         justify-content: flex-end;
-        margin-bottom: 5rem;
+        margin-bottom: 3.25rem;
       }
 
       &__right {
@@ -502,7 +513,7 @@
         flex-flow: row nowrap;
         overflow: scroll;
         background: rgba(var(--rgb-shadow), 1);
-        box-shadow: 0 3px 0.5rem rgba(var(--rgb-shadow-2), 0.2);
+        box-shadow: 0 3px 0.3rem rgba(var(--rgb-shadow-2), 0.2);
       }
 
       &__header {
@@ -542,17 +553,17 @@
         border-bottom: 0;
         z-index: 120;
         background: rgba(var(--rgb-background), 1);
-        box-shadow: 0 0.5rem 0.5rem rgba(var(--rgb-shadow-2), 0.12),
-          0 0.2rem 0.5rem rgba(var(--rgb-shadow-2), 0.12);
+        box-shadow: 0 0.3rem 0.3rem rgba(var(--rgb-shadow-2), 0.12),
+          0 0.1rem 0.3rem rgba(var(--rgb-shadow-2), 0.12);
 
         &:focus {
           border-bottom: 0;
         }
         &__icon {
           &--back {
-            font-size: 1.6rem;
-            margin: auto 0.5rem;
-            padding: auto 1rem;
+            font-size: 1rem;
+            margin: auto 0.3rem;
+            padding: auto .6rem;
             cursor: pointer;
 
             &:hover {
@@ -570,7 +581,7 @@
         }
 
         &__input:focus + &__icon {
-          right: calc(100% - 9rem);
+          right: calc(100% - 5.625rem);
         }
       }
 

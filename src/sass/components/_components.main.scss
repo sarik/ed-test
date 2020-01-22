@@ -5,6 +5,8 @@
 @import "./dropdown";
 @import "./placeholder";
 @import "./zoom";
+@import "./nps";
+@import "./loader";
 
 // PORTAL APP Components
 @import "./portal/portal";
@@ -14,6 +16,9 @@
 
 // ATTENDANCE APP Components
 @import "./attendance-web-app/attendance";
+
+// FEEDBACK APP Components
+@import "./feedback-web-app/feedback";
 
 // USER-SETTING Components
 @import "./user-settings-web-app/user-settings";
