@@ -29,6 +29,7 @@ async function init() {
 
         loadingPromises.push(loadApp('home', '/home', '/home/singleSpaEntry.js', null, globalEventDistributor, null));
         loadingPromises.push(loadApp('discover', '/discover', '/discover/singleSpaEntry.js', null, globalEventDistributor, null));
+        loadingPromises.push(loadApp('video', '/video', '/video/singleSpaEntry.js', null, globalEventDistributor, null));
 
 
         // wait until all stores are loaded and all apps are registered with singleSpa

@@ -77,6 +77,10 @@ module.exports = {
                 target: "http://localhost:8237",
                 pathRewrite: {"^/discover" : ""}
             },
+             "/video": {
+                target: "http://localhost:8238",
+                pathRewrite: {"^/video" : ""}
+            }
         }
     }
 };
