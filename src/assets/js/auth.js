@@ -98,7 +98,6 @@ async function signIn(event) {
   })
     .then(res => res.json())
     .then(data => {
-      console.log("data:  ", data);
       if (data.success) {
         if (saveUsername.checked) {
           window.localStorage.setItem("username", username.value);
