@@ -113,7 +113,7 @@
       transform: translateX(600%);
       transition: all $transition-default-time;
 
-      overflow-y: scroll;
+      overflow-y: auto;
       z-index: 51;
 
       display: flex;

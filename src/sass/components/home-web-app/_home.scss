@@ -1,32 +1,3 @@
-// .ed-home-bg--default {
-// 	background:  rgbabackground--rgb-background), 1);
-// }
-
-// .ed-home-card {
-//   box-shadow: 0 1rem 2.8rem rgba($color-black, 0.15);
-// 	border-radius: .3rem;
-// 	display: flex;
-// 	flex-flow: column nowrap;
-// 	justify-content: flex-start;
-// 	align-items: center;
-
-// 	@media screen and (min-width: 1216px) {
-// 		height: 15rem;
-// 		padding: 3rem;
-// 	}
-
-// 	@media screen and (min-width: 1024px) and (max-width: 1215px) {
-// 		height: 15rem;
-// 		padding: 3rem;
-// 	}
-// 	@media screen and (min-width: 769px) and (max-width: 1023px) {
-// 		height: 1.6rem;
-// 		padding: 3rem;
-// 	}
-// }
-
-// Yet to be implemented
-
 .ed-ho-card {
   background: rgba(var(--rgb-background), 1);
   color: rgba(var(--rgb-text-default), 1);
@@ -87,7 +58,7 @@
 }
 
 .ed-ho-main {
-  position: absolute;
+  position: relative;
   height: 100vh;
   width: 100vw;
   display: flex;

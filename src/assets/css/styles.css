@@ -50,6 +50,23 @@ html[data-theme="dark"] {
   --rgb-text-highlight: 0,166,155;
   --rgb-text-default: 238,238,238; }
 
+/*
+ECH0 Default theme=>
+  Primary Accent: #00a69b
+  Shadow: #eee
+  Background: #fff
+  Text highlight: #00a69b
+  Text Default: #424242
+
+
+ECH0 DARK theme=>
+  Primary Accent: #00a69b
+  Shadow: #424242
+  Background: #222
+  Text highlight: #00a69b
+  Text Default: #eee
+
+*/
 html {
   --rgb-primary-accent: 0, 166, 155;
   --rgb-background: 255, 255, 255;
@@ -7172,11 +7189,16 @@ label.panel-block {
   box-sizing: inherit; }
 
 body, html {
-  min-width: 100vw !important;
-  min-height: 100vh !important; }
+  overflow: hidden !important; }
 
 html {
-  font-size: 100% !important; }
+  font-size: 100%; }
+  @media only screen and (min-width: 769px) {
+    html {
+      font-size: 95%; } }
+  @media only screen and (max-width: 768px) {
+    html {
+      font-size: 90%; } }
 
 body {
   box-sizing: border-box; }
@@ -7315,6 +7337,12 @@ textarea {
   100% {
     transform: rotateZ(360deg); } }
 
+@keyframes ed-a-expand-bottom {
+  0% {
+    height: 30%; }
+  100% {
+    height: 100%; } }
+
 @keyframes ed-a-shake {
   0% {
     transform: translate(0%, 0%); }
@@ -7355,11 +7383,11 @@ textarea {
 
 @keyframes ed-a-fade-in {
   0% {
-    opacity: 100%; }
-  50% {
-    opacity: 0%; }
+    opacity: 0%;
+    transform: scale(0.3); }
   100% {
-    opacity: 100%; } }
+    opacity: 100%;
+    transform: scale(1); } }
 
 @keyframes ed-a-back-wave {
   0% {
@@ -7506,7 +7534,7 @@ textarea {
       right: 0;
       transform: translateX(600%);
       transition: all 0.2s;
-      overflow-y: scroll;
+      overflow-y: auto;
       z-index: 51;
       display: flex;
       flex-flow: column nowrap;
@@ -7856,7 +7884,7 @@ textarea {
     color: rgba(var(--rgb-text-default), 1); }
 
 .ed-ho-main {
-  position: absolute;
+  position: relative;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -7889,12 +7917,12 @@ textarea {
     top: 1.25rem;
     right: 1.25rem;
     background: #fff;
-    padding: .6rem;
+    padding: 0.6rem;
     border-radius: 100%;
     border: none;
     z-index: 124; }
   .ed-at-modal-btn {
-    padding: .6rem;
+    padding: 0.6rem;
     background-color: #57b846;
     color: #fff;
     width: 100%;
@@ -7927,7 +7955,7 @@ textarea {
   .ed-at-modal-icon {
     border-radius: 5000px;
     border: 1px solid rgba(var(--rgb-text-default), 1);
-    margin: .6rem;
+    margin: 0.6rem;
     overflow: hidden;
     position: relative;
     display: flex;
@@ -7948,7 +7976,7 @@ textarea {
     justify-content: space-between;
     align-items: center;
     background: rgba(var(--rgb-background), 1);
-    border-radius: .6rem;
+    border-radius: 0.6rem;
     box-shadow: 0 0 0.3rem 0 rgba(var(--rgb-shadow-2), 0.12), 0 0.125rem 0.3rem 0 rgba(var(--rgb-shadow-2), 0.12);
     transition: all 0.2s; }
     .ed-at-modal-display--inviteGuest {
@@ -7957,7 +7985,7 @@ textarea {
       width: 80vw;
       min-height: 580px; }
   .ed-at-modal-header {
-    padding: .6rem 0.3rem;
+    padding: 0.6rem 0.3rem;
     min-height: 3rem;
     align-self: stretch;
     min-height: 40px;
@@ -7970,7 +7998,7 @@ textarea {
     .ed-at-modal-header img {
       display: inline-block;
       margin-left: 0.3rem;
-      margin-right: .6rem; }
+      margin-right: 0.6rem; }
   .ed-at-modal-body {
     margin: 0.3rem;
     display: flex;
@@ -7994,13 +8022,13 @@ textarea {
       align-items: flex-start;
       width: 100%; }
     .ed-at-modal-invite__user-details {
-      padding-left: .5rem; }
+      padding-left: 0.5rem; }
     .ed-at-modal-invite__form-group {
       display: flex;
       flex-flow: nowrap;
       justify-content: flex-start;
       align-items: center;
-      padding: .6rem 0.3rem;
+      padding: 0.6rem 0.3rem;
       cursor: pointer;
       transition: all 0.2s;
       position: relative; }
@@ -8019,15 +8047,17 @@ textarea {
       .ed-at-modal-invite__form-group:hover {
         background: rgba(var(--rgb-shadow), 0.5);
         transform: translateX(0.3rem); }
+      .ed-at-modal-invite__form-group--display {
+        animation: ed-a-back-wave ease-in-out 0.2s; }
     .ed-at-modal-invite__remove {
       position: absolute;
-      right: .6rem;
+      right: 0.6rem;
       color: rgba(var(--rgb-text-default), 0.8); }
       .ed-at-modal-invite__remove:hover, .ed-at-modal-invite__remove:focus {
         transform: scale(1.025);
         color: rgba(var(--rgb-color-red), 1); }
     .ed-at-modal-invite__icon {
-      margin: 0.3rem .2rem; }
+      margin: 0.3rem 0.2rem; }
     .ed-at-modal-invite__caption {
       display: flex;
       flex-flow: row nowrap;
@@ -8050,7 +8080,7 @@ textarea {
       height: 440px;
       overflow-y: auto;
       width: 100%;
-      padding: .9rem; }
+      padding: 5px; }
     .ed-at-modal-invite-search {
       display: flex;
       flex-wrap: nowrap;
@@ -8064,12 +8094,12 @@ textarea {
         font-size: 1.25rem;
         width: 1.25rem;
         position: absolute;
-        right: .6rem;
+        right: 0.6rem;
         top: 50%;
         transform: translateY(-50%); }
       .ed-at-modal-invite-search__input {
         transition: all 0.2s;
-        padding: .6rem;
+        padding: 0.6rem;
         width: 100%;
         font-size: 1rem;
         border: 0 solid transparent;
@@ -8081,16 +8111,16 @@ textarea {
         .ed-at-modal-invite-search__input::placeholder {
           color: rgba(var(--rgb-text-default), 0.7); }
       .ed-at-modal-invite-search__input:focus + .ed-at-modal-invite-search__icon {
-        right: calc(100% - .625rem); }
+        right: calc(100% - 0.625rem); }
     .ed-at-modal-invite-list {
       box-shadow: 0 0 0.3rem 0 rgba(var(--rgb-shadow-2), 0.12), 0 0.125rem 0.3rem 0 rgba(var(--rgb-shadow-2), 0.12);
       width: 90%;
       height: 100%;
       height: 340px;
-      overflow-y: scroll; }
+      overflow-y: auto; }
       .ed-at-modal-invite-list__header {
         text-align: center;
-        padding: .6rem;
+        padding: 0.6rem;
         background: rgba(var(--rgb-shadow), 1);
         box-shadow: 0 3px 0.3rem rgba(var(--rgb-shadow-2), 0.2); }
       .ed-at-modal-invite-list__names {
@@ -8098,7 +8128,7 @@ textarea {
         white-space: nowrap;
         text-overflow: ellipsis; }
     .ed-at-modal-invite-add-guest {
-      padding-top: .6rem;
+      padding-top: 0.6rem;
       display: flex;
       flex-flow: column nowrap;
       justify-content: center;
@@ -8128,7 +8158,7 @@ textarea {
         outline: none;
         border-bottom: 2px solid #285096; }
     .ed-at-modal__add-new input:focus + button {
-      right: .6rem; }
+      right: 0.6rem; }
   .ed-at-modal__add-btn {
     transition: all 0.2s;
     position: absolute;
@@ -8194,7 +8224,7 @@ textarea {
   .ed-at-modal-display {
     height: 100vh;
     width: 100vw;
-    max-height: 100%;
+    min-height: 100%;
     max-width: 100%;
     border-radius: 0rem; }
   .ed-at-modal-body {
@@ -8203,28 +8233,60 @@ textarea {
     width: 100%;
     overflow: scroll;
     background: rgba(var(--rgb-background), 1); }
+    .ed-at-modal-invite__user-added--show {
+      display: flex !important;
+      animation: ed-a-expand-bottom ease-in 0.2s; }
+    .ed-at-modal-invite__user-added--down {
+      top: 8.8rem !important; }
     .ed-at-modal-invite__left {
       background: rgba(var(--rgb-background), 1);
       height: inherit;
       width: 100%;
       position: absolute;
-      top: 10rem;
+      top: 2.8rem;
       display: flex;
       flex-flow: column-reverse nowrap;
       justify-content: flex-end;
       margin-bottom: 3.25rem; }
     .ed-at-modal-invite__right {
-      position: absolute;
+      position: fixed;
       top: 40px;
       left: 0;
       height: fit-content;
-      display: flex;
+      max-height: 6rem;
+      display: none;
       flex-flow: row nowrap;
       overflow: scroll;
       background: rgba(var(--rgb-shadow), 1);
       box-shadow: 0 3px 0.3rem rgba(var(--rgb-shadow-2), 0.2); }
     .ed-at-modal-invite__header {
       height: 0; }
+    .ed-at-modal-invite__form-group--display {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      padding: .8rem;
+      animation: ed-a-fade-in ease-in-out 0.2s; }
+      .ed-at-modal-invite__form-group--display .ed-at-modal-invite__user-details {
+        padding-left: 0; }
+      .ed-at-modal-invite__form-group--display .ed-at-modal-invite__icon {
+        position: relative; }
+        .ed-at-modal-invite__form-group--display .ed-at-modal-invite__icon::after {
+          position: absolute;
+          bottom: -20%;
+          right: -20%;
+          font-family: "Font Awesome 5 Pro";
+          font-weight: 900;
+          content: "\f057";
+          color: #ce4762; }
+    .ed-at-modal-invite__icon {
+      position: relative; }
+    .ed-at-modal-invite__caption p {
+      width: unset; }
+    .ed-at-modal-invite__log-user {
+      display: flex;
+      flex-flow: column nowrap; }
     .ed-at-modal-invite-search {
       position: fixed;
       top: 0;
@@ -8239,7 +8301,7 @@ textarea {
       .ed-at-modal-invite-search__icon--back {
         font-size: 1rem;
         margin: auto 0.3rem;
-        padding: auto .6rem;
+        padding: auto 0.6rem;
         cursor: pointer; }
         .ed-at-modal-invite-search__icon--back:hover {
           color: #285096; }
