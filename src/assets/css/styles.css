@@ -7254,7 +7254,9 @@ textarea {
 .ed-u-highlight {
   color: rgba(var(--rgb-text-highlight), 1) !important; }
 
-.ed-u-flex-centered {
+.ed-u-flex-centered-col {
+  display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center; }
 
@@ -7533,15 +7535,27 @@ textarea {
 .ed-re-options__description {
   justify-self: start; }
 
+.ed-re-error-toast {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(50%, 50%); }
+  .ed-re-error-toast--open {
+    display: block; }
+
 .ed-toast {
+  display: none;
   position: fixed;
   padding: 1rem 1.5rem;
-  transform: translateX(-600px);
-  transition: all .3s ease;
+  transition: all 0.2s ease;
   top: 5rem;
-  left: 0; }
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0; }
   .ed-toast--show {
-    transform: translateY(0px); }
+    display: block;
+    opacity: 1; }
 
 .ed-navbar {
   display: flex;
