@@ -25,9 +25,6 @@
       <img src="./img/echo_logo_new.jpg">
     </a>
 
-    <div class="ed-toast notification is-danger" id="toast-unavailable">
-      Sorry! This option is not available!
-    </div>
     <!-- <div class="container"> -->
     <!-- mainNavbar: replaces authForm after login success -->
 
@@ -37,10 +34,10 @@
         <div class="ed-navbar-mobile-menu ed-navbar-mobile-menu--underlay" onclick="toggleNavbarMobile()"></div>
         <div class="ed-navbar-mobile-menu" id="nav-mobile-menu">
           <div class="ed-navbar-mobile__user-info">
-            <figure class="image is-48x48">
+            <!-- <figure class="image is-48x48">
               <img src="./img/user_demo.jpg" alt="" class="is-rounded" />
             </figure>
-            <h1>UserName Replace</h1>
+            <h1></h1> -->
           </div>
           <div class="ed-navbar-mobile-main">
             <div class="ed-navbar-mobile-apps">
@@ -76,162 +73,8 @@
                     </a> -->
         </div>
         <div class="ed-navbar-menu__section">
-          <div class="ed-navbar-menu__item--static" id="username">
-            <!-- <span class="ed-navbar-menu__item--greeting">Hello&nbsp;</span> -->
+          <div class="ed-navbar-menu__item--static" id="username">1
           </div>
-
-          <!-- Notification icon -->
-          <!-- <div
-            class="navbar-item ed-navbar-menu__item"
-            id="notifDropdownWrapper"
-            onmouseenter="toggleDropdown('notifDropdownWrapper')"
-            onmouseleave="toggleDropdown('notifDropdownWrapper')"
-          >
-            <span class="icon"
-              ><i
-                class="far fa-bell has-badge-rounded has-badge-danger"
-                data-badge="3"
-              ></i
-            ></span>
-
-            <div
-              class="navbar-dropdown is-hidden is-right is-boxed"
-              id="notifDropdown"
-            >
-              <div class="navbar-item">
-                <article class="media">
-                  <figure class="media-left">
-                    <p
-                      class="image is-32x32"
-                      style="border-radius:9999px;overflow:hidden"
-                    >
-                      <img src="./img/user_demo.jpg" />
-                    </p>
-                  </figure>
-                  <div class="media-content">
-                    <div class="content">
-                      <p>
-                        <a href="">John smith</a> is inviting you to
-                        <a href="">Hepatitis C ECHO Program</a>
-                        <br /><span class="is-size-7 has-text-grey"
-                          >Yesterday, 2PM</span
-                        >
-                      </p>
-                    </div>
-                    <nav class="level is-mobile">
-                      <div class="level-left">
-                        <a class="level-item">
-                          <button class="button is-primary is-small is-rounded">
-                            <span class="icon is-small"
-                              ><i class="far fa-check"></i>
-                            </span>
-                            &nbsp;Accept Invite
-                          </button>
-                        </a>
-                        <a class="level-item">
-                          <button class="button is-small is-rounded">
-                            <span class="icon is-small"
-                              ><i class="far fa-times"></i>
-                            </span>
-                            &nbsp;Reject
-                          </button>
-                        </a>
-                      </div>
-                    </nav>
-                  </div>
-                </article>
-              </div>
-              <hr class="navbar-divider" />
-              <div class="navbar-item">
-                <article class="media">
-                  <figure class="media-left">
-                    <p
-                      class="image is-32x32"
-                      style="border-radius:9999px;overflow:hidden"
-                    >
-                      <img src="./img/user_demo.jpg" />
-                    </p>
-                  </figure>
-                  <div class="media-content">
-                    <div class="content">
-                      <p>
-                        <a href="">Andy Ortegon</a> is requesting to join
-                        <a href="">Autism ECHO Program</a>
-                        <br /><span class="is-size-7 has-text-grey"
-                          >3 days ago</span
-                        >
-                      </p>
-                    </div>
-                    <nav class="level is-mobile">
-                      <div class="level-left">
-                        <a class="level-item">
-                          <button class="button is-primary is-small is-rounded">
-                            <span class="icon is-small"
-                              ><i class="far fa-check"></i>
-                            </span>
-                            &nbsp;Accept join request
-                          </button>
-                        </a>
-                        <a class="level-item">
-                          <button class="button is-small is-rounded">
-                            <span class="icon is-small"
-                              ><i class="far fa-times"></i>
-                            </span>
-                            &nbsp;Reject
-                          </button>
-                        </a>
-                      </div>
-                    </nav>
-                  </div>
-                </article>
-              </div>
-              <hr class="navbar-divider" />
-              <div class="navbar-item">
-                <article class="media">
-                  <figure class="media-left">
-                    <p class="image is-32x32 has-text-centered">
-                      <i class="far fa-check-circle has-text-success fa-lg"></i>
-                    </p>
-                  </figure>
-                  <div class="media-content">
-                    <div class="content">
-                      <p>
-                        Your email
-                        <a href="">rebekkahjordan@gmail.com</a>
-                        has been successfully verified
-                        <br /><span class="is-size-7 has-text-grey"
-                          >1 week ago</span
-                        >
-                      </p>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <hr class="navbar-divider" />
-              <div class="navbar-item">
-                <article class="media">
-                  <figure class="media-left">
-                    <p class="image is-32x32 has-text-centered">
-                      <i
-                        class="far fa-exclamation-triangle has-text-warning fa-lg"
-                      ></i>
-                    </p>
-                  </figure>
-                  <div class="media-content">
-                    <div class="content">
-                      <p>
-                        Liver Cancer ECHO's session on 14 Aug 2019 has been
-                        rescheduled to 17 Aug 2019
-                        <br /><span class="is-size-7 has-text-grey"
-                          >2 months ago</span
-                        >
-                      </p>
-                    </div>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </div> -->
 
           <div class="ed-dropdown" onmouseenter="toggleNavbarDropdown('navbar-main-dropdown')"
             onmouseleave="toggleNavbarDropdown('navbar-main-dropdown')">
@@ -263,7 +106,7 @@
                     <span class="ed-dropdown__subitem" onclick="handleI18n('hi')">
                       (&#x958) हिंदी
                     </span>
-                    <span class="ed-dropdown__subitem">
+                    <!-- <span class="ed-dropdown__subitem">
                       (দ্য) বাংলা
                     </span>
                     <span class="ed-dropdown__subitem">
@@ -286,7 +129,7 @@
                     </span>
                     <span class="ed-dropdown__subitem">
                       (മ) മലയാളം
-                    </span>
+                    </span> -->
                   </div>
                 </div>
               </span>
@@ -311,15 +154,6 @@
 
   </nav>
   <!-- authForm: main login form -->
-
-  <!-- <section class="ed-login" id="authForm">
-    <div class="ed-login-container">
-      <div class="ed-login-container-left">Login Form</div>
-      <div class="ed-login-container-right">Images here</div>
-    </div>
-  </section> -->
-
-  
 
   <section class="hero ed-login is-fullheight-with-navbar" id="authForm">
     <div class="section">
@@ -397,14 +231,14 @@
     <div class="ed-login-languages">
       <span id="login-lang-en" onclick="handleI18n('en')">English</span>
       <span id="login-lang-hi"onclick="handleI18n('hi')">हिंदी</span>
-      <span id="login-lang-ba">বাংলা</span>
+      <!-- <span id="login-lang-ba">বাংলা</span>
       <span id="login-lang-gu">ગુજરતી</span>
       <span id="login-lang-ma">मराठी</span>
       <span id="login-lang-pu">ਪੰਜਾਬੀ</span>
       <span id="login-lang-ta">தமிழ்</span>
       <span id="login-lang-te">తెలుగు</span>
       <span id="login-lang-ka">ಕನ್ನಡ</span>
-      <span id="login-lang-ma">മലയാളം</span>
+      <span id="login-lang-ma">മലയാളം</span> -->
       </div>
     <div  style="opacity: 0;"
     class="content has-text-centered has-text-grey is-size-7 formattedMessage"
@@ -414,53 +248,6 @@
       <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
     </div>
   </section>
-
-  <!-- language selection portal -->
-  <div class="modal ed-portal-modal" id="i18n" style="font-size: 1.6rem;">
-    <div class="modal-background"></div>
-    <div class="modal-content ed-u-overflow-visible">
-      <div class="box">
-        <p class="formattedMessage"
-          intl-id="we-ve-detected-that-your-device-language-is-set-to-local-language-would-you-like-to-set-local-language-as-your-default-language-for-echo-digital"
-          variables='{"displayLanguage" : "English"}'>
-          We've detected that your device language is set to
-          {displayLanguage}. Would you like to set English as your default
-          language for ECHO Digital?
-        </p>
-        <br />
-
-        <div class="buttons is-right">
-          <div class="dropdown" id="languageDropdown" style="font-size: 1.6rem;">
-            <button class="button is-primary is-outlined" aria-haspopup="true" aria-controls="dropdown-menu"
-              style="font-size: 1.6rem;" onclick="toggleDropdown('languageDropdown')">
-              <span class="formattedMessage" intl-id="no-select-another-language">No, select another language</span>
-              <span class="icon is-small">
-                <i class="fas fa-angle-down" aria-hidden="true"></i>
-              </span>
-            </button>
-            <div class="dropdown-menu" id="dropdown-menu" role="menu">
-              <div class="dropdown-content">
-                <a class="dropdown-item" onclick="handleI18n('hi')" style="font-size: 1.6rem;">
-                  हिंदी
-                </a>
-                <a class="dropdown-item" onclick="handleI18n('en')" style="font-size: 1.6rem;">
-                  English
-                </a>
-                
-              </div>
-            </div>
-          </div>
-
-          <button class="button is-primary" onclick="handleI18n()" style="font-size: 1.6rem;">
-            <strong class="formattedMessage" intl-id="set-language-as-display-language"
-              variables='{"displayLanguage":"English"}'>Set language as {displayLanguage}</strong>
-          </button>
-        </div>
-      </div>
-    </div>
-    <button class="modal-close is-large" aria-label="close"
-      onclick="document.getElementById('i18n').classList.remove('is-active')"></button>
-  </div>
 
   <!-- CDNs -->
   <script src="https://kit.fontawesome.com/adbb60565b.js"></script>
@@ -500,37 +287,6 @@
   <script type="text/javascript" src="js/auth.js"></script>
   <script type="text/javascript" src="js/i18n.js"></script>
 
-  <script type="text/javascript">
-    // var language = window.localStorage.language || "en";
-    // console.log(language)
-    // const messages = localStorage.translation
-    //     ? JSON.parse(localStorage.translation)
-    //     : {};
-
-    // const formattedMessages = document.getElementsByClassName('formattedMessage')
-    // for(var i=0; i<formattedMessages.length;i++){
-    //     let formattedMessage = formattedMessages[i]
-    //     let childNodes = formattedMessage.childNodes
-    //     let intlId = formattedMessage.getAttribute('intl-id')
-
-    //     for(j=0; j<childNodes.length; j++){
-    //         let childNode = childNodes[j]
-    //         if(childNode.nodeType === 3 && childNode.nodeValue.trim() !== "" ){
-    //             if(messages[language][intlId]){
-    //                 let message = new IntlMessageFormat.IntlMessageFormat(messages[language][intlId], language)
-    //                 childNode.nodeValue = message.format()
-    //                 formattedMessage.insertBefore( document.createTextNode( '\u00A0' ), childNode );
-    //                 break;
-    //             }
-    //         }
-    //     }
-
-    // }
-
-    //     var enNumPhotos = new IntlMessageFormat.IntlMessageFormat(MESSAGES['en-US'].NUM_PHOTOS, 'en-US');
-    //     output = enNumPhotos.format({ numPhotos: 1 });
-    //     console.log(output); // => "You have 1,000 photos."
-  </script>
 </body>
 
 </html>
