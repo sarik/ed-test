@@ -6,17 +6,23 @@
   box-sizing: inherit;
 }
 
-html {
-  font-size: 62.5% !important; //1rem === 10px
 
-  // font-size: 100%; //to test stuff 1rem === 16px
+body,html {
+  // min-width: 100vw !important ;
+  // min-height: 100vh !important ;
+  overflow: hidden !important;
+}
+
+html {
+
+  font-size: 100%; 
 
   @include ed-respond(tablet) {
-    font-size: 56.25%; //1rem === 9px
+    font-size: 95%; 
   }
 
   @include ed-respond(mobile) {
-    font-size: 56.25%; //1rem === 9px
+    font-size: 90%; 
   }
 }
 
@@ -25,8 +31,8 @@ body {
 }
 
 i {
-  margin-left: 0.3rem;
-  margin-right: 0.3rem;
+  margin-left: 3px;
+  margin-right: 3px;
 }
 
 a {

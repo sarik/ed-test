@@ -16,7 +16,7 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.js?$/,
+				test: /\.jsx?$/,
 				exclude: [path.resolve(__dirname, 'node_modules')],
 				loader: 'babel-loader',
 			},
@@ -77,6 +77,14 @@ module.exports = {
                 target: "http://localhost:8237",
                 pathRewrite: {"^/discover" : ""}
             },
+             "/video": {
+                target: "http://localhost:8238",
+                pathRewrite: {"^/video" : ""}
+            },
+             "/reset-password": {
+                target: "http://localhost:8239",
+                pathRewrite: {"^/reset-password" : ""}
+            }
         }
     }
 };

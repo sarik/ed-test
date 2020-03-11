@@ -1,82 +1,53 @@
-// .ed-home-bg--default {
-// 	background:  rgbabackground--rgb-background), 1);
-// }
-
-// .ed-home-card {
-//   box-shadow: 0 1rem 2.8rem rgba($color-black, 0.15);
-// 	border-radius: .3rem;
-// 	display: flex;
-// 	flex-flow: column nowrap;
-// 	justify-content: flex-start;
-// 	align-items: center;
-
-// 	@media screen and (min-width: 1216px) {
-// 		height: 15rem;
-// 		padding: 3rem;
-// 	}
-
-// 	@media screen and (min-width: 1024px) and (max-width: 1215px) {
-// 		height: 15rem;
-// 		padding: 3rem;
-// 	}
-// 	@media screen and (min-width: 769px) and (max-width: 1023px) {
-// 		height: 1.6rem;
-// 		padding: 3rem;
-// 	}
-// }
-
-// Yet to be implemented
-
 .ed-ho-card {
   background: rgba(var(--rgb-background), 1);
   color: rgba(var(--rgb-text-default), 1);
 
   font-size: $text-default-size;
-  padding: 4rem;
-  margin: 3rem;
+  padding: 2.5rem;
+  margin: 1.8rem;
 
   display: inline-block;
-  width: 35rem;
+  width: 22rem;
   max-width: 95%;
   text-align: center;
   border: 0;
   border-radius: 3px;
-  box-shadow: 0 0.4rem 1rem rgba($color-black, 0.4);
+  box-shadow: 0 0.25rem .6rem rgba($color-black, 0.4);
 
   transition: all 0.3s;
 
   &:hover {
     transform: translateY(-3%);
     color: rgba(var(--rgb-text-default), 1);
-    box-shadow: 0 0.6rem 1.2rem rgba($color-black, 0.3);
+    box-shadow: 0 0.4rem .75rem rgba($color-black, 0.3);
   }
 
   &:active {
     transform: translateY(3%);
-    box-shadow: 0 0.3rem 0.6rem rgba($color-black, 0.5);
+    box-shadow: 0 0.1rem 0.4rem rgba($color-black, 0.5);
   }
 
   &__icon {
   }
 
   &__title {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     text-transform: capitalize;
     display: flex;
     flex-flow: column nowrap;
   }
 
   &__description {
-    margin-top: 1rem;
+    margin-top: .6rem;
   }
 }
 
 .ed-ho-message {
-  font-size: 2rem;
+  font-size: 1.25rem;
   width: 85%;
-  margin: 0 auto 2rem auto;
+  margin: 0 auto 1.25rem auto;
   &__title {
-    font-size: 4rem;
+    font-size: 2.5rem;
     font-weight: 600;
     color: rgba(var(--rgb-text-highlight), 1);
   }
@@ -87,7 +58,7 @@
 }
 
 .ed-ho-main {
-  position: absolute;
+  position: relative;
   height: 100vh;
   width: 100vw;
   display: flex;

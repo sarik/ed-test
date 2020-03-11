@@ -23,14 +23,18 @@ $color-black-2: #202225;
 
 $color-white: #fff;
 
+$color-grey-light-1: #ececec;
 $color-grey-light: #eee;
 $color-grey: #d3d3d3;
 $color-grey-dark: #424242;
 
 $color-turquiose: #00a69b;
-
+$color-amber: #ffbf00;
+$color-blue-light-2: #E5F0FD;  
+$color-blue-light-1: rgb(76, 94, 231);   
 $color-green: #57b846;
 
+$color-red-light-1: #ce4762;
 $color-red-light: #ed4133;
 $color-red: #c32d38;
 $color-red-dark: #9c1720;
@@ -52,6 +56,7 @@ $color-text-default: $color-grey-dark;
 
 // BULMA VARIABLES
 $primary: $color-green;
+$warning: $color-amber;
 $title-color: $color-text-highlight;
 // $subtitle-color: $color-grey-light;
 
@@ -61,8 +66,8 @@ $title-color: $color-text-highlight;
 // $color-echo-green:
 
 // GLOBAL VARIABLES
-
-$text-default-size: 1.6rem;
+$default-border-radius: 4px;
+$text-default-size: 1rem;
 $transition-default-time: 0.2s;
 
 //COMPONENT VARIABLES
