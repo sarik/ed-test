@@ -1,0 +1,38 @@
+
+// MEDIA QUERY MANAGER
+/*
+$breakpoint arguement choices:
+(Directly taken from Bulma)
+  Mobile:     up to 768px [TOUCH]
+  Tablet:     from 769px  [TOUCH]
+  Desktop:    from 1024px 
+  Widescreen: from 1216px 
+  FullHD:     from 1408px 
+
+[1024 - 1800] is where our normal styles apply
+## add a 1800+ option for big desktops?
+*/
+
+@mixin ed-respond($breakpoint) {
+  @if $breakpoint == mobile {
+      @media only screen and (max-width: 768px) { @content };
+  }
+  @if $breakpoint == tablet {
+      @media only screen and (min-width: 769px) { @content };
+  }
+  @if $breakpoint == touch-device {
+      @media only screen and (max-width: 1023px) { @content };
+  }
+
+  // Normal styles apply
+  @if $breakpoint == desktop {
+      @media only screen and (min-width: 1024px) { @content };
+  }
+  @if $breakpoint == widescreen {
+      @media only screen and (min-width: 1216px) { @content };
+    }
+  @if $breakpoint == fullhd {
+      @media only screen and (min-width: 1408px) { @content };
+  }
+  
+}

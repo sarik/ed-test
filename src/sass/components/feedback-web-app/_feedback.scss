@@ -1,0 +1,194 @@
+// .ed-fe-main {
+//   padding-top: 2rem;
+//   border-top: 3px solid rgba(var(--rgb-primary-accent), 1);
+
+//   hr {
+//     margin: 0.5rem auto;
+//   }
+// }
+
+// .ed-fe-form {
+//   display: flex;
+//   flex-flow: column nowrap;
+//   justify-content: center;
+//   align-items: center;
+//   width: 100%;
+//   hr {
+//     width: 100%;
+//   }
+// }
+
+// .ed-fe-form-tags {
+//   margin: .25rem;
+//   width: 100%;
+//   display: flex;
+//   flex-flow: row wrap;
+//   justify-content: flex-start;
+//   align-items: center;
+  
+//   span {
+//     border-radius: 100%;
+//     margin: .2rem;
+//   }
+// }
+
+// .ed-fe-toast {
+//   // animation: ed-a-fade-in $transition-default-time linear;
+//   opacity: 0;
+//   visibility: hidden;
+//   position: fixed;
+//   top: 2.5rem;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   transition: all $transition-default-time;
+
+//   &--show {
+//     opacity: 1;
+//     visibility: visible;
+//   }
+// }
+
+// .ed-fe-form-group {
+//   width: 100%;
+//   display: flex;
+//   flex-flow: column nowrap;
+//   justify-content: center;
+//   align-items: flex-start;
+//   margin-bottom: 1rem;
+
+//   button {
+//     align-self: center;
+//   }
+// }
+
+// .ed-fe-info-grid {
+//   display: grid;
+//   width: 100%;
+//   grid-template-columns: repeat(6, 1fr);
+//   grid-template-areas:
+//     "tips tips tips remarks remarks remarks"
+//     "session session session session resource resource"
+//     "attendance attendance attendance attendance resource resource";
+//   gap: 1rem;
+
+//   .ed-fe-info-box {
+//     background: rgba(var(--rgb-background), 1);
+//     box-shadow: 0 0 0.3rem 0 rgba(var(--rgb-shadow-2), 0.2),
+//       0 0.125rem 0.3rem 0 rgba(var(--rgb-shadow-2), 0.2);
+//     border-radius: 3px;
+//     padding: 1rem;
+//     border: 0px solid black;
+//   }
+
+//   .ed-fe-echo-tips {
+//     grid-area: remarks;
+
+
+//     display: flex;
+//     flex-flow: column;
+//     justify-content: flex-start;
+//     align-items: flex-start;
+//   }
+
+//   .ed-fe-session-tips {
+//     grid-area: tips;
+
+//     display: flex;
+//     flex-flow: column;
+//     justify-content: flex-start;
+//     align-items: flex-start;
+//   }
+
+
+//   .ed-fe-next-session {
+//     grid-area: session;
+
+//     &__details {
+//       display: flex;
+//       flex-wrap: nowrap;
+//       justify-content: space-between;
+//       align-items: center;
+//     }
+
+//     &__program {
+//       display: flex;
+//       flex-wrap: nowrap;
+//       justify-content: flex-start;
+//       align-items: center;
+
+//       article {
+//         font-size: 0.8rem;
+//         padding: 1rem;
+//         line-height: 1.6rem;
+//         margin: 0.5rem;
+//         border: 5px solid $color-amber;
+//         border-radius: 50%;
+//         border-top: 5px solid $color-grey-light ;
+//         transform: rotateZ(-45deg);
+        
+//         p {
+//           font-style: italic;
+//           transform: rotateZ(45deg);
+//         }
+//       }
+
+//       figure {
+//         margin: 0.5rem;
+//       }
+//       div {
+//         display: flex;
+//         flex-flow: column nowrap;
+//         justify-items: flex-start;
+        
+//       }
+
+//       h3 {
+//       }
+//       h4 {
+//       }
+//     }
+//   }
+
+//   .ed-fe-user-attendance {
+//     grid-area: attendance;
+
+//     &__numbers {
+//       padding: .5rem;
+//       // color: $color-blue-light-1;
+//       background: $color-blue-light-2;
+//       border-radius: 3px;
+//     }
+//   }
+
+//   .ed-fe-resources {
+//     grid-area: resource;
+
+//     &-tile {
+//       padding: 1rem;
+//       display: flex;
+//       flex-flow: column nowrap;
+//       justify-content: space-evenly;
+      
+//       div {
+//         padding: .5rem .1rem;
+//         margin: .5rem .1rem;
+//         border-radius: 5px;
+//         box-shadow: 0 0 0.4rem 0 rgba(var(--rgb-shadow-2), 0.05),
+//         0 0.05rem 0.4rem 0 rgba(var(--rgb-shadow-2), 0.05);
+        
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+        
+//         transition: all $transition-default-time;
+        
+//         &:hover {
+//           transform: scale(1.05);
+//           box-shadow: 0 0 0.4rem 0 rgba(var(--rgb-shadow-2), 0.05),
+//           0 0.1rem 0.4rem 0 rgba(var(--rgb-shadow-2), 0.05);
+//         }
+
+//       }
+//     }
+//   }
+// }
