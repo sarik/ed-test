@@ -1,16 +1,13 @@
 
 .ed-toast {
-  display: none;
   position: fixed;
   padding: 1rem 1.5rem;
-  transition: all $transition-default-time ease;
+  transform: translateX(-600px);
+  transition: all .3s ease;
   top: 5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
+  left: 0;
   
   &--show {
-    display: block;
-    opacity: 1;
+    transform: translateY(0px);
    }
 }

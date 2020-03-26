@@ -9,11 +9,6 @@
   <!-- <link> Tags -->
   <link rel="stylesheet" href="./css/styles.css" />
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
-  <meta name="importmap-type" content="systemjs-importmap">
- 
-  <script type="systemjs-importmap" src="https://ed-2.s3.amazonaws.com/import-map-echo.json">
-  
-  </script>
 
 </head>
 
@@ -84,6 +79,158 @@
             <!-- <span class="ed-navbar-menu__item--greeting">Hello&nbsp;</span> -->
           </div>
 
+          <!-- Notification icon -->
+          <!-- <div
+            class="navbar-item ed-navbar-menu__item"
+            id="notifDropdownWrapper"
+            onmouseenter="toggleDropdown('notifDropdownWrapper')"
+            onmouseleave="toggleDropdown('notifDropdownWrapper')"
+          >
+            <span class="icon"
+              ><i
+                class="far fa-bell has-badge-rounded has-badge-danger"
+                data-badge="3"
+              ></i
+            ></span>
+
+            <div
+              class="navbar-dropdown is-hidden is-right is-boxed"
+              id="notifDropdown"
+            >
+              <div class="navbar-item">
+                <article class="media">
+                  <figure class="media-left">
+                    <p
+                      class="image is-32x32"
+                      style="border-radius:9999px;overflow:hidden"
+                    >
+                      <img src="./img/user_demo.jpg" />
+                    </p>
+                  </figure>
+                  <div class="media-content">
+                    <div class="content">
+                      <p>
+                        <a href="">John smith</a> is inviting you to
+                        <a href="">Hepatitis C ECHO Program</a>
+                        <br /><span class="is-size-7 has-text-grey"
+                          >Yesterday, 2PM</span
+                        >
+                      </p>
+                    </div>
+                    <nav class="level is-mobile">
+                      <div class="level-left">
+                        <a class="level-item">
+                          <button class="button is-primary is-small is-rounded">
+                            <span class="icon is-small"
+                              ><i class="far fa-check"></i>
+                            </span>
+                            &nbsp;Accept Invite
+                          </button>
+                        </a>
+                        <a class="level-item">
+                          <button class="button is-small is-rounded">
+                            <span class="icon is-small"
+                              ><i class="far fa-times"></i>
+                            </span>
+                            &nbsp;Reject
+                          </button>
+                        </a>
+                      </div>
+                    </nav>
+                  </div>
+                </article>
+              </div>
+              <hr class="navbar-divider" />
+              <div class="navbar-item">
+                <article class="media">
+                  <figure class="media-left">
+                    <p
+                      class="image is-32x32"
+                      style="border-radius:9999px;overflow:hidden"
+                    >
+                      <img src="./img/user_demo.jpg" />
+                    </p>
+                  </figure>
+                  <div class="media-content">
+                    <div class="content">
+                      <p>
+                        <a href="">Andy Ortegon</a> is requesting to join
+                        <a href="">Autism ECHO Program</a>
+                        <br /><span class="is-size-7 has-text-grey"
+                          >3 days ago</span
+                        >
+                      </p>
+                    </div>
+                    <nav class="level is-mobile">
+                      <div class="level-left">
+                        <a class="level-item">
+                          <button class="button is-primary is-small is-rounded">
+                            <span class="icon is-small"
+                              ><i class="far fa-check"></i>
+                            </span>
+                            &nbsp;Accept join request
+                          </button>
+                        </a>
+                        <a class="level-item">
+                          <button class="button is-small is-rounded">
+                            <span class="icon is-small"
+                              ><i class="far fa-times"></i>
+                            </span>
+                            &nbsp;Reject
+                          </button>
+                        </a>
+                      </div>
+                    </nav>
+                  </div>
+                </article>
+              </div>
+              <hr class="navbar-divider" />
+              <div class="navbar-item">
+                <article class="media">
+                  <figure class="media-left">
+                    <p class="image is-32x32 has-text-centered">
+                      <i class="far fa-check-circle has-text-success fa-lg"></i>
+                    </p>
+                  </figure>
+                  <div class="media-content">
+                    <div class="content">
+                      <p>
+                        Your email
+                        <a href="">rebekkahjordan@gmail.com</a>
+                        has been successfully verified
+                        <br /><span class="is-size-7 has-text-grey"
+                          >1 week ago</span
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <hr class="navbar-divider" />
+              <div class="navbar-item">
+                <article class="media">
+                  <figure class="media-left">
+                    <p class="image is-32x32 has-text-centered">
+                      <i
+                        class="far fa-exclamation-triangle has-text-warning fa-lg"
+                      ></i>
+                    </p>
+                  </figure>
+                  <div class="media-content">
+                    <div class="content">
+                      <p>
+                        Liver Cancer ECHO's session on 14 Aug 2019 has been
+                        rescheduled to 17 Aug 2019
+                        <br /><span class="is-size-7 has-text-grey"
+                          >2 months ago</span
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div> -->
 
           <div class="ed-dropdown" onmouseenter="toggleNavbarDropdown('navbar-main-dropdown')"
             onmouseleave="toggleNavbarDropdown('navbar-main-dropdown')">
@@ -162,7 +309,14 @@
     </div>
 
   </nav>
+  <!-- authForm: main login form -->
 
+  <!-- <section class="ed-login" id="authForm">
+    <div class="ed-login-container">
+      <div class="ed-login-container-left">Login Form</div>
+      <div class="ed-login-container-right">Images here</div>
+    </div>
+  </section> -->
 
   
 
@@ -312,18 +466,9 @@
 
   <!-- <script> Tags-->
 
-  
-  <script src='https://unpkg.com/systemjs@4.1.0/dist/system.js'></script>
-    <script src='https://unpkg.com/systemjs@4.1.0/dist/extras/amd.js'></script>
-    <script src='https://unpkg.com/systemjs@4.1.0/dist/extras/named-exports.js'></script>
-    <script src='https://unpkg.com/systemjs@4.1.0/dist/extras/use-default.js'></script>
-
-    <script src="js/common-deps.js"></script>
-  
   <!-- Load the application -->
-  <script>
-    System.import('@portal/config')
-  </script>
+  <script src="./system.js"></script>
+  <script src="./main.js"></script>
 
   <!-- handles custom js for pure css components -->
 
@@ -354,7 +499,37 @@
   <script type="text/javascript" src="js/auth.js"></script>
   <script type="text/javascript" src="js/i18n.js"></script>
 
- 
+  <script type="text/javascript">
+    // var language = window.localStorage.language || "en";
+    // console.log(language)
+    // const messages = localStorage.translation
+    //     ? JSON.parse(localStorage.translation)
+    //     : {};
+
+    // const formattedMessages = document.getElementsByClassName('formattedMessage')
+    // for(var i=0; i<formattedMessages.length;i++){
+    //     let formattedMessage = formattedMessages[i]
+    //     let childNodes = formattedMessage.childNodes
+    //     let intlId = formattedMessage.getAttribute('intl-id')
+
+    //     for(j=0; j<childNodes.length; j++){
+    //         let childNode = childNodes[j]
+    //         if(childNode.nodeType === 3 && childNode.nodeValue.trim() !== "" ){
+    //             if(messages[language][intlId]){
+    //                 let message = new IntlMessageFormat.IntlMessageFormat(messages[language][intlId], language)
+    //                 childNode.nodeValue = message.format()
+    //                 formattedMessage.insertBefore( document.createTextNode( '\u00A0' ), childNode );
+    //                 break;
+    //             }
+    //         }
+    //     }
+
+    // }
+
+    //     var enNumPhotos = new IntlMessageFormat.IntlMessageFormat(MESSAGES['en-US'].NUM_PHOTOS, 'en-US');
+    //     output = enNumPhotos.format({ numPhotos: 1 });
+    //     console.log(output); // => "You have 1,000 photos."
+  </script>
 </body>
 
 </html>

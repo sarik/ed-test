@@ -15,11 +15,10 @@ const intialMessage = {
 
 }
 
-// if(!localStorage.language) {
-// 	document.getElementById("i18n").className += " is-active";
-// } else 
-
-if (localStorage.language != language) {
+if(!localStorage.language) {
+	document.getElementById("i18n").className += " is-active";
+} 
+else if (localStorage.language != language) {
 	language=localStorage.language;
 } 
 

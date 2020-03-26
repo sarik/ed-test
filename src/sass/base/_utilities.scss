@@ -33,9 +33,7 @@
   color: rgba(var(--rgb-text-highlight), 1) !important;
 }
 
-.ed-u-flex-centered-col {
-  display: flex;
-  flex-flow: column nowrap;
+.ed-u-flex-centered {
   justify-content: center;
   align-items: center;
 }

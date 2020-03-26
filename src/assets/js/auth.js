@@ -119,10 +119,6 @@ async function signIn(event) {
     ;
 }
 
-function resetPassowrd() {
-  document.getElementById("authForm").style = "display: none;"
-}
-
 function signOut() {
   document.cookie = `token=`;
   location.reload();

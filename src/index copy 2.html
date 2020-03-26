@@ -10,9 +10,21 @@
   <link rel="stylesheet" href="./css/styles.css" />
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
   <meta name="importmap-type" content="systemjs-importmap">
- 
-  <script type="systemjs-importmap" src="https://ed-2.s3.amazonaws.com/import-map-echo.json">
-  
+  <script type="systemjs-importmap">
+    {
+      "imports": {
+        "@portal/config": "http://localhost:8233/main.js",
+        "people": "https://upload-tester1.s3.amazonaws.com/account.js",
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@4.4.1/lib/system/single-spa.min.js",
+        "@portal/attendacne": "https://upload-tester1.s3.amazonaws.com/attendance.js",
+        "@portal/account": "https://upload-tester1.s3.amazonaws.com/account.js",
+        "@portal/test": "https://upload-tester1.s3.amazonaws.com/test.js",
+        "@portal/home": "https://upload-tester1.s3.amazonaws.com/home.js",
+        "@portal/discover": "https://upload-tester1.s3.amazonaws.com/discover.js",
+        "@portal/video": "https://upload-tester1.s3.amazonaws.com/attendance.js",
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@4.4.1/lib/system/single-spa.min.js"
+      }
+    }
   </script>
 
 </head>
@@ -312,7 +324,7 @@
 
   <!-- <script> Tags-->
 
-  
+  <!-- Load the application -->
   <script src='https://unpkg.com/systemjs@4.1.0/dist/system.js'></script>
     <script src='https://unpkg.com/systemjs@4.1.0/dist/extras/amd.js'></script>
     <script src='https://unpkg.com/systemjs@4.1.0/dist/extras/named-exports.js'></script>
@@ -320,7 +332,6 @@
 
     <script src="js/common-deps.js"></script>
   
-  <!-- Load the application -->
   <script>
     System.import('@portal/config')
   </script>

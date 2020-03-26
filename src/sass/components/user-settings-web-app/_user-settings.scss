@@ -1,6 +1,81 @@
-.ed-setting-user-img {
+.ed-us-user-img {
   overflow: hidden;
   border-radius: 100%; 
   left: 50%;
   transform: translate(-50%);
 }
+
+.ed-us-main {
+  background: rgba(var(--rgb-shadow), 1);
+  font-size: $text-default-size;
+  min-height: 100vh;
+  margin-top: 0px;
+  border-top: 3px solid rgba(var(--rgb-primary-accent), 1);
+ }
+
+@media screen and (min-width: 768px) {
+  .ed-us-padding-desktop {
+   padding-top: 30px;
+   padding-right: 60px;
+  }
+}
+
+
+.ed-us-border-top{
+  border-top: 3px solid rgba(var(--rgb-primary-accent), 1);
+}
+
+@media screen and (max-width: 768px) {
+.ed-us-border-top-mobile{
+  border-top: 3px solid rgba(var(--rgb-primary-accent), 1);
+}
+}
+
+.ed-us-grid{
+  display: flex;
+  
+  flex-direction: column;
+  height: 70vh;
+ 
+  align-items: flex-start;
+  justify-content: stretch;
+ 
+}
+
+.ed-us-customvertical-padding{
+  margin-bottom:0px;
+  padding-bottom:0px;
+  margin-top:0px;
+  padding-top:10px;
+  flex-grow:1;
+  width:100%;
+  padding:0px 20px;
+}
+
+.ed-us--pointer{
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .ed-us-width-mobile {
+  width:50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ed-us-img-box{
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    
+   }
+}
+
+@media screen and (min-width: 768px) {
+  .ed-us-usr-img {
+   margin-left: auto;
+    
+   }
+}
+
+
