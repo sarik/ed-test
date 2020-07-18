@@ -24,7 +24,7 @@ pipeline {
         stage('checking builder') {
             steps {
                 echo "Getting builder IP..."
-                sh 'tree'
+                
                 nodejs('nodejs') {
                          sh 'npm i 2>&1'
                      }
