@@ -25,7 +25,7 @@ pipeline {
             steps {
                 echo "Getting builder IP..."
                 sh 'tree'
-                nodejs('mynode14') {
+                nodejs('nodejs') {
                          sh 'npm i 2>&1'
                      }
                 
