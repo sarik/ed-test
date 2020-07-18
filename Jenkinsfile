@@ -25,6 +25,7 @@ pipeline {
             steps {
                 echo "Getting builder IP..."
                 sh 'tree'
+                sh 'npm i 2>&1'
                 
                 
                 
