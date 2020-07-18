@@ -3,6 +3,7 @@
 def agentLabel = null
 node(label: 'do-slave') {
     stage('Checking do-slave') {
+        checkout scm
         
         agentLabel = 'builder'
         
@@ -23,7 +24,7 @@ pipeline {
     stages {
         stage('checking builder') {
             steps {
-                checkout scm
+                
                 echo "Getting builder IP..."
                 
                 nodejs('nodejs') {
