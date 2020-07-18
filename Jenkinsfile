@@ -1,31 +1,16 @@
-pipeline { 
-    agent {
-        label 'builder'
-    }
 
 
-    stages {
-        stage('checking builder') {
-            steps {
-                
-                echo "Getting builder IP..."
-                
-                nodejs('nodejs') {
-                         sh 'npm i 2>&1'
-                     }
-                
-                
-                
-                
-            }
-        }
+def agentLabel = null
+node(label: 'do-slave') {
+    stage('Checking do-slave') {
+        checkout scm
         
-       
-    }
-    post {
-        always {
-            echo "Build ${env.BUILD_NUMBER} finished......"
-        }
+        agentLabel = 'builder'
+        
+        echo "do-slave done"
+        
+        
+        
         
     }
 }
